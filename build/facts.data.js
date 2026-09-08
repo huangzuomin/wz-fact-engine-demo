@@ -23,7 +23,7 @@ const ENTITIES = [
     standardName: '五马历史文化街区',
     aliases: ['五马街', '五马商圈', '五马步行街', '公园路', '解放街老城'],
     typeLabel: '历史文化街区 · 文旅空间',
-    schemaType: 'TouristDestination',
+    schemaType: 'Place',
     domain: '文化旅游',
     domainOwner: '领域编辑 · 文化旅游组',
     location: '浙江省温州市鹿城区（老城核心，覆盖五马街、公园路、解放街一带）',
@@ -106,7 +106,7 @@ const ENTITIES = [
     standardName: '南塘风貌街',
     aliases: ['南塘街', '印象南塘', '南塘餐饮街', '南塘文化旅游区'],
     typeLabel: '历史文化街区 · 夜间消费空间',
-    schemaType: 'TouristDestination',
+    schemaType: 'Place',
     domain: '文化旅游',
     domainOwner: '领域编辑 · 文化旅游组',
     location: '浙江省温州市鹿城区（南塘河沿线）',
@@ -164,7 +164,7 @@ const ENTITIES = [
     standardName: '江心屿（江心孤屿）',
     aliases: ['江心孤屿', '孤屿', '江心寺', '江心古屿', '海上蓬莱'],
     typeLabel: '岛屿景区 · 文旅空间',
-    schemaType: 'TouristDestination',
+    schemaType: 'Place',
     domain: '文化旅游',
     domainOwner: '领域编辑 · 文化旅游组',
     location: '浙江省温州市鹿城区（瓯江之中）',
@@ -222,7 +222,7 @@ const ENTITIES = [
     standardName: '温州大黄鱼（南麂/洞头大黄鱼）',
     aliases: ['大黄鱼', '洞头大黄鱼', '鹿西大黄鱼', '平阳大黄鱼'],
     typeLabel: '地理标志农产品 · 海水养殖产业',
-    schemaType: 'Product',
+    schemaType: 'Thing',
     domain: '产业经济',
     domainOwner: '领域编辑 · 产业经济组',
     location: '浙江省温州市（洞头区鹿西乡、平阳南麂、苍南炎亭等海域）',
@@ -231,7 +231,7 @@ const ENTITIES = [
       entityRef: 'wz:entity:food:ingredient:yellow_croaker',
       dataProduct: '瓯菜数据资产 ou_cuisine_asset v2.0（Authority.A / AIReady.L3）',
     },
-    summary: '温州海洋养殖支柱品种：深水网箱养殖全国领先，2025年全市产量2.2万吨；"温州大黄鱼"品牌加速标准化、品牌化。',
+    summary: '温州海洋养殖支柱品种：深水网箱养殖全国领先，2025年全市产量2.2万吨、全产业链产值19.2亿元；"温州大黄鱼"品牌加速标准化、品牌化。',
     ttlDays: 180,
     updateRiskNote: '产量产值按统计周期年度复核；品牌活动按活动日历管理。',
     facts: [
@@ -253,12 +253,22 @@ const ENTITIES = [
         evidence: ['20230804:105593203#1c5bb459'],
       },
       {
-        fid: 'WZ-F-00512-03', predicate: '产业产值（2022年度）', value: '产值突破15亿元（2023年8月报道，对应2022年产量口径）',
-        type: '统计数据', status: 'uncertain', precision: '年度',
+        fid: 'WZ-F-00512-03', predicate: '产业产值（2022年度·历史口径）', value: '产值突破15亿元（2023年8月报道，对应2022年产量口径）',
+        type: '统计数据', status: 'superseded', precision: '年度',
         validFrom: '2022-01-01', validTo: '2022-12-31',
-        lastVerifiedAt: '2023-08-04', reviewAfter: '2027-08-31', risk: 'L2',
-        note: '存在更新口径线索：2026-06-11视频报道标题称"温州这条鱼卖了19亿"，因属标题级证据，尚不足以直接替换15亿元口径，已进入人工复核队列。',
+        lastVerifiedAt: VERIFY_DATE, reviewAfter: '2027-08-31', risk: 'L2',
+        note: '2026-09-08 经正文级证据确认新年度口径（chg-20260908-001 人工确认）后，本历史口径转为 superseded 保留备查；此前"19亿"视频标题级线索一并获得正文确认。',
+        supersededBy: 'WZ-F-00512-09',
         evidence: ['20230804:105593203#be92cf5d', 'ctx:video:yellow-croaker'],
+      },
+      {
+        fid: 'WZ-F-00512-09', predicate: '产业产值（最新年度）', value: '2025年温州大黄鱼全产业链产值 19.2亿元',
+        type: '统计数据', status: 'active', precision: '年度',
+        validFrom: '2025-01-01', validTo: '2025-12-31',
+        lastVerifiedAt: VERIFY_DATE, reviewAfter: '2027-08-31', risk: 'L2',
+        supersedes: 'WZ-F-00512-03',
+        note: '由 News Event 20260908-0347 触发 Fact Change（chg-20260908-001，Update），经领域编辑 13:18 人工确认后生效；同时了结此前视频标题级线索的 uncertain 状态。',
+        evidence: ['news:20260908-0347', '20260421:105738139#f95276b5'],
       },
       {
         fid: 'WZ-F-00512-04', predicate: '主产区产量（鹿西）', value: '2025年鹿西一地大黄鱼产量达2780吨',
@@ -306,6 +316,7 @@ const ENTITIES = [
       { date: '2026-04-21', precision: '日', title: '2025年度产量发布', detail: '2025年温州大黄鱼产量2.2万吨，其中鹿西2780吨。', evidence: ['20260421:105738139#f95276b5', '20260421:105738139#4ab4a6b6'], factRef: 'WZ-F-00512-01' },
       { date: '2026-05-08', precision: '日', title: '市级专题研究产业升级', detail: '张振丰专题研究文旅区域联动发展和大黄鱼产业高质量发展，强调品牌打造与农文旅融合。', evidence: ['asset:20260508:66wz_105743242'], factRef: 'WZ-F-00512-08' },
       { date: '2026-06-11', precision: '日', title: '视频报道：产值新口径线索', detail: '《温州这条鱼卖了19亿！》视频发布；因属标题级证据，产值口径更新进入人工复核。', evidence: ['ctx:video:yellow-croaker'], factRef: 'WZ-F-00512-03' },
+      { date: '2026-09-08', precision: '日', title: '产值口径经人工确认更新', detail: '新报道确认 2025 年度全产业链产值 19.2 亿元（chg-20260908-001，Update）；原 2022 年度 15 亿元口径转 superseded 保留。', evidence: ['news:20260908-0347'], factRef: 'WZ-F-00512-09' },
       { date: '2026-07-19', precision: '日', title: '大黄鱼品牌嘉年华开席', detail: '2026温州大黄鱼品牌嘉年华在园博园启幕（7月19日—24日），"瓯韵"主题宴开席。', evidence: ['20260719:105830913#f63a1f35'], factRef: 'WZ-F-00512-07' },
     ],
     related: ['WZ-CULT-00000208', 'WZ-EVENT-00000073'],
@@ -515,7 +526,7 @@ const ENTITIES = [
     standardName: '滨江商务区CBD总部大楼群',
     aliases: ['滨江CBD总部楼宇', '滨江商务区大楼群', '滨江CBD', '温州"陆家嘴"'],
     typeLabel: '重大工程 · 总部经济集聚区',
-    schemaType: 'Place',
+    schemaType: 'Project',
     domain: '城市建设',
     domainOwner: '领域编辑 · 城市建设组',
     location: '浙江省温州市鹿城区（瓯江新城核心区，学院路、华光路与瓯江路围合扇形区域）',
@@ -753,4 +764,15 @@ const ENGINE = {
   generatedAt: VERIFY_DATE + 'T10:00:00+08:00',
 };
 
-module.exports = { ENTITIES, ENGINE, VERIFY_DATE, HUB_SOURCES };
+// Entity → Schema.org 映射表（不为 rich result 强行套类型；不确定时用 Thing）
+const SCHEMA_MAPPING = [
+  { match: 'place（街区/景区/地标）', schema: 'Place', examples: ['WZ-PLACE-00001237 五马街', 'WZ-PLACE-00000322 南塘风貌街', 'WZ-PLACE-00000298 江心屿'] },
+  { match: 'event（博览会/活动）', schema: 'Event', examples: ['WZ-EVENT-00000073 第十五届园博会'] },
+  { match: 'project（重大工程）', schema: 'Project', examples: ['WZ-PROJECT-00000321 滨江CBD总部大楼群'] },
+  { match: 'policy / public service / transport program', schema: 'GovernmentService', examples: ['WZ-SCHOOL-00001782 教育工程', 'WZ-TRANS-00000864 市域铁路', 'WZ-POLICY-00000873 城市更新'] },
+  { match: 'food / cultural concept', schema: 'Thing', examples: ['WZ-GOOD-00000512 温州大黄鱼', 'WZ-CULT-00000208 瓯菜'] },
+  { match: 'school（单所学校建档时）', schema: 'EducationalOrganization', examples: [], note: '市级工程类不套用，仍为 GovernmentService' },
+  { match: 'uncertain（缺省兜底）', schema: 'Thing', examples: [] },
+];
+
+module.exports = { ENTITIES, ENGINE, VERIFY_DATE, HUB_SOURCES, SCHEMA_MAPPING };

@@ -5,7 +5,9 @@
 // ============================================================
 const fs = require('fs');
 const path = require('path');
-const { ENTITIES, ENGINE, VERIFY_DATE, HUB_SOURCES } = require('./facts.data.js');
+const { ENTITIES, ENGINE, VERIFY_DATE, HUB_SOURCES, SCHEMA_MAPPING } = require('./facts.data.js');
+const RT = require('./realtime.data.js');
+const PAGES = require('./pages.realtime.js');
 
 const ROOT = path.join(__dirname, '..');
 const DATA_DIR = path.join(ROOT, '_mcp', 'data');
@@ -100,6 +102,18 @@ function sourceUrlFor(key, kind) {
 
 function resolveEvidence(key) {
   // 返回 {kind, sourceOrg, title, pubDate, url, quote, statement, anchors, spanHash, confidence, verification, grade, usable, urn}
+  if (key.startsWith('news:')) {
+    // 实时链路新闻事件（Demo Simulation 标注见页面）
+    const nid = key.slice(5);
+    const n = RT.NEWS_EVENTS.find(x => x.contentId === nid);
+    return {
+      kind: 'news', sourceOrg: '温州新闻网（News Event · 实时链路）',
+      title: n ? n.title : '新闻事件', pubDate: n ? n.publishedAt.slice(0, 10) : null,
+      url: n ? `${DEPLOY}/news/${nid}/` : null,
+      quote: n ? n.excerpt : '', statement: n && n.simulated ? '演示模拟新闻（Demo Simulation）' : '枢纽真实档案',
+      directness: '正文引用', grade: 'A', usable: true, verification: 'rule_verified',
+    };
+  }
   if (key.startsWith('hub:')) {
     const h = HUB_SOURCES[key];
     return { kind: 'hub', sourceOrg: h.sourceOrg, title: h.title, statement: h.statement, quote: h.statement, authority: h.authority, verification: 'controlled_vocabulary' };
@@ -391,10 +405,18 @@ function renderEntityPage(ent) {
   const leadFact = activeFacts.find(f => f.type === '统计数据' || f.type === '当前状态') || activeFacts[0];
 
   // ---- JSON-LD ----
-  const subjectOf = ent.evidences.filter(e => e.url && e.title).slice(0, 12).map(e => ({
-    '@type': 'NewsArticle', url: e.url, headline: e.title,
-    ...(e.pubDate ? { datePublished: e.pubDate } : {}),
-  }));
+  // subjectOf 按 canonical URL 去重（同一 URL 的多段证据只回链一次）
+  const subjSeen = new Set();
+  const subjectOf = [];
+  for (const e of ent.evidences) {
+    if (!e.url || !e.title || subjSeen.has(e.url)) continue;
+    subjSeen.add(e.url);
+    subjectOf.push({
+      '@type': 'NewsArticle', url: e.url, headline: e.title,
+      ...(e.pubDate ? { datePublished: e.pubDate } : {}),
+    });
+    if (subjectOf.length >= 12) break;
+  }
   const addProps = activeFacts.map(f => ({ '@type': 'PropertyValue', name: f.predicate, value: f.value }));
   const addr = { '@type': 'PostalAddress', addressCountry: 'CN', addressLocality: '温州市', streetAddress: ent.location.replace('浙江省温州市', '').replace('（.*?）', '') };
   let main;
@@ -405,12 +427,12 @@ function renderEntityPage(ent) {
     sdPublisher: { '@type': 'NewsMediaOrganization', name: '温州新闻网', url: 'https://www.66wz.com' },
     subjectOf: subjectOf, additionalProperty: addProps,
   };
-  if (ent.schemaType === 'Product') {
-    main = { ...common, brand: { '@type': 'Brand', name: '温州大黄鱼' }, category: '海水养殖农产品' };
-  } else if (ent.schemaType === 'GovernmentService') {
+  if (ent.schemaType === 'GovernmentService') {
     main = { ...common, serviceArea: { '@type': 'AdministrativeArea', name: '温州市' } };
   } else if (ent.schemaType === 'Event') {
     main = { ...common, location: { '@type': 'Place', name: '温州园博园', address: addr } };
+  } else if (ent.schemaType === 'Project' || ent.schemaType === 'Thing') {
+    main = { ...common };
   } else {
     main = { ...common, address: addr, containedInPlace: { '@type': 'City', name: '温州市' } };
   }
@@ -498,6 +520,33 @@ function renderEntityPage(ent) {
     </div>`).join('\n');
 
   const s = ent.stats;
+
+  // 最近事实变化（本实体被新闻事件驱动的更新，含待审核项）
+  const entChanges = RT.CHANGES.filter(c => c.entityId === ent.id).sort((a, b) => b.changedAt.localeCompare(a.changedAt));
+  const { CHANGE_TYPES, REVIEW_STATUS } = RT;
+  const chgBoxes = entChanges.map(c => `
+    <div class="changebox">
+      <div style="display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center">
+        <span style="font-family:Consolas,Menlo,monospace;font-size:12.5px;color:var(--sub)">${esc(c.changedAt)}</span>
+        <span class="chg chg-${c.changeType}">${CHANGE_TYPES[c.changeType]}</span>
+        <span class="chip rev-${c.reviewStatus}">${REVIEW_STATUS[c.reviewStatus]}</span>
+        <span style="font-size:12.5px;color:var(--sub)">来源：<a href="${DEPLOY}/news/${esc(c.contentId)}/">News Event CMS-${esc(c.contentId)}</a></span>
+      </div>
+      <div style="margin-top:8px;font-size:14.5px"><b>${esc(c.predicate)}</b></div>
+      ${c.changeType === 'no_change'
+      ? `<div style="font-size:13.5px;margin-top:5px">${esc(c.currentValue ? c.currentValue.value : '')} —— 新证据与现行事实一致（多源确认）</div>`
+      : `<div class="cb-grid">
+          <div class="cb-cell"><div class="k">旧版本${c.currentValue && c.currentValue.factId && !c.currentValue.factId.startsWith('（') ? ` · <a href="#fact-${esc(c.currentValue.factId)}">${esc(c.currentValue.factId)}</a>` : ''}</div><span class="oldval">${esc(c.currentValue ? c.currentValue.value : '（无既有事实）')}</span> ${c.currentValue ? `<span class="chip">${esc(c.currentValue.status)}</span>` : ''}</div>
+          <div class="cb-cell"><div class="k">新版本${c.proposedValue.factId && !c.proposedValue.factId.startsWith('（') ? ` · <a href="#fact-${esc(c.proposedValue.factId)}">${esc(c.proposedValue.factId)}</a>` : ''}</div><span class="newval">${esc(c.proposedValue.value)}</span> <span class="chip">${esc(c.proposedValue.status)}</span></div>
+        </div>
+        <div style="font-size:13px;color:var(--sub);margin-top:7px">原因：${esc(c.reason)}${c.reviewStatus === 'pending' ? ` · <a href="${DEPLOY}/review/${esc(c.changeId)}/"><b>进入审核 →</b></a>` : ` · 审核：${esc(c.reviewer || '')} ${esc(c.reviewedAt || '')}`}</div>`}
+    </div>`).join('\n');
+  const chgSection = entChanges.length ? `
+  <section id="recent-changes">
+    <h2 class="sec">最近事实变化</h2>
+    <p class="secdesc">本实体的事实如何被新闻事件驱动更新。旧版本不覆盖、全部保留；"待人工确认"的变化尚未写入 Canonical Fact。</p>
+    ${chgBoxes}
+  </section>` : '';
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -508,7 +557,7 @@ function renderEntityPage(ent) {
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="${ent.factUrl}">
 <link rel="alternate" type="application/json" title="JSON API" href="${ent.jsonUrl}">
-<style>${CSS}</style>
+<style>${CSS}${PAGES.RT_CSS}</style>
 <script type="application/ld+json">${jsonLd(ld)}</script>
 </head>
 <body>
@@ -516,7 +565,7 @@ function renderEntityPage(ent) {
   <div class="wrap">
     <div class="bar">
       <div class="brand"><span class="logo">温州在线 · <b>城市事实</b></span><span class="sub">城市事实发布引擎 Fact Publishing Engine</span></div>
-      <nav><a href="${DEPLOY}/">事实目录</a><a href="#evidence">证据链</a><a href="${ent.jsonUrl}">JSON API</a><a href="${DEPLOY}/">机器出口</a></nav>
+      <nav>${PAGES.navHtml({ DEPLOY })}</nav>
     </div>
     <div class="crumbs">www.66wz.net / fact / <b>${ent.id}</b></div>
   </div>
@@ -553,6 +602,7 @@ ${demoBanner()}
 </div>
 
 <div class="wrap">
+  ${chgSection}
   <section id="current">
     <h2 class="sec">当前事实</h2>
     <p class="secdesc">区分【已发生事实 / 当前状态 / 统计 / 计划 / 活动 / 来源主张】六类口径；任何事实不直接覆盖旧值，状态机见每张卡片右上角。每条事实可点击证据编号下钻到原文锚点。</p>
@@ -657,7 +707,8 @@ function entityJson(ent) {
 // ------------------------------------------------------------
 // 5. 门户页
 // ------------------------------------------------------------
-function renderPortal() {
+function renderPortalLegacy() {
+  // v1「事实目录首页」，已被 v2 产品首页（renderPortal，见文件末尾）替代，保留备查。
   const totals = E.reduce((a, e) => ({
     facts: a.facts + e.stats.total, active: a.active + e.stats.active,
     sup: a.sup + e.stats.superseded + e.stats.expired, unc: a.unc + e.stats.uncertain + e.stats.unverified,
@@ -685,7 +736,7 @@ function renderPortal() {
 <link rel="alternate" type="application/json" title="Fact Catalog API" href="${DEPLOY}/catalog.json">
 <link rel="alternate" type="application/rss+xml" title="事实更新 Feed" href="${DEPLOY}/feed.xml">
 <link rel="alternate" type="application/feed+json" title="事实更新 JSON Feed" href="${DEPLOY}/feed.json">
-<style>${CSS}</style>
+<style>${CSS}${PAGES.RT_CSS}</style>
 <script type="application/ld+json">${jsonLd({
     '@context': 'https://schema.org', '@type': 'CollectionPage', name: '温州城市事实目录',
     url: DEPLOY + '/', inLanguage: 'zh-CN', sdDatePublished: VERIFY_DATE,
@@ -793,6 +844,8 @@ for (const ent of E) {
 // sitemap.xml
 const urls = [{ loc: DEPLOY + '/', lastmod: VERIFY_DATE }];
 for (const ent of E) urls.push({ loc: ent.factUrl, lastmod: VERIFY_DATE });
+for (const n of RT.NEWS_EVENTS) urls.push({ loc: `${DEPLOY}/news/${n.contentId}/`, lastmod: VERIFY_DATE });
+urls.push({ loc: DEPLOY + '/observatory/', lastmod: VERIFY_DATE });
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map(u => `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod><changefreq>daily</changefreq><priority>${u.loc.endsWith('/fact/') ? '1.0' : '0.8'}</priority></url>`).join('\n')}
@@ -897,12 +950,110 @@ const catalog = {
 };
 fs.writeFileSync(path.join(SITE, 'fact', 'catalog.json'), JSON.stringify(catalog, null, 1), 'utf8');
 
-// robots.txt
-fs.writeFileSync(path.join(SITE, 'robots.txt'), `User-agent: *
+// robots.txt —— 抓取策略：HTML/JSON-LD 开放索引；JSON API 保持可读取，
+// 不进入搜索结果的控制通过响应头 X-Robots-Tag: noindex 实现（部署层配置），而不是屏蔽读取。
+fs.writeFileSync(path.join(SITE, 'robots.txt'), `# 城市实时可信内容分发系统 · 抓取策略
+# HTML 与页面内嵌 JSON-LD：面向搜索引擎与 AI 爬虫完全开放，允许索引与引用
+User-agent: *
 Allow: /
-Disallow: /*.json$
+
+# JSON API 与 Feed（*.json / feed.xml）：允许任何 Agent 与开发者读取；
+# 这类机器资源不进入搜索结果的控制方式是在响应头配置 X-Robots-Tag: noindex，
+# 而不是通过 robots.txt 阻止读取（屏蔽读取会同时切断 AI 与 Agent 的合法访问）。
+
+# 事实页与新闻事件页变更主动推送：IndexNow / 百度收录 API（发布即提交）
+
 Sitemap: ${DEPLOY}/sitemap.xml
 `, 'utf8');
+
+// ------------------------------------------------------------
+// 6b. 实时链路输出：News Event 页 / Review 工作台 / Observatory / JSON 出口
+// ------------------------------------------------------------
+function makeCtx() {
+  const todayNewsEvents = RT.NEWS_EVENTS.filter(n => n.publishedAt.startsWith(VERIFY_DATE));
+  const todayChanges = RT.CHANGES.filter(c => c.changedAt.startsWith(VERIFY_DATE));
+  const pendingChanges = RT.CHANGES.filter(c => c.reviewStatus === 'pending');
+  const todayClaims = todayNewsEvents.flatMap(n => n.claims);
+  const expiringSoon = E.flatMap(e => e.facts).filter(f => f.status === 'active' && f.reviewAfter && f.reviewAfter <= '2026-10-08').length;
+  return {
+    DEPLOY, BASE, DEMO, VERIFY_DATE, ENGINE, E, RT, SCHEMA_MAPPING, byId,
+    esc, chip, statusChip, demoBanner, jsonLd, CSS,
+    stats: {
+      todayNews: todayNewsEvents.length,
+      todayChanges: todayChanges.length,
+      pendingCount: pendingChanges.length,
+      todayClaims: todayClaims.length,
+      expiringSoon,
+      todayDone: todayChanges.filter(c => c.reviewStatus !== 'pending').length,
+      conflicts: RT.CHANGES.filter(c => c.changeType === 'conflict').length,
+    },
+  };
+}
+const ctxShared = makeCtx();
+
+// 审核工作台（首页 + 每条 Change 的三栏详情页）
+fs.mkdirSync(path.join(SITE, 'fact', 'review'), { recursive: true });
+fs.writeFileSync(path.join(SITE, 'fact', 'review', 'index.html'), PAGES.renderReviewIndex(ctxShared));
+for (const c of RT.CHANGES) {
+  fs.mkdirSync(path.join(SITE, 'fact', 'review', c.changeId), { recursive: true });
+  fs.writeFileSync(path.join(SITE, 'fact', 'review', c.changeId, 'index.html'), PAGES.renderReviewDetail(ctxShared, c));
+}
+
+// AI Citation Observatory
+fs.mkdirSync(path.join(SITE, 'fact', 'observatory'), { recursive: true });
+fs.writeFileSync(path.join(SITE, 'fact', 'observatory', 'index.html'), PAGES.renderObservatory(ctxShared));
+
+// News Event 页 + News Event JSON
+fs.mkdirSync(path.join(SITE, 'fact', 'news'), { recursive: true });
+for (const n of RT.NEWS_EVENTS) {
+  fs.mkdirSync(path.join(SITE, 'fact', 'news', n.contentId), { recursive: true });
+  fs.writeFileSync(path.join(SITE, 'fact', 'news', n.contentId, 'index.html'), PAGES.renderNewsEvent(ctxShared, n));
+  const newsJson = {
+    api: { name: ENGINE.name + ' · News Event API', version: 'v0.2', generatedAt: ENGINE.generatedAt, canonicalBase: DEPLOY + '/' },
+    newsEvent: {
+      contentId: n.contentId, title: n.title, source: n.source,
+      publishedAt: n.publishedAt, modifiedAt: n.modifiedAt, cmsUrl: n.cmsUrl,
+      lifecycle: n.lifecycle, simulated: n.simulated !== false,
+      htmlUrl: `${DEPLOY}/news/${n.contentId}/`, excerpt: n.excerpt,
+    },
+    fastLane: n.fastLane,
+    entityAnchors: n.anchors,
+    candidateClaims: n.claims,
+    factChanges: n.claims.filter(c => c.changeId).map(c => c.changeId),
+    reviewSummary: n.reviewSummary,
+  };
+  fs.writeFileSync(path.join(SITE, 'fact', 'news', n.contentId + '.json'), JSON.stringify(newsJson, null, 1), 'utf8');
+}
+
+// changes.json（Change Feed：事实变化订阅流）
+const changesFeed = {
+  feed: {
+    name: '城市事实 Change Feed', version: 'v0.2', updated: ENGINE.generatedAt,
+    canonicalBase: DEPLOY + '/',
+    note: '每一次 Canonical Fact 变化的订阅流；old_value 永不删除，仅标记 superseded 保留。',
+  },
+  changes: RT.CHANGES.slice().sort((a, b) => b.changedAt.localeCompare(a.changedAt)).map(c => ({
+    change_id: c.changeId,
+    entity_id: c.entityId,
+    entity_name: c.entityName,
+    predicate: c.predicate,
+    change_type: c.changeType,
+    old_value: c.currentValue ? c.currentValue.value : null,
+    new_value: c.proposedValue ? c.proposedValue.value : null,
+    old_fact_id: c.currentValue ? c.currentValue.factId : null,
+    new_fact_id: c.proposedValue ? c.proposedValue.factId : null,
+    changed_at: c.changedAt,
+    review_status: c.reviewStatus,
+    reviewer: c.reviewer,
+    reason: c.reason,
+    evidence_url: `${DEPLOY}/news/${c.contentId}/`,
+    fact_url: `${DEPLOY}/${c.entityId}/`,
+  })),
+};
+fs.writeFileSync(path.join(SITE, 'fact', 'changes.json'), JSON.stringify(changesFeed, null, 1), 'utf8');
+
+// 首页 v2：城市实时可信内容分发系统（函数声明后置覆盖 v1）
+function renderPortal() { return PAGES.renderPortalHome(makeCtx()); }
 
 // 汇总
 console.log('entities:', E.length);
