@@ -1,0 +1,833 @@
+{
+ "api": {
+  "name": "城市事实发布引擎",
+  "version": "v0.1",
+  "generatedAt": "2026-09-08T10:00:00+08:00",
+  "canonicalBase": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/"
+ },
+ "entity": {
+  "id": "WZ-GOOD-00000512",
+  "standardName": "温州大黄鱼（南麂/洞头大黄鱼）",
+  "name": "温州大黄鱼",
+  "aliases": [
+   "大黄鱼",
+   "洞头大黄鱼",
+   "鹿西大黄鱼",
+   "平阳大黄鱼"
+  ],
+  "type": "地理标志农产品 · 海水养殖产业",
+  "schemaType": "Thing",
+  "domain": "产业经济",
+  "location": "浙江省温州市（洞头区鹿西乡、平阳南麂、苍南炎亭等海域）",
+  "hubRef": {
+   "fqn": "OuCuisineGlossary.FoodItems.ClassicDishes.LuXiDaHuangYu",
+   "entityRef": "wz:entity:food:ingredient:yellow_croaker",
+   "dataProduct": "瓯菜数据资产 ou_cuisine_asset v2.0（Authority.A / AIReady.L3）"
+  },
+  "summary": "温州海洋养殖支柱品种：深水网箱养殖全国领先，2025年全市产量2.2万吨、全产业链产值19.2亿元；\"温州大黄鱼\"品牌加速标准化、品牌化。",
+  "lastVerifiedAt": "2026-09-08",
+  "reviewAfter": null,
+  "ttlDays": 180,
+  "htmlUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-GOOD-00000512/",
+  "jsonUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-GOOD-00000512.json"
+ },
+ "facts": [
+  {
+   "factId": "WZ-F-00512-01",
+   "predicate": "养殖产量（最新年度）",
+   "value": "2025年温州大黄鱼养殖产量 2.2万吨",
+   "factType": "统计数据",
+   "status": "active",
+   "timePrecision": "年度",
+   "validFrom": "2025-01-01",
+   "validTo": "2025-12-31",
+   "sourcePublishedAt": "2026-04-21",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2027-08-31",
+   "updateRiskLevel": "L1",
+   "supersedes": "WZ-F-00512-02",
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20260421:105738139#f95276b5"
+   ]
+  },
+  {
+   "factId": "WZ-F-00512-02",
+   "predicate": "养殖产量（历史年度）",
+   "value": "2022年温州大黄鱼养殖产量 17318吨",
+   "factType": "统计数据",
+   "status": "superseded",
+   "timePrecision": "年度",
+   "validFrom": "2022-01-01",
+   "validTo": "2022-12-31",
+   "sourcePublishedAt": "2023-08-04",
+   "lastVerifiedAt": "2023-08-04",
+   "reviewAfter": "2024-08-31",
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": "WZ-F-00512-01",
+   "note": "口径为年度统计，非错误值；随新统计年度到来被最新值替代，保留备查。",
+   "evidence": [
+    "20230804:105593203#1c5bb459"
+   ]
+  },
+  {
+   "factId": "WZ-F-00512-03",
+   "predicate": "产业产值（2022年度·历史口径）",
+   "value": "产值突破15亿元（2023年8月报道，对应2022年产量口径）",
+   "factType": "统计数据",
+   "status": "superseded",
+   "timePrecision": "年度",
+   "validFrom": "2022-01-01",
+   "validTo": "2022-12-31",
+   "sourcePublishedAt": "2026-06-11",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2027-08-31",
+   "updateRiskLevel": "L2",
+   "supersedes": null,
+   "supersededBy": "WZ-F-00512-09",
+   "note": "2026-09-08 经正文级证据确认新年度口径（chg-20260908-001 人工确认）后，本历史口径转为 superseded 保留备查；此前\"19亿\"视频标题级线索一并获得正文确认。",
+   "evidence": [
+    "20230804:105593203#be92cf5d",
+    "ctx:video:yellow-croaker"
+   ]
+  },
+  {
+   "factId": "WZ-F-00512-09",
+   "predicate": "产业产值（最新年度）",
+   "value": "2025年温州大黄鱼全产业链产值 19.2亿元",
+   "factType": "统计数据",
+   "status": "active",
+   "timePrecision": "年度",
+   "validFrom": "2025-01-01",
+   "validTo": "2025-12-31",
+   "sourcePublishedAt": "2026-09-08",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2027-08-31",
+   "updateRiskLevel": "L2",
+   "supersedes": "WZ-F-00512-03",
+   "supersededBy": null,
+   "note": "由 News Event 20260908-0347 触发 Fact Change（chg-20260908-001，Update），经领域编辑 13:18 人工确认后生效；同时了结此前视频标题级线索的 uncertain 状态。",
+   "evidence": [
+    "news:20260908-0347",
+    "20260421:105738139#f95276b5"
+   ]
+  },
+  {
+   "factId": "WZ-F-00512-04",
+   "predicate": "主产区产量（鹿西）",
+   "value": "2025年鹿西一地大黄鱼产量达2780吨",
+   "factType": "统计数据",
+   "status": "active",
+   "timePrecision": "年度",
+   "validFrom": "2025-01-01",
+   "validTo": "2025-12-31",
+   "sourcePublishedAt": "2026-04-21",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2027-08-31",
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20260421:105738139#4ab4a6b6"
+   ]
+  },
+  {
+   "factId": "WZ-F-00512-05",
+   "predicate": "养殖方式",
+   "value": "深水网箱与围栏养殖为主（从挪威引进深水网箱系统；洞头培育适宜深水网箱和围栏养殖的新品系；2024年洞头首创声波围网养殖）",
+   "factType": "当前状态",
+   "status": "active",
+   "timePrecision": "当前有效",
+   "validFrom": "2024-12-01",
+   "validTo": null,
+   "sourcePublishedAt": "2024-12-18",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-12-07",
+   "updateRiskLevel": "L2",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20040729:057041418",
+    "20221130:105524614",
+    "asset:20241218:105665392"
+   ]
+  },
+  {
+   "factId": "WZ-F-00512-06",
+   "predicate": "质量品牌建设",
+   "value": "2026年3月洞头生态大黄鱼获\"等级身份证\"（等级化品牌管理）",
+   "factType": "已发生事实",
+   "status": "active",
+   "timePrecision": "月",
+   "validFrom": "2026-03-01",
+   "validTo": null,
+   "sourcePublishedAt": "2026-03-12",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-12-07",
+   "updateRiskLevel": "L2",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "asset:20260312:105730467"
+   ]
+  },
+  {
+   "factId": "WZ-F-00512-07",
+   "predicate": "品牌活动（2026）",
+   "value": "2026温州大黄鱼品牌嘉年华于2026年7月19日—24日在温州园博园举行（每日18:00-20:30，含\"瓯韵\"大黄鱼主题宴）",
+   "factType": "活动",
+   "status": "expired",
+   "timePrecision": "日（区间）",
+   "validFrom": "2026-07-19",
+   "validTo": "2026-07-24",
+   "sourcePublishedAt": "2026-08-21",
+   "lastVerifiedAt": "2026-08-21",
+   "reviewAfter": null,
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": "活动已结束，状态自动置为 expired，不再对外作为\"即将举办\"信息分发。",
+   "evidence": [
+    "20260716:105805477#b11fa700",
+    "20260719:105830913#f63a1f35",
+    "20260821:105830910#c0a12273"
+   ]
+  },
+  {
+   "factId": "WZ-F-00512-08",
+   "predicate": "市级产业部署",
+   "value": "2026年5月市委主要领导专题研究大黄鱼产业高质量发展，推进标准化、品牌化、国际化路径",
+   "factType": "当前状态",
+   "status": "active",
+   "timePrecision": "月",
+   "validFrom": "2026-05-01",
+   "validTo": null,
+   "sourcePublishedAt": "2026-05-08",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-12-07",
+   "updateRiskLevel": "L2",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "asset:20260508:66wz_105743242"
+   ]
+  }
+ ],
+ "timeline": [
+  {
+   "date": "2004-07-29",
+   "precision": "日",
+   "title": "引进挪威深水网箱系统",
+   "detail": "鹿西从挪威引进深水网箱养殖系统，开启深水养殖路线。",
+   "factRef": null,
+   "evidence": [
+    "20040729:057041418"
+   ],
+   "note": null
+  },
+  {
+   "date": "2004-08-31",
+   "precision": "日",
+   "title": "养殖规模全国居首",
+   "detail": "温州深水网箱养殖的大黄鱼等先后出口日韩，出口量达2500余吨、创汇近1000万美元，数量、种类、质量均居全国沿海各地之首；\"海上活鱼库\"创值1.8亿。",
+   "factRef": null,
+   "evidence": [
+    "20040831:058674864"
+   ],
+   "note": null
+  },
+  {
+   "date": "2011-10-31",
+   "precision": "日",
+   "title": "激流海水网箱技术落地",
+   "detail": "与浙江大学共同研发的激流海水网箱养殖大黄鱼技术投入应用。",
+   "factRef": null,
+   "evidence": [
+    "20111031:102850432"
+   ],
+   "note": null
+  },
+  {
+   "date": "2019-11-26",
+   "precision": "日",
+   "title": "白龙屿海洋牧场投产",
+   "detail": "国家级生态海洋牧场——洞头区鹿西乡白龙屿生态海洋牧场主养殖区正式投产，50万尾大黄鱼苗入养。",
+   "factRef": null,
+   "evidence": [
+    "ctx:https://finance.66wz.com/system/2019/11/26/105212502.shtml"
+   ],
+   "note": null
+  },
+  {
+   "date": "2022-11-30",
+   "precision": "日",
+   "title": "本地新品系培育成功",
+   "detail": "省级科技特派员张立宁团队在洞头本地培育出适宜深水网箱和围栏养殖的大黄鱼新品系。",
+   "factRef": null,
+   "evidence": [
+    "20221130:105524614"
+   ],
+   "note": null
+  },
+  {
+   "date": "2023-08-04",
+   "precision": "日",
+   "title": "2022年度产业数据发布",
+   "detail": "2022年温州大黄鱼养殖产量17318吨，产值突破15亿元；\"浙南鱼仓\"修复振兴纵深推进。",
+   "factRef": "WZ-F-00512-02",
+   "evidence": [
+    "20230804:105593203#1c5bb459",
+    "20230804:105593203#be92cf5d",
+    "20230804:105593203#7341567f"
+   ],
+   "note": null
+  },
+  {
+   "date": "2024-12-18",
+   "precision": "日",
+   "title": "洞头首创声波围网养殖",
+   "detail": "洞头首创声波围网养殖大黄鱼。",
+   "factRef": null,
+   "evidence": [
+    "asset:20241218:105665392"
+   ],
+   "note": null
+  },
+  {
+   "date": "2026-03-12",
+   "precision": "日",
+   "title": "生态大黄鱼获\"等级身份证\"",
+   "detail": "洞头生态大黄鱼实行等级化管理。",
+   "factRef": "WZ-F-00512-06",
+   "evidence": [
+    "asset:20260312:105730467"
+   ],
+   "note": null
+  },
+  {
+   "date": "2026-04-21",
+   "precision": "日",
+   "title": "2025年度产量发布",
+   "detail": "2025年温州大黄鱼产量2.2万吨，其中鹿西2780吨。",
+   "factRef": "WZ-F-00512-01",
+   "evidence": [
+    "20260421:105738139#f95276b5",
+    "20260421:105738139#4ab4a6b6"
+   ],
+   "note": null
+  },
+  {
+   "date": "2026-05-08",
+   "precision": "日",
+   "title": "市级专题研究产业升级",
+   "detail": "张振丰专题研究文旅区域联动发展和大黄鱼产业高质量发展，强调品牌打造与农文旅融合。",
+   "factRef": "WZ-F-00512-08",
+   "evidence": [
+    "asset:20260508:66wz_105743242"
+   ],
+   "note": null
+  },
+  {
+   "date": "2026-06-11",
+   "precision": "日",
+   "title": "视频报道：产值新口径线索",
+   "detail": "《温州这条鱼卖了19亿！》视频发布；因属标题级证据，产值口径更新进入人工复核。",
+   "factRef": "WZ-F-00512-03",
+   "evidence": [
+    "ctx:video:yellow-croaker"
+   ],
+   "note": null
+  },
+  {
+   "date": "2026-07-19",
+   "precision": "日",
+   "title": "大黄鱼品牌嘉年华开席",
+   "detail": "2026温州大黄鱼品牌嘉年华在园博园启幕（7月19日—24日），\"瓯韵\"主题宴开席。",
+   "factRef": "WZ-F-00512-07",
+   "evidence": [
+    "20260719:105830913#f63a1f35"
+   ],
+   "note": null
+  },
+  {
+   "date": "2026-09-08",
+   "precision": "日",
+   "title": "产值口径经人工确认更新",
+   "detail": "新报道确认 2025 年度全产业链产值 19.2 亿元（chg-20260908-001，Update）；原 2022 年度 15 亿元口径转 superseded 保留。",
+   "factRef": "WZ-F-00512-09",
+   "evidence": [
+    "news:20260908-0347"
+   ],
+   "note": null
+  }
+ ],
+ "evidence": [
+  {
+   "key": "20260421:105738139#f95276b5",
+   "sourceOrg": "温州新闻网",
+   "title": "“一条黄鱼”游出19亿元产值，从鱼苗到餐桌的闭环如何炼成",
+   "publishedAt": "2026-04-21",
+   "quote": "2025年，温州交出的成绩单是：产量2.2万吨",
+   "statement": "【大黄鱼】产量：2025年温州产量2.2万吨。",
+   "anchors": [
+    23,
+    46
+   ],
+   "spanHash": "f95276b5",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2026/04/21/105738139.shtml",
+   "urn": "urn:wz:asset:66wz:news:20260421:105738139"
+  },
+  {
+   "key": "20230804:105593203#1c5bb459",
+   "sourceOrg": "温州新闻网",
+   "title": "上半年温州农业经济增幅居全省第四 “粮仓”产量明显上升",
+   "publishedAt": "2023-08-04",
+   "quote": "去年，温州大黄鱼养殖产量17318吨",
+   "statement": "【大黄鱼】产量：去年温州大黄鱼养殖产量17318吨。",
+   "anchors": [
+    818,
+    836
+   ],
+   "spanHash": "1c5bb459",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2023/08/04/105593203.shtml",
+   "urn": "urn:wz:asset:66wz:news:20230804:105593203"
+  },
+  {
+   "key": "20230804:105593203#be92cf5d",
+   "sourceOrg": "温州新闻网",
+   "title": "上半年温州农业经济增幅居全省第四 “粮仓”产量明显上升",
+   "publishedAt": "2023-08-04",
+   "quote": "产值突破15亿元",
+   "statement": "【大黄鱼】产值：产值突破15亿元。",
+   "anchors": [
+    837,
+    845
+   ],
+   "spanHash": "be92cf5d",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2023/08/04/105593203.shtml",
+   "urn": "urn:wz:asset:66wz:news:20230804:105593203"
+  },
+  {
+   "key": "ctx:video:yellow-croaker",
+   "sourceOrg": "温州新闻网（视频报道）",
+   "title": "温州这条鱼卖了19亿！",
+   "publishedAt": "2026-06-11",
+   "quote": "《温州这条鱼卖了19亿！》（视频标题级主张）",
+   "statement": null,
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "title_level",
+   "directness": "标题级",
+   "qualityGrade": "B",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2026/06/11/105788171.shtml",
+   "urn": null
+  },
+  {
+   "key": "news:20260908-0347",
+   "sourceOrg": "温州新闻网（News Event · 实时链路）",
+   "title": "2025年温州大黄鱼全产业链产值达19.2亿元",
+   "publishedAt": "2026-09-08",
+   "quote": "记者从温州大黄鱼产业高质量发展专题会上获悉，2025年温州大黄鱼全产业链产值达19.2亿元，养殖产量2.2万吨，其中洞头鹿西一地产量2780吨。会议明确下一步将推进\"温州大黄鱼\"标准化、品牌化、国际化。",
+   "statement": "演示模拟新闻（Demo Simulation）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "rule_verified",
+   "directness": "正文引用",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/news/20260908-0347/",
+   "urn": null
+  },
+  {
+   "key": "20260421:105738139#4ab4a6b6",
+   "sourceOrg": "温州新闻网",
+   "title": "“一条黄鱼”游出19亿元产值，从鱼苗到餐桌的闭环如何炼成",
+   "publishedAt": "2026-04-21",
+   "quote": "2025年仅鹿西一地大黄鱼产量就达2780吨",
+   "statement": "【鹿西大黄鱼】产量：2025年鹿西大黄鱼产量达2780吨。",
+   "anchors": [
+    666,
+    688
+   ],
+   "spanHash": "4ab4a6b6",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2026/04/21/105738139.shtml",
+   "urn": "urn:wz:asset:66wz:news:20260421:105738139"
+  },
+  {
+   "key": "20040729:057041418",
+   "sourceOrg": "温州新闻网",
+   "title": "瑞安：围塘滩涂三万亩 蟹爬虾跳鱼儿肥",
+   "publishedAt": "2004-07-29",
+   "quote": "从挪威引进的深水网箱养殖系统",
+   "statement": "【鹿西大黄鱼】养殖技术：深水网箱养殖。",
+   "anchors": [
+    329,
+    343
+   ],
+   "spanHash": "ee9ed942",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2004/07/29/057041418.shtml",
+   "urn": "urn:wz:asset:66wz:news:20040729:057041418"
+  },
+  {
+   "key": "20221130:105524614",
+   "sourceOrg": "温州新闻网",
+   "title": "温州洞头：人才下沉 科技特派员赋能海岛共同富裕",
+   "publishedAt": "2022-11-30",
+   "quote": "省级科技特派员张立宁团队在洞头本地培育出适宜深水网箱和围栏养殖的大黄鱼新品系",
+   "statement": "【大黄鱼】培育新品系：省级科技特派员张立宁团队在洞头本地培育出适宜深水网箱和围栏养殖的大黄鱼新品系。",
+   "anchors": [
+    528,
+    566
+   ],
+   "spanHash": "4daef093",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2022/11/30/105524614.shtml",
+   "urn": "urn:wz:asset:66wz:news:20221130:105524614"
+  },
+  {
+   "key": "asset:20241218:105665392",
+   "sourceOrg": "温州新闻网",
+   "title": "洞头首创声波围网养殖大黄鱼",
+   "publishedAt": "2024-12-18",
+   "quote": null,
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2024/12/18/105665392.shtml",
+   "urn": "urn:wz:asset:66wz:news:20241218:105665392"
+  },
+  {
+   "key": "asset:20260312:105730467",
+   "sourceOrg": "温州新闻网",
+   "title": "温州洞头：生态大黄鱼有了“等级身份证”",
+   "publishedAt": "2026-03-12",
+   "quote": null,
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2026/03/12/105730467.shtml",
+   "urn": "urn:wz:asset:66wz:news:20260312:105730467"
+  },
+  {
+   "key": "20260716:105805477#b11fa700",
+   "sourceOrg": "温州新闻网",
+   "title": "快来园博寻鲜打卡！2026温州大黄鱼嘉年华来袭，黄鱼体验官火热招募中",
+   "publishedAt": "2026-07-16",
+   "quote": "2026温州大黄鱼品牌嘉年华，7月19日—24日每天18:00-20:30登陆温州园博园滨水草坪。",
+   "statement": "【园博园】举办活动：2026温州大黄鱼品牌嘉年华。",
+   "anchors": [
+    36,
+    85
+   ],
+   "spanHash": "b11fa700",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2026/07/16/105805477.shtml",
+   "urn": "urn:wz:asset:66wz:news:20260716:105805477"
+  },
+  {
+   "key": "20260719:105830913#f63a1f35",
+   "sourceOrg": "温州新闻网",
+   "title": "一口鲜掉眉毛！园博园大黄鱼盛宴开席，6天夏夜嗨玩不停",
+   "publishedAt": "2026-07-19",
+   "quote": "2026温州大黄鱼品牌嘉年华重磅活动——瓯韵·温州大黄鱼主题宴鲜美开席。",
+   "statement": "【园博园】举办活动：2026温州大黄鱼品牌嘉年华。",
+   "anchors": [
+    46,
+    82
+   ],
+   "spanHash": "f63a1f35",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2026/07/19/105830913.shtml",
+   "urn": "urn:wz:asset:66wz:news:20260719:105830913"
+  },
+  {
+   "key": "20260821:105830910#c0a12273",
+   "sourceOrg": "温州新闻网",
+   "title": "晚风、渔火、人海！园博园大黄鱼嘉年华狂欢，才是温州夏夜的正确打开方式",
+   "publishedAt": "2026-08-21",
+   "quote": "7月19日到24日，每晚18:00-20:30，园博园化身温州最有烟火气的渔港夜市。",
+   "statement": "【园博园】举办活动：2026温州大黄鱼品牌嘉年华。",
+   "anchors": [
+    55,
+    97
+   ],
+   "spanHash": "c0a12273",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2026/08/21/105830910.shtml",
+   "urn": "urn:wz:asset:66wz:news:20260821:105830910"
+  },
+  {
+   "key": "asset:20260508:66wz_105743242",
+   "sourceOrg": "温州新闻网",
+   "title": "张振丰专题研究文旅区域联动发展和大黄鱼产业高质量发展",
+   "publishedAt": "2026-05-08",
+   "quote": "张振丰专题研究温州文旅区域联动发展和大黄鱼产业高质量发展，强调以农文旅融合推动产业升级，打造国际化休闲度假城市和‘温州大黄鱼’品牌。重点提及园博园、朔门古港等文旅资源的整合与开发，以及大黄鱼产业的标准化、品牌化和国际化路径。",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2026/05/08/105743242.shtml",
+   "urn": "urn:wz:asset:66wz:news:20260508:66wz_105743242"
+  },
+  {
+   "key": "20040831:058674864",
+   "sourceOrg": "温州新闻网",
+   "title": "深水网箱养殖规模全国居首 海上活鱼库创1.8亿",
+   "publishedAt": "2004-08-31",
+   "quote": "据悉，我市深水网箱养殖的美国红鱼、大黄鱼、鲈鱼、石斑鱼等先后出口日本、韩国等国家，出口量达2500余吨，创汇近1000万美元，数量、种类、质量均居全国沿海各地之首。",
+   "statement": "《温州新闻网》于 2004-08-31 报道涉及【大黄鱼】：深水网箱养殖规模全国居首 海上活鱼库创1.8亿。",
+   "anchors": [
+    140,
+    222
+   ],
+   "spanHash": "d0bbe0f0",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2004/08/31/058674864.shtml",
+   "urn": "urn:wz:asset:66wz:news:20040831:058674864"
+  },
+  {
+   "key": "20111031:102850432",
+   "sourceOrg": "温州新闻网",
+   "title": "首届舟山大黄鱼烹饪邀请赛 大厨们纷纷亮“作品”",
+   "publishedAt": "2011-10-31",
+   "quote": "这是他们和浙江大学共同研发的激流海水网箱养殖大黄鱼",
+   "statement": "【大黄鱼】养殖技术：激流海水网箱养殖。",
+   "anchors": [
+    738,
+    763
+   ],
+   "spanHash": "cc04014c",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2011/10/31/102850432.shtml",
+   "urn": "urn:wz:asset:66wz:news:20111031:102850432"
+  },
+  {
+   "key": "ctx:https://finance.66wz.com/system/2019/11/26/105212502.shtml",
+   "sourceOrg": "温州新闻网",
+   "title": "50万尾大黄鱼苗“游”进 鹿西白龙屿生态海洋牧场",
+   "publishedAt": "2019-11-26",
+   "quote": "近日，国家级生态海洋牧场——洞头区鹿西乡白龙屿生态海洋牧场主养殖区正式投产，50万尾大黄鱼苗“漂洋过海”，从福建来到这里“安家”！",
+   "statement": "规范新闻样本（枢纽核验）",
+   "anchors": [
+    0,
+    65
+   ],
+   "spanHash": "b63d4ec3",
+   "confidence": null,
+   "verification": "rule_verified",
+   "directness": "原文引用",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://finance.66wz.com/system/2019/11/26/105212502.shtml",
+   "urn": null
+  },
+  {
+   "key": "20230804:105593203#7341567f",
+   "sourceOrg": "温州新闻网",
+   "title": "上半年温州农业经济增幅居全省第四 “粮仓”产量明显上升",
+   "publishedAt": "2023-08-04",
+   "quote": "近年来，我市积极实施渔业现代化提升工程，纵深推进“浙南鱼仓”修复振兴，加快发展大黄鱼等高附加值海洋养殖业，创新发展稻渔综合种养产业，渔业产品产量明显上升。",
+   "statement": "《温州新闻网》于 2023-08-04 报道涉及【大黄鱼】：上半年温州农业经济增幅居全省第四 “粮仓”产量明显上升。",
+   "anchors": [
+    595,
+    672
+   ],
+   "spanHash": "7341567f",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2023/08/04/105593203.shtml",
+   "urn": "urn:wz:asset:66wz:news:20230804:105593203"
+  }
+ ],
+ "relatedEntities": [
+  "WZ-CULT-00000208",
+  "WZ-EVENT-00000073"
+ ],
+ "relatedNews": [
+  {
+   "title": "2025年温州大黄鱼全产业链产值达19.2亿元",
+   "pubDate": "2026-09-08",
+   "url": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/news/20260908-0347/",
+   "media": "温州新闻网（News Event · 实时链路）",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "晚风、渔火、人海！园博园大黄鱼嘉年华狂欢，才是温州夏夜的正确打开方式",
+   "pubDate": "2026-08-21",
+   "url": "https://www.66wz.com/system/2026/08/21/105830910.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "7.21！温州大黄鱼“鲜”到园博园！",
+   "pubDate": "2026-07-23",
+   "url": "https://www.66wz.com/system/2026/07/23/105809930.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "urn": "urn:wz:asset:66wz:news:20260723:105809930"
+  },
+  {
+   "title": "7.20！园博园大黄鱼嘉年华狂欢",
+   "pubDate": "2026-07-22",
+   "url": "https://www.66wz.com/system/2026/07/22/105809075.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "urn": "urn:wz:asset:66wz:news:20260722:105809075"
+  },
+  {
+   "title": "鱼从鹿西来，跃动新蓝海",
+   "pubDate": "2026-07-20",
+   "url": "https://www.66wz.com/wendu/system/2026/07/20/105807991.shtml",
+   "media": "温州新闻网"
+  },
+  {
+   "title": "一口鲜掉眉毛！园博园大黄鱼盛宴开席，6天夏夜嗨玩不停",
+   "pubDate": "2026-07-19",
+   "url": "https://www.66wz.com/system/2026/07/19/105830913.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "快来园博寻鲜打卡！2026温州大黄鱼嘉年华来袭，黄鱼体验官火热招募中",
+   "pubDate": "2026-07-16",
+   "url": "https://www.66wz.com/system/2026/07/16/105805477.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "洞头50多万公斤大黄鱼“挺住了”",
+   "pubDate": "2026-07-13",
+   "url": "https://www.66wz.com/system/2026/07/13/105803603.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "urn": "urn:wz:asset:66wz:news:20260713:105803603"
+  },
+  {
+   "title": "温州这条鱼卖了19亿！",
+   "pubDate": "2026-06-11",
+   "url": "https://www.66wz.com/system/2026/06/11/105788171.shtml",
+   "media": "温州新闻网（视频报道）",
+   "grade": "B",
+   "viaEvidence": true
+  },
+  {
+   "title": "张振丰专题研究文旅区域联动发展和大黄鱼产业高质量发展",
+   "pubDate": "2026-05-08",
+   "url": "https://www.66wz.com/system/2026/05/08/105743242.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "“一条黄鱼”游出19亿元产值，从鱼苗到餐桌的闭环如何炼成",
+   "pubDate": "2026-04-21",
+   "url": "https://www.66wz.com/system/2026/04/21/105738139.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "温州洞头：生态大黄鱼有了“等级身份证”",
+   "pubDate": "2026-03-12",
+   "url": "https://www.66wz.com/system/2026/03/12/105730467.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "洞头首创声波围网养殖大黄鱼",
+   "pubDate": "2024-12-18",
+   "url": "https://www.66wz.com/system/2024/12/18/105665392.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "上半年温州农业经济增幅居全省第四 “粮仓”产量明显上升",
+   "pubDate": "2023-08-04",
+   "url": "https://www.66wz.com/system/2023/08/04/105593203.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  }
+ ]
+}

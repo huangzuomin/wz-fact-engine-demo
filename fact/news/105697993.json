@@ -1,0 +1,82 @@
+{
+ "api": {
+  "name": "城市事实发布引擎 · News Event API",
+  "version": "v0.2",
+  "generatedAt": "2026-09-08T10:00:00+08:00",
+  "canonicalBase": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/"
+ },
+ "newsEvent": {
+  "contentId": "105697993",
+  "title": "温州全市已实施新改扩建中小学项目92个",
+  "source": "温州新闻网",
+  "publishedAt": "2025-08-29 08:31",
+  "modifiedAt": "2025-08-29 08:31",
+  "cmsUrl": "https://www.66wz.com/system/2025/08/29/105697993.shtml",
+  "lifecycle": "fact_updated",
+  "simulated": false,
+  "htmlUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/news/105697993/",
+  "excerpt": "截至目前，全市已实施中小学新改扩建项目92个，其中34个项目顺利完工，包括整校新建项目10个，一批现代化、高品质新校园正陆续投用。"
+ },
+ "fastLane": [
+  {
+   "step": "新闻发布",
+   "time": "08:31:00",
+   "status": "success",
+   "result": "CMS 发布回调触发 · Content ID 入队"
+  },
+  {
+   "step": "Sitemap 更新",
+   "time": "08:31:02",
+   "status": "success",
+   "result": "sitemap.xml lastmod 已刷新 · 本次含 1 个新 URL"
+  },
+  {
+   "step": "IndexNow 提交",
+   "time": "08:31:03",
+   "status": "success",
+   "result": "HTTP 202 Accepted · 1 URL 提交至 Bing / Seznam / Yandex 通道"
+  },
+  {
+   "step": "百度收录提交",
+   "time": "08:31:04",
+   "status": "success",
+   "result": "普通收录推送成功 · 当日剩余配额 1987/2000"
+  },
+  {
+   "step": "Feed 追加",
+   "time": "08:31:05",
+   "status": "success",
+   "result": "RSS / JSON Feed 各追加 1 条（News = Event）"
+  }
+ ],
+ "entityAnchors": [
+  {
+   "entityId": "WZ-SCHOOL-00001782",
+   "entityName": "温州市中小学校新建改扩建工程",
+   "matchMethod": "标准名 + 数值口径",
+   "confidence": 0.96,
+   "para": 1,
+   "start": 28,
+   "end": 114,
+   "quote": "全市已实施中小学新改扩建项目92个，其中34个项目顺利完工",
+   "state": "confirmed"
+  }
+ ],
+ "candidateClaims": [
+  {
+   "claimId": "cl-20250829-101",
+   "entityId": "WZ-SCHOOL-00001782",
+   "predicate": "annual_projects_progress（年度进度）",
+   "value": "92个实施 / 34个完工（2025年度）",
+   "claimType": "statistics",
+   "evidenceText": "文章第1段（原文引用，物理锚点见事实页 E1）",
+   "confidence": 0.97,
+   "status": "accepted",
+   "changeId": "chg-20250829-101"
+  }
+ ],
+ "factChanges": [
+  "chg-20250829-101"
+ ],
+ "reviewSummary": "Update 已确认 → 事实 WZ-F-01782-01 现行有效"
+}

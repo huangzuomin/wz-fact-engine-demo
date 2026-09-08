@@ -1,0 +1,69 @@
+{
+ "api": {
+  "name": "城市事实发布引擎 · News Event API",
+  "version": "v0.2",
+  "generatedAt": "2026-09-08T10:00:00+08:00",
+  "canonicalBase": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/"
+ },
+ "newsEvent": {
+  "contentId": "20260908-0368",
+  "title": "瓯海泽雅高山番薯迎来丰收季 村民增收有盼头",
+  "source": "温州新闻网",
+  "publishedAt": "2026-09-08 12:10",
+  "modifiedAt": "2026-09-08 12:15",
+  "cmsUrl": "https://news.66wz.com/system/2026/09/08/105837368.shtml",
+  "lifecycle": "distributed",
+  "simulated": true,
+  "htmlUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/news/20260908-0368/",
+  "excerpt": "金秋时节，瓯海区泽雅镇的高山番薯陆续采挖上市，今年品质好于往年，村民收入有望稳步增长。"
+ },
+ "fastLane": [
+  {
+   "step": "新闻发布",
+   "time": "12:10:00",
+   "status": "success",
+   "result": "CMS 发布回调触发 · Content ID 入队"
+  },
+  {
+   "step": "Sitemap 更新",
+   "time": "12:10:02",
+   "status": "success",
+   "result": "sitemap.xml lastmod 已刷新 · 本次含 1 个新 URL"
+  },
+  {
+   "step": "IndexNow 提交",
+   "time": "12:10:03",
+   "status": "success",
+   "result": "HTTP 202 Accepted · 1 URL 提交至 Bing / Seznam / Yandex 通道"
+  },
+  {
+   "step": "百度收录提交",
+   "time": "12:10:04",
+   "status": "success",
+   "result": "普通收录推送成功 · 当日剩余配额 1987/2000"
+  },
+  {
+   "step": "Feed 追加",
+   "time": "12:10:05",
+   "status": "success",
+   "result": "RSS / JSON Feed 各追加 1 条（News = Event）"
+  }
+ ],
+ "entityAnchors": [
+  {
+   "entityId": null,
+   "entityName": "泽雅风景名胜区（未建档）",
+   "matchMethod": "地名候选 · 与受控实体匹配度过低",
+   "confidence": 0.38,
+   "para": 1,
+   "start": 4,
+   "end": 6,
+   "quote": "泽雅",
+   "state": "rejected",
+   "note": "低于锚定阈值 0.60，新闻不进入 Fact Lane"
+  }
+ ],
+ "candidateClaims": [],
+ "factChanges": [],
+ "reviewSummary": "无受控实体锚定 → 本条仅走 Fast Lane（发布即分发），不产生 Claim"
+}

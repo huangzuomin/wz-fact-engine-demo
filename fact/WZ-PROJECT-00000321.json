@@ -1,0 +1,669 @@
+{
+ "api": {
+  "name": "城市事实发布引擎",
+  "version": "v0.1",
+  "generatedAt": "2026-09-08T10:00:00+08:00",
+  "canonicalBase": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/"
+ },
+ "entity": {
+  "id": "WZ-PROJECT-00000321",
+  "standardName": "滨江商务区CBD总部大楼群",
+  "name": "滨江商务区CBD总部大楼群",
+  "aliases": [
+   "滨江CBD总部楼宇",
+   "滨江商务区大楼群",
+   "滨江CBD",
+   "温州\"陆家嘴\""
+  ],
+  "type": "重大工程 · 总部经济集聚区",
+  "schemaType": "Project",
+  "domain": "城市建设",
+  "location": "浙江省温州市鹿城区（瓯江新城核心区，学院路、华光路与瓯江路围合扇形区域）",
+  "hubRef": {
+   "fqn": "QiangChengGlossary.LandmarkAchievements.CBDHeadquartersCluster",
+   "entityRef": "QiangChengGlossary.LandmarkAchievements.CBDHeadquartersCluster",
+   "dataProduct": "强城奋进路·争创第三极数字资产 qiangcheng_third_pole_asset"
+  },
+  "summary": "\"强城行动\"十大标志性成果之首：2.4平方公里滨江CBD，正泰、华峰、青山、万洋、民商银行等总部大楼在建，缤江中心已投用。",
+  "lastVerifiedAt": "2026-09-08",
+  "reviewAfter": null,
+  "ttlDays": 30,
+  "htmlUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-PROJECT-00000321/",
+  "jsonUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-PROJECT-00000321.json"
+ },
+ "facts": [
+  {
+   "factId": "WZ-F-00321-01",
+   "predicate": "战略定位",
+   "value": "\"强城行动\"十大标志性成果第一条：在瓯江新城内打造滨江商务区CBD总部大楼群，打造代表温州最高建设水平的\"城市封面\"",
+   "factType": "当前状态",
+   "status": "active",
+   "timePrecision": "当前有效",
+   "validFrom": "2024-01-01",
+   "validTo": null,
+   "sourcePublishedAt": "2024-02-22",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-12-07",
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20240120:105619278",
+    "20240222:105623456"
+   ]
+  },
+  {
+   "factId": "WZ-F-00321-02",
+   "predicate": "片区范围",
+   "value": "滨江CBD区块为由学院路、华光路和瓯江路围成的扇形区域，规划总用地面积2.4平方公里",
+   "factType": "当前状态",
+   "status": "active",
+   "timePrecision": "当前有效",
+   "validFrom": "2025-01-23",
+   "validTo": null,
+   "sourcePublishedAt": "2025-01-23",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2027-03-08",
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20250123:105670033"
+   ]
+  },
+  {
+   "factId": "WZ-F-00321-03",
+   "predicate": "在建总部大楼",
+   "value": "正泰、温州民商银行、华峰、青山、万洋5栋总部大楼在建（2026年3月报道\"正拔节生长\"）",
+   "factType": "当前状态",
+   "status": "active",
+   "timePrecision": "进行中",
+   "validFrom": "2026-03-01",
+   "validTo": null,
+   "sourcePublishedAt": "2026-03-09",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-10-08",
+   "updateRiskLevel": "L2",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20260309:105729706"
+   ]
+  },
+  {
+   "factId": "WZ-F-00321-04",
+   "predicate": "已投用楼宇",
+   "value": "缤江中心已投用；滨江板块已聚集滨润大厦、滨江悦地商务中心、缤江中心等楼宇",
+   "factType": "当前状态",
+   "status": "active",
+   "timePrecision": "进行中",
+   "validFrom": "2026-03-01",
+   "validTo": null,
+   "sourcePublishedAt": "2026-06-25",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-10-08",
+   "updateRiskLevel": "L2",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20260625:66wz_105793511",
+    "asset:20260318:105731524"
+   ]
+  },
+  {
+   "factId": "WZ-F-00321-05",
+   "predicate": "配套绿廊",
+   "value": "滨江CBD绿廊（1.5公里绿带串起杨府山与瓯江路）2025年5月开建，计划2026年初与园博园同步开放",
+   "factType": "计划",
+   "status": "active",
+   "timePrecision": "月（计划）",
+   "validFrom": "2025-05-01",
+   "validTo": null,
+   "sourcePublishedAt": "2025-05-10",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-10-08",
+   "updateRiskLevel": "L2",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": "属计划口径；是否按期开放需现场核实后转\"已发生事实\"。",
+   "evidence": [
+    "20250123:105670033",
+    "20250510:105684055"
+   ]
+  }
+ ],
+ "timeline": [
+  {
+   "date": "2015-03-19",
+   "precision": "日",
+   "title": "温州中心综合体披露",
+   "detail": "视频报道《新地标综合体温州中心 投资60亿 360度视野288米高度》。",
+   "factRef": null,
+   "evidence": [
+    "ctx:video:cbd-headquarters"
+   ],
+   "note": "标题级证据，具体指标待文字稿核验。"
+  },
+  {
+   "date": "2016-11-16",
+   "precision": "日",
+   "title": "首家金融机构入驻",
+   "detail": "工商银行新大楼启用，滨江CBD迎来首家金融机构入驻。",
+   "factRef": null,
+   "evidence": [
+    "20161116:104932823"
+   ],
+   "note": null
+  },
+  {
+   "date": "2017-10-12",
+   "precision": "日",
+   "title": "\"陆家嘴\"现雏形",
+   "detail": "工行、浙商银行、华夏银行、浦发银行等相继落户；\"30幢大楼\"基本进入逐步入驻阶段。",
+   "factRef": null,
+   "evidence": [
+    "20171012:105033876",
+    "asset:20171012:105033876"
+   ],
+   "note": null
+  },
+  {
+   "date": "2023-02-08",
+   "precision": "日",
+   "title": "民商银行摘牌D-05地块",
+   "detail": "温州民商银行以20547万元摘牌核心片区商务中心单元D-05地块，系正泰、华峰、万洋等总部后又一家企业总部落地，为2023年首宗商服用地出让。",
+   "factRef": null,
+   "evidence": [
+    "asset:20230208:105544265",
+    "20230208:105544265"
+   ],
+   "note": null
+  },
+  {
+   "date": "2024-01-20",
+   "precision": "日",
+   "title": "纳入\"强城行动\"十大标志性成果",
+   "detail": "温州\"强城行动\"三年计划：打造全省高质量发展第三极；建设滨江商务区CBD总部大楼群列为十大标志性成果第一条。",
+   "factRef": "WZ-F-00321-01",
+   "evidence": [
+    "20240120:105619278",
+    "20240222:105623456"
+   ],
+   "note": null
+  },
+  {
+   "date": "2024-03-14",
+   "precision": "日",
+   "title": "67亿元\"温州太古里\"项目",
+   "detail": "总投资67亿元项目落地滨江商务区；建成大楼将打造成滨江商务区\"金融硅谷\"。",
+   "factRef": null,
+   "evidence": [
+    "asset:20240314:105626381",
+    "ctx:https://news.66wz.com/system/2024/03/14/105626381.shtml"
+   ],
+   "note": null
+  },
+  {
+   "date": "2025-01-23",
+   "precision": "日",
+   "title": "绿廊工程披露",
+   "detail": "滨江CBD绿廊即将开建，1.5公里绿带串起杨府山和瓯江路；区块规划总用地2.4平方公里。",
+   "factRef": "WZ-F-00321-02",
+   "evidence": [
+    "20250123:105670033"
+   ],
+   "note": null
+  },
+  {
+   "date": "2025-05-10",
+   "precision": "日",
+   "title": "绿廊计划与园博园同步开放",
+   "detail": "绿廊计划当年5月开建，2026年初与园博园同步开放。",
+   "factRef": "WZ-F-00321-05",
+   "evidence": [
+    "20250510:105684055"
+   ],
+   "note": null
+  },
+  {
+   "date": "2026-03-09",
+   "precision": "日",
+   "title": "五栋总部大楼在建",
+   "detail": "正泰、温州民商银行、华峰、青山、万洋5栋总部大楼\"正拔节生长\"。",
+   "factRef": "WZ-F-00321-03",
+   "evidence": [
+    "20260309:105729706"
+   ],
+   "note": null
+  },
+  {
+   "date": "2026-03-18",
+   "precision": "日",
+   "title": "缤江中心投用、楼宇集群成型",
+   "detail": "瓯江新城核心区10多栋楼宇集群加速建设，缤江中心投用，总部经济集聚效应形成。",
+   "factRef": "WZ-F-00321-04",
+   "evidence": [
+    "asset:20260318:105731524"
+   ],
+   "note": null
+  },
+  {
+   "date": "2026-06-25",
+   "precision": "日",
+   "title": "楼宇经济提质增效",
+   "detail": "温州楼宇经济从规模扩张转向提质增效；滨江板块成为温州总部经济核心高地。",
+   "factRef": "WZ-F-00321-04",
+   "evidence": [
+    "20260625:66wz_105793511"
+   ],
+   "note": null
+  }
+ ],
+ "evidence": [
+  {
+   "key": "20240120:105619278",
+   "sourceOrg": "温州新闻网",
+   "title": "温州“强城行动”三年计划：打造全省高质量发展第三极",
+   "publishedAt": "2024-01-20",
+   "quote": "一是建设滨江商务区CBD总部大楼群，打造代表温州最高建设水平的“城市封面”。",
+   "statement": "《温州新闻网》于 2024-01-20 报道涉及【滨江商务区CBD总部大楼群】：温州“强城行动”三年计划：打造全省高质量发展第三极。",
+   "anchors": [
+    4203,
+    4241
+   ],
+   "spanHash": "91761546",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2024/01/20/105619278.shtml",
+   "urn": "urn:wz:asset:66wz:news:20240120:105619278"
+  },
+  {
+   "key": "20240222:105623456",
+   "sourceOrg": "温州新闻网",
+   "title": "聚力“转型升级”，鹿城新春第一会发出8份任务书",
+   "publishedAt": "2024-02-22",
+   "quote": "“强城行动”十大标志性成果第一条，便是要在瓯江新城内，打造滨江商务区CBD总部大楼群，打造代表温州最高建设水平的“城市封面”。",
+   "statement": "《温州新闻网》于 2024-02-22 报道涉及【滨江商务区CBD总部大楼群】：聚力“转型升级”，鹿城新春第一会发出8份任务书。",
+   "anchors": [
+    1594,
+    1657
+   ],
+   "spanHash": "772995c0",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2024/02/22/105623456.shtml",
+   "urn": "urn:wz:asset:66wz:news:20240222:105623456"
+  },
+  {
+   "key": "20250123:105670033",
+   "sourceOrg": "温州新闻网",
+   "title": "滨江CBD绿廊即将开建 1.5公里绿带串起杨府山和瓯江路",
+   "publishedAt": "2025-01-23",
+   "quote": "滨江CBD区块是瓯江新城建设中的“核心之作”，是一个由学院路、华光路和瓯江路围成的扇形区域，规划总用地面积2.4平方公里。",
+   "statement": "《温州新闻网》于 2025-01-23 报道涉及【瓯江新城】：滨江CBD绿廊即将开建 1.5公里绿带串起杨府山和瓯江路。",
+   "anchors": [
+    102,
+    163
+   ],
+   "spanHash": "2a3e3155",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2025/01/23/105670033.shtml",
+   "urn": "urn:wz:asset:66wz:news:20250123:105670033"
+  },
+  {
+   "key": "20260309:105729706",
+   "sourceOrg": "温州新闻网",
+   "title": "建设热潮涌动！温州这些项目进度刷新",
+   "publishedAt": "2026-03-09",
+   "quote": "正泰、温州民商银行、华峰、青山、万洋5栋总部大楼正拔节生长",
+   "statement": "【瓯江新城】建设重点：五栋总部大楼建设。",
+   "anchors": [
+    145,
+    174
+   ],
+   "spanHash": "eb060636",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2026/03/09/105729706.shtml",
+   "urn": "urn:wz:asset:66wz:news:20260309:105729706"
+  },
+  {
+   "key": "20260625:66wz_105793511",
+   "sourceOrg": "温州新闻网",
+   "title": "温州楼宇经济从规模扩张转向提质增效 以楼聚产打造经济“垂直引擎”",
+   "publishedAt": "2026-06-25",
+   "quote": "作为我市瓯江新城的重要组成部分，滨江板块凸显商务金融特色，已然成为温州总部经济的核心高地，不仅聚集了滨润大厦、滨江悦地商务中心、缤江中心等楼宇，还有在建的青山、正泰、华峰、万洋、民商银行等一大批温商龙头企业总部大楼以及温州润府、滨江云谷未来社区等商办楼宇。",
+   "statement": "《温州新闻网》于 2026-06-25 报道涉及【瓯江新城】：温州楼宇经济从规模扩张转向提质增效 以楼聚产打造经济“垂直引擎”。",
+   "anchors": [
+    839,
+    967
+   ],
+   "spanHash": "94dd654e",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2026/06/25/105793511.shtml",
+   "urn": "urn:wz:asset:66wz:news:20260625:66wz_105793511"
+  },
+  {
+   "key": "asset:20260318:105731524",
+   "sourceOrg": "温州新闻网",
+   "title": "瓯江之畔，10多栋楼宇集群拔节生长",
+   "publishedAt": "2026-03-18",
+   "quote": "瓯江新城核心区楼宇集群加速建设，缤江中心投用，滨江CBD形成总部经济集聚效应。10多栋高楼拔节生长，推动中心城区能级跃升。西部时尚城项目同步推进，以楼聚产，打造创新高地，助力温州争创第三极。",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2026/03/18/105731524.shtml",
+   "urn": "urn:wz:asset:66wz:news:20260318:105731524"
+  },
+  {
+   "key": "20250510:105684055",
+   "sourceOrg": "温州新闻网",
+   "title": "滨江CBD绿廊计划5月开建 2026年初与园博园同步开放",
+   "publishedAt": "2025-05-10",
+   "quote": "未来，滨江CBD绿廊也将成为提升鹿城综合吸引力的新引擎，为区域职工提供“能量快充”，助力瓯江新城塑造“活力门户”形象，共同勾勒显山露水的瓯江新城核心区城市天际线。",
+   "statement": "《温州新闻网》于 2025-05-10 报道涉及【瓯江新城】：滨江CBD绿廊计划5月开建 2026年初与园博园同步开放。",
+   "anchors": [
+    500,
+    581
+   ],
+   "spanHash": "2e1a3c41",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2025/05/10/105684055.shtml",
+   "urn": "urn:wz:asset:66wz:news:20250510:105684055"
+  },
+  {
+   "key": "ctx:video:cbd-headquarters",
+   "sourceOrg": "温州新闻网（视频报道）",
+   "title": "新地标综合体温州中心投资60亿 360度视野288米高度",
+   "publishedAt": "2015-03-19",
+   "quote": "《新地标综合体温州中心投资60亿 360度视野288米高度》（视频标题级主张）",
+   "statement": null,
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "title_level",
+   "directness": "标题级",
+   "qualityGrade": "B",
+   "usable": true,
+   "url": "https://home.66wz.com/system/2015/03/19/104388945.shtml",
+   "urn": null
+  },
+  {
+   "key": "20161116:104932823",
+   "sourceOrg": "温州新闻网",
+   "title": "滨江CBD迎来首家金融机构入驻 工商银行新大楼启用",
+   "publishedAt": "2016-11-16",
+   "quote": "作为温州由“滨江时代”迈向“滨海时代”的中心连接点，滨江商务区一直是市委市政府重点工作之一，承担着温州经济腾飞、大温州都市圈崛起引擎的重任。",
+   "statement": "《温州新闻网》于 2016-11-16 报道涉及【温州都市圈】：滨江CBD迎来首家金融机构入驻 工商银行新大楼启用。",
+   "anchors": [
+    128,
+    198
+   ],
+   "spanHash": "f617f959",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2016/11/16/104932823.shtml",
+   "urn": "urn:wz:asset:66wz:news:20161116:104932823"
+  },
+  {
+   "key": "20171012:105033876",
+   "sourceOrg": "温州新闻网",
+   "title": "滨江商务区沿江楼宇逐步入驻 温州“陆家嘴”现雏形",
+   "publishedAt": "2017-10-12",
+   "quote": "作为温州由“滨江时代”迈向“滨海时代”的中心连接点，滨江商务区一直都是温州市委、市政府重点工作之一，承担着温州经济腾飞、大温州都市圈崛起引擎的重任。",
+   "statement": "《温州新闻网》于 2017-10-12 报道涉及【温州都市圈】：滨江商务区沿江楼宇逐步入驻 温州“陆家嘴”现雏形。",
+   "anchors": [
+    781,
+    855
+   ],
+   "spanHash": "8e304c85",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": "B",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2017/10/12/105033876.shtml",
+   "urn": "urn:wz:asset:66wz:news:20171012:105033876"
+  },
+  {
+   "key": "asset:20171012:105033876",
+   "sourceOrg": "温州新闻网",
+   "title": "滨江商务区沿江楼宇逐步入驻 温州“陆家嘴”现雏形",
+   "publishedAt": "2017-10-12",
+   "quote": "温州网讯 工商银行、浙商银行、华夏银行、浦发银行等多家金融机构相继落户滨江商务区，温州“陆家嘴”的金融氛围日渐浓厚……随着建设的进一步推进，滨江商务区沿江楼宇群集聚已初具雏形，尤其是30栋大楼基本进入逐步入驻阶段。\n作为滨江商务区建设的一大“重头戏”——“30幢大楼”主要包括桃花岛D地块、天盛一和二",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "B",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2017/10/12/105033876.shtml",
+   "urn": "urn:wz:asset:66wz:news:20171012:105033876"
+  },
+  {
+   "key": "asset:20230208:105544265",
+   "sourceOrg": "温州新闻网",
+   "title": "新春开门红！又一银行总部落户滨江商务区CBD",
+   "publishedAt": "2023-02-08",
+   "quote": "滨江商务区CBD片效果图\n温州民商银行商办楼效果图\n温州网讯 新春，滨江商务区CBD又迎来重磅喜讯。温州民商银行以20547万元成功摘牌温州市核心片区商务中心单元D-05地块，这是继正泰、华峰、万洋等企业总部入驻滨江商务区CBD之后又一落地的企业总部，也是滨江商务区2023年成功出让的首宗商服用地。",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2023/02/08/105544265.shtml",
+   "urn": "urn:wz:asset:66wz:news:20230208:105544265"
+  },
+  {
+   "key": "20230208:105544265",
+   "sourceOrg": "温州新闻网",
+   "title": "新春开门红！又一银行总部落户滨江商务区CBD",
+   "publishedAt": "2023-02-08",
+   "quote": "在2022年的温州市政府工作报告中明确，“要高水平规划建设瓯江新城，推动滨江商务区加快打造城市新地标。",
+   "statement": "《温州新闻网》于 2023-02-08 报道涉及【瓯江新城】：新春开门红！又一银行总部落户滨江商务区CBD。",
+   "anchors": [
+    203,
+    254
+   ],
+   "spanHash": "87cb01ba",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2023/02/08/105544265.shtml",
+   "urn": "urn:wz:asset:66wz:news:20230208:105544265"
+  },
+  {
+   "key": "asset:20240314:105626381",
+   "sourceOrg": "温州新闻网",
+   "title": "总投资67亿元！滨江商务区打造温州“太古里”",
+   "publishedAt": "2024-03-14",
+   "quote": null,
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2024/03/14/105626381.shtml",
+   "urn": "urn:wz:asset:66wz:news:20240314:105626381"
+  },
+  {
+   "key": "ctx:https://news.66wz.com/system/2024/03/14/105626381.shtml",
+   "sourceOrg": "温州新闻网",
+   "title": "总投资67亿元！滨江商务区打造温州“太古里”",
+   "publishedAt": "2024-03-14",
+   "quote": "建成后的大楼将打造成滨江商务区的“金融硅谷”，为瓯江新城塑造“城市封面”注入更强劲的金融动能。",
+   "statement": "规范新闻样本（枢纽核验）",
+   "anchors": [
+    113,
+    160
+   ],
+   "spanHash": "007a1c55",
+   "confidence": null,
+   "verification": "rule_verified",
+   "directness": "原文引用",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://news.66wz.com/system/2024/03/14/105626381.shtml",
+   "urn": null
+  }
+ ],
+ "relatedEntities": [
+  "WZ-EVENT-00000073",
+  "WZ-TRANS-00000864"
+ ],
+ "relatedNews": [
+  {
+   "title": "温州楼宇经济从规模扩张转向提质增效 以楼聚产打造经济“垂直引擎”",
+   "pubDate": "2026-06-25",
+   "url": "https://www.66wz.com/system/2026/06/25/105793511.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "瓯江之畔，10多栋楼宇集群拔节生长",
+   "pubDate": "2026-03-18",
+   "url": "https://www.66wz.com/system/2026/03/18/105731524.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "建设热潮涌动！温州这些项目进度刷新",
+   "pubDate": "2026-03-09",
+   "url": "https://www.66wz.com/system/2026/03/09/105729706.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "一组图片，见证温州瓯江新城滨江CBD的精彩蝶变",
+   "pubDate": "2025-08-05",
+   "url": "https://www.66wz.com/system/2025/08/05/105695055.shtml",
+   "media": "温州新闻网",
+   "grade": "B",
+   "urn": "urn:wz:asset:66wz:news:20250805:105695055"
+  },
+  {
+   "title": "滨江CBD绿廊计划5月开建 2026年初与园博园同步开放",
+   "pubDate": "2025-05-10",
+   "url": "https://www.66wz.com/system/2025/05/10/105684055.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "滨江CBD绿廊即将开建 1.5公里绿带串起杨府山和瓯江路",
+   "pubDate": "2025-01-23",
+   "url": "https://www.66wz.com/system/2025/01/23/105670033.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "总投资67亿元！滨江商务区打造温州“太古里”",
+   "pubDate": "2024-03-14",
+   "url": "https://www.66wz.com/system/2024/03/14/105626381.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "鹿城：两大板块建设瓯江新城",
+   "pubDate": "2024-03-03",
+   "url": "https://news.66wz.com/system/2024/03/03/105624902.shtml",
+   "media": "温州新闻网"
+  },
+  {
+   "title": "聚力“转型升级”，鹿城新春第一会发出8份任务书",
+   "pubDate": "2024-02-22",
+   "url": "https://www.66wz.com/system/2024/02/22/105623456.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "温州“强城行动”三年计划：打造全省高质量发展第三极",
+   "pubDate": "2024-01-20",
+   "url": "https://www.66wz.com/system/2024/01/20/105619278.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "新春开门红！又一银行总部落户滨江商务区CBD",
+   "pubDate": "2023-02-08",
+   "url": "https://www.66wz.com/system/2023/02/08/105544265.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "2000亿配套逐步落地 滨江CBD板块迎来多项利好",
+   "pubDate": "2020-12-24",
+   "url": "https://www.66wz.com/system/2020/12/24/105334691.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "urn": "urn:wz:asset:66wz:news:20201224:105334691"
+  },
+  {
+   "title": "滨江商务区沿江楼宇逐步入驻 温州“陆家嘴”现雏形",
+   "pubDate": "2017-10-12",
+   "url": "https://www.66wz.com/system/2017/10/12/105033876.shtml",
+   "media": "温州新闻网",
+   "grade": "B",
+   "viaEvidence": true
+  },
+  {
+   "title": "滨江CBD迎来首家金融机构入驻 工商银行新大楼启用",
+   "pubDate": "2016-11-16",
+   "url": "https://www.66wz.com/system/2016/11/16/104932823.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  }
+ ]
+}

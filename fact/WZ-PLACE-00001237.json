@@ -1,0 +1,647 @@
+{
+ "api": {
+  "name": "城市事实发布引擎",
+  "version": "v0.1",
+  "generatedAt": "2026-09-08T10:00:00+08:00",
+  "canonicalBase": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/"
+ },
+ "entity": {
+  "id": "WZ-PLACE-00001237",
+  "standardName": "五马历史文化街区",
+  "name": "五马街（五马历史文化街区）",
+  "aliases": [
+   "五马街",
+   "五马商圈",
+   "五马步行街",
+   "公园路",
+   "解放街老城"
+  ],
+  "type": "历史文化街区 · 文旅空间",
+  "schemaType": "Place",
+  "domain": "文化旅游",
+  "location": "浙江省温州市鹿城区（老城核心，覆盖五马街、公园路、解放街一带）",
+  "hubRef": {
+   "fqn": "OuCuisineGlossary.CulinaryPlaces.FoodStreets.WuMaHistoricalDistrict",
+   "entityRef": "wz:entity:food:poi:wuma_street",
+   "dataProduct": "瓯菜数据资产 ou_cuisine_asset v2.0（Authority.A / AIReady.L3）"
+  },
+  "summary": "温州老城核心商业与文化街区：2018年起整体改造提升，2021年入选首批浙江省旅游休闲街区，现为主城区文旅核心地标。",
+  "lastVerifiedAt": "2026-09-08",
+  "reviewAfter": null,
+  "ttlDays": 90,
+  "htmlUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-PLACE-00001237/",
+  "jsonUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-PLACE-00001237.json"
+ },
+ "facts": [
+  {
+   "factId": "WZ-F-01237-01",
+   "predicate": "空间定位",
+   "value": "温州老城核心商业和饮食空间，覆盖五马街、公园路、解放街一带",
+   "factType": "当前状态",
+   "status": "active",
+   "timePrecision": "当前有效",
+   "validFrom": "2021-01-01",
+   "validTo": null,
+   "sourcePublishedAt": null,
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-12-07",
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "hub:wuma"
+   ]
+  },
+  {
+   "factId": "WZ-F-01237-02",
+   "predicate": "改造提升",
+   "value": "2018年开始对蝉街、五马、公园路实施整体改造提升；禅街、五马街于2019年国庆期间改造后开放",
+   "factType": "已发生事实",
+   "status": "active",
+   "timePrecision": "年（起始）",
+   "validFrom": "2018-01-01",
+   "validTo": null,
+   "sourcePublishedAt": "2020-11-22",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2027-03-08",
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20201122:105326592",
+    "20190611:105171688",
+    "ctx:https://news.66wz.com/system/2020/10/26/105319794.shtml"
+   ]
+  },
+  {
+   "factId": "WZ-F-01237-03",
+   "predicate": "省级荣誉",
+   "value": "2021年11月获评首批浙江省旅游休闲街区（融合瓯菜、瓯礼、瓯绣等瓯文化元素）",
+   "factType": "已发生事实",
+   "status": "active",
+   "timePrecision": "月",
+   "validFrom": "2021-11-01",
+   "validTo": null,
+   "sourcePublishedAt": "2021-11-30",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2027-03-08",
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "asset:20211130:105421414"
+   ]
+  },
+  {
+   "factId": "WZ-F-01237-04",
+   "predicate": "街区文化品牌",
+   "value": "2022年10月\"五马清廉街区\"开街，同步首发教育读本《东瓯廉集》",
+   "factType": "已发生事实",
+   "status": "active",
+   "timePrecision": "月",
+   "validFrom": "2022-10-01",
+   "validTo": null,
+   "sourcePublishedAt": "2022-10-10",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2027-03-08",
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "asset:20221010:105509114"
+   ]
+  },
+  {
+   "factId": "WZ-F-01237-05",
+   "predicate": "所在城区文旅热度（鹿城区，含五马古街）",
+   "value": "高峰期日均客流量25万人次、年文旅收入超30亿元（2023年9月报道口径）",
+   "factType": "统计数据",
+   "status": "superseded",
+   "timePrecision": "时点统计",
+   "validFrom": "2023-09-01",
+   "validTo": "2025-09-30",
+   "sourcePublishedAt": "2023-09-26",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-12-07",
+   "updateRiskLevel": "L2",
+   "supersedes": null,
+   "supersededBy": "WZ-F-01237-06",
+   "note": "已被2025年国庆中秋单期数据覆盖为更新口径；旧值保留备查。",
+   "evidence": [
+    "20230926:105601711"
+   ]
+  },
+  {
+   "factId": "WZ-F-01237-06",
+   "predicate": "所在城区文旅热度（鹿城区，含五马街区）",
+   "value": "2025年国庆中秋假期历史文化街区人流量突破100万人次（\"千年斗城·海丝名城\"主题、50余场活动）",
+   "factType": "统计数据",
+   "status": "active",
+   "timePrecision": "假期区间",
+   "validFrom": "2025-10-01",
+   "validTo": "2025-10-08",
+   "sourcePublishedAt": "2025-10-07",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-12-07",
+   "updateRiskLevel": "L2",
+   "supersedes": "WZ-F-01237-05",
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20251007:105702672"
+   ]
+  },
+  {
+   "factId": "WZ-F-01237-07",
+   "predicate": "园博联动",
+   "value": "2025年9月起承接\"全城园博\"分会场市集活动（13个分会场特色摊位、瓯菜与非遗展示）",
+   "factType": "已发生事实",
+   "status": "active",
+   "timePrecision": "月",
+   "validFrom": "2025-09-01",
+   "validTo": null,
+   "sourcePublishedAt": "2026-04-23",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-12-07",
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "asset:20250927:105701586",
+    "ctx:https://xuanchuan.66wz.com/system/2026/04/23/105738705.shtml"
+   ]
+  }
+ ],
+ "timeline": [
+  {
+   "date": "2018-01-01",
+   "precision": "年",
+   "title": "整体改造提升启动",
+   "detail": "温州对蝉街、五马、公园路进行整体改造提升。",
+   "factRef": null,
+   "evidence": [
+    "20201122:105326592",
+    "asset:20180927:105116373"
+   ],
+   "note": null
+  },
+  {
+   "date": "2018-06-29",
+   "precision": "日",
+   "title": "街区保护规划公示",
+   "detail": "《规划》指出街区集中体现4点历史文化价值，五马街区是古城\"南市\"历史功能传承的代表区域；五马-墨池与城西街计划创建省级历史文化街区。",
+   "factRef": null,
+   "evidence": [
+    "ctx:https://tour.66wz.com/system/2018/06/29/105094835.shtml"
+   ],
+   "note": null
+  },
+  {
+   "date": "2019-10-01",
+   "precision": "月",
+   "title": "改造后首度国庆开放",
+   "detail": "禅街、五马街改造后于国庆期间开放，面貌焕然一新；规划将禅街、五马街、公园路连为一体，以步行街慢行形式打造街区主动脉。",
+   "factRef": null,
+   "evidence": [
+    "20190611:105171688",
+    "ctx:https://news.66wz.com/system/2019/10/08/105199832.shtml"
+   ],
+   "note": null
+  },
+  {
+   "date": "2020-10-26",
+   "precision": "日",
+   "title": "\"温州第一街\"蝶变金名片",
+   "detail": "历时3年改造提升，蝶变成为具有城市代表性的温州\"金名片\"。",
+   "factRef": null,
+   "evidence": [
+    "ctx:https://news.66wz.com/system/2020/10/26/105319794.shtml"
+   ],
+   "note": null
+  },
+  {
+   "date": "2021-11-30",
+   "precision": "日",
+   "title": "获评首批省旅游休闲街区",
+   "detail": "以文化引领为核心，融合瓯菜、瓯礼、瓯绣等瓯文化元素，打造集吃、住、行、游、购、娱于一体的旅游休闲体验。",
+   "factRef": null,
+   "evidence": [
+    "asset:20211130:105421414"
+   ],
+   "note": null
+  },
+  {
+   "date": "2022-10-10",
+   "precision": "日",
+   "title": "\"五马清廉街区\"开街",
+   "detail": "以\"清廉\"为关键词的教育读本《东瓯廉集》同步首发，讲述温州历史上50位清官廉吏故事。",
+   "factRef": null,
+   "evidence": [
+    "asset:20221010:105509114"
+   ],
+   "note": null
+  },
+  {
+   "date": "2023-09-26",
+   "precision": "日",
+   "title": "鹿城文旅数据发布",
+   "detail": "鹿城拥有江心古屿、五马古街、朔门古港、九山古戏四张国字号文化金名片；高峰期日均客流25万人次、年文旅收入超30亿元。",
+   "factRef": "WZ-F-01237-05",
+   "evidence": [
+    "20230926:105601711"
+   ],
+   "note": null
+  },
+  {
+   "date": "2025-09-27",
+   "precision": "日",
+   "title": "\"全城园博\"分会场活动进街区",
+   "detail": "13个分会场特色摊位汇聚五马街区，永嘉麦饼、瓯柑等地方美食与非遗文创展示。",
+   "factRef": null,
+   "evidence": [
+    "asset:20250927:105701586"
+   ],
+   "note": null
+  },
+  {
+   "date": "2025-10-07",
+   "precision": "日",
+   "title": "国庆中秋假期人流量破百万",
+   "detail": "鹿城历史文化街区以\"千年斗城·海丝名城\"为主题携50余场特色活动，人流量突破100万。",
+   "factRef": "WZ-F-01237-06",
+   "evidence": [
+    "20251007:105702672"
+   ],
+   "note": null
+  }
+ ],
+ "evidence": [
+  {
+   "key": "hub:wuma",
+   "sourceOrg": "城市可信内容枢纽 · 受控实体词表",
+   "title": "五马历史文化街区（官方定义）",
+   "quote": "温州老城核心商业和饮食空间，覆盖五马街、公园路、解放街一带。",
+   "statement": "温州老城核心商业和饮食空间，覆盖五马街、公园路、解放街一带。",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "controlled_vocabulary",
+   "directness": null,
+   "qualityGrade": null,
+   "usable": true,
+   "url": null,
+   "urn": null
+  },
+  {
+   "key": "20201122:105326592",
+   "sourceOrg": "温州新闻网",
+   "title": "原始报道（题名未随证据返回）",
+   "publishedAt": "2020-11-22",
+   "quote": null,
+   "statement": null,
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "unknown",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2020/11/22/105326592.shtml",
+   "urn": "urn:wz:asset:66wz:news:20201122:105326592"
+  },
+  {
+   "key": "20190611:105171688",
+   "sourceOrg": "温州新闻网",
+   "title": "历史城区计划实施10多个提升项目 江心屿公园路五马华盖里将迎蜕变",
+   "publishedAt": "2019-06-11",
+   "quote": "事实上，近年来我市一直致力于推进历史文化名城建设，打造了南塘风貌街，修缮和保护谯楼、夏鼐故居等文物古迹，对瓯江路沿线进行改造提升……不仅如此，去年我市还对禅街、五马街进行改造，并于去年国庆期间开放，改造后的禅街、五马街面貌焕然一新，展现了浓浓的“老温州”味道。",
+   "statement": "《温州新闻网》于 2019-06-11 报道涉及【南塘风貌街】：历史城区计划实施10多个提升项目 江心屿公园路五马华盖里将迎蜕变。",
+   "anchors": [
+    1817,
+    1947
+   ],
+   "spanHash": "6b8be002",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2019/06/11/105171688.shtml",
+   "urn": "urn:wz:asset:66wz:news:20190611:105171688"
+  },
+  {
+   "key": "ctx:https://news.66wz.com/system/2020/10/26/105319794.shtml",
+   "sourceOrg": "温州新闻网",
+   "title": "五马街区描绘蓝图 形神兼备讲好历史文化街区新故事",
+   "publishedAt": "2020-10-26",
+   "quote": "温州网讯 有着“温州第一街”之称的五马历史文化街区，历时3年改造提升，蝶变成为具有城市代表性的温州“金名片”。",
+   "statement": "规范新闻样本（枢纽核验）",
+   "anchors": [
+    0,
+    55
+   ],
+   "spanHash": "64632649",
+   "confidence": null,
+   "verification": "rule_verified",
+   "directness": "原文引用",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://news.66wz.com/system/2020/10/26/105319794.shtml",
+   "urn": null
+  },
+  {
+   "key": "asset:20211130:105421414",
+   "sourceOrg": "温州新闻网",
+   "title": "五马历史文化街区获评首批省旅游休闲街区",
+   "publishedAt": "2021-11-30",
+   "quote": "五马历史文化街区获评首批省旅游休闲街区，以文化引领为核心，融合瓯菜、瓯礼、瓯绣等瓯文化元素，打造集吃、住、行、游、购、娱于一体的旅游休闲体验。",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2021/11/30/105421414.shtml",
+   "urn": "urn:wz:asset:66wz:news:20211130:105421414"
+  },
+  {
+   "key": "asset:20221010:105509114",
+   "sourceOrg": "温州新闻网",
+   "title": "温州廉洁文化新地标“五马清廉街区”开街",
+   "publishedAt": "2022-10-10",
+   "quote": "温州网讯 清风徐来，“廉”花盛开。见证温州千年风华的历史文化街区，从昨天起又有一个新的称呼——五马清廉街区。\n开街仪式上，以“清廉”为关键词的教育读本《东瓯廉集》同步首发。书中讲述温州历史上50位清官廉吏的故事，向世人呈现一个“文以化人、廉以养德”的温州。\n“一书一街区”，皆是我市打造新时代廉洁文化",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2022/10/10/105509114.shtml",
+   "urn": "urn:wz:asset:66wz:news:20221010:105509114"
+  },
+  {
+   "key": "20230926:105601711",
+   "sourceOrg": "温州新闻网",
+   "title": "鹿城获评首批省级 新型消费城市建设试点",
+   "publishedAt": "2023-09-26",
+   "quote": "文旅消费呈蓬勃兴起之势，目前全区已拥有江心古屿、五马古街、朔门古港、九山古戏四张国字号文化金名片，推出全国首个戏曲生活市集“九山书会·大宋戏仓”，高峰期日均客流量达到25万人次，年文旅收入超30亿元。",
+   "statement": "《温州新闻网》于 2023-09-26 报道涉及【温州朔门古港遗址】：鹿城获评首批省级 新型消费城市建设试点。",
+   "anchors": [
+    237,
+    337
+   ],
+   "spanHash": "b222b9bc",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2023/09/26/105601711.shtml",
+   "urn": "urn:wz:asset:66wz:news:20230926:105601711"
+  },
+  {
+   "key": "20251007:105702672",
+   "sourceOrg": "温州新闻网",
+   "title": "鹿城历史文化街区人流量破100万！",
+   "publishedAt": "2025-10-07",
+   "quote": "作为鹿城文旅地标，这个国庆中秋假期，鹿城历史文化街区以“千年斗城·海丝名城”为核心主题，携50余场特色活动重磅启幕，交出了一份亮眼的“人气答卷”。",
+   "statement": "《温州新闻网》于 2025-10-07 报道涉及【世界海丝历史文化名城】：鹿城历史文化街区人流量破100万！。",
+   "anchors": [
+    0,
+    73
+   ],
+   "spanHash": "3c66062b",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2025/10/07/105702672.shtml",
+   "urn": "urn:wz:asset:66wz:news:20251007:105702672"
+  },
+  {
+   "key": "asset:20250927:105701586",
+   "sourceOrg": "温州新闻网",
+   "title": "“全城园博”分会场摊位亮点纷呈",
+   "publishedAt": "2025-09-27",
+   "quote": "在五马历史文化街区举行的‘全城园博’活动，汇聚了温州13个分会场的特色摊位，展示了瓯菜与非遗文化的融合。永嘉麦饼、瓯柑等地方美食成为焦点，活动结合了花卉市集、非遗文创、美食试吃等元素，呈现了一场多元文化交融的金秋派对。",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2025/09/27/105701586.shtml",
+   "urn": "urn:wz:asset:66wz:news:20250927:105701586"
+  },
+  {
+   "key": "ctx:https://xuanchuan.66wz.com/system/2026/04/23/105738705.shtml",
+   "sourceOrg": "温州新闻网",
+   "title": "园博风漫染五马街！打卡即大片，快来投稿“园博映像”摄影征集",
+   "publishedAt": "2026-04-23",
+   "quote": "温州网讯（记者：徐彬彬 实习生：刘思琪）园博盛会启幕，“全城园博”氛围正浓。",
+   "statement": "规范新闻样本（枢纽核验）",
+   "anchors": [
+    0,
+    38
+   ],
+   "spanHash": "7ac97b1c",
+   "confidence": null,
+   "verification": "rule_verified",
+   "directness": "原文引用",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://xuanchuan.66wz.com/system/2026/04/23/105738705.shtml",
+   "urn": null
+  },
+  {
+   "key": "ctx:https://tour.66wz.com/system/2018/06/29/105094835.shtml",
+   "sourceOrg": "温州新闻网",
+   "title": "五马-墨池与城西街 计划创省级历史文化街区",
+   "publishedAt": "2018-06-29",
+   "quote": "《规划》指出，该街区集中体现4点历史文化价值：一是五马街区是古城“南市”历史功能传承的代表区域；",
+   "statement": "规范新闻样本（枢纽核验）",
+   "anchors": [
+    463,
+    511
+   ],
+   "spanHash": "592586fb",
+   "confidence": null,
+   "verification": "rule_verified",
+   "directness": "原文引用",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://tour.66wz.com/system/2018/06/29/105094835.shtml",
+   "urn": null
+  },
+  {
+   "key": "asset:20180927:105116373",
+   "sourceOrg": "温州新闻网",
+   "title": "五马街历史文化街区 国庆节原汁原味迎客",
+   "publishedAt": "2018-09-27",
+   "quote": "记者探访蝉街、五马街改造工程，工人正加班加点进行路面铺设和沿街建筑的外立面改造。",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "B",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2018/09/27/105116373.shtml",
+   "urn": "urn:wz:asset:66wz:news:20180927:105116373"
+  },
+  {
+   "key": "ctx:https://news.66wz.com/system/2019/10/08/105199832.shtml",
+   "sourceOrg": "温州新闻网",
+   "title": "五马老街“活”出新姿态 历史文化可传承可触摸可带走",
+   "publishedAt": "2019-10-08",
+   "quote": "规划将禅街、五马街、公园路连为一体，以步行街慢行的形式，打造成五马历史文化街区主动脉。",
+   "statement": "规范新闻样本（枢纽核验）",
+   "anchors": [
+    340,
+    383
+   ],
+   "spanHash": "c668850f",
+   "confidence": null,
+   "verification": "rule_verified",
+   "directness": "原文引用",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://news.66wz.com/system/2019/10/08/105199832.shtml",
+   "urn": null
+  }
+ ],
+ "relatedEntities": [
+  "WZ-PLACE-00000322",
+  "WZ-PLACE-00000298",
+  "WZ-CULT-00000208",
+  "WZ-TRANS-00000864",
+  "WZ-EVENT-00000073"
+ ],
+ "relatedNews": [
+  {
+   "title": "“世纪音弦”走进温州五马街",
+   "pubDate": "2026-09-01",
+   "url": null,
+   "media": "温州新闻网",
+   "grade": "A",
+   "urn": "urn:wz:asset:66wz:video:20260901:105831480"
+  },
+  {
+   "title": "园博风漫染五马街！打卡即大片，快来投稿“园博映像”摄影征集",
+   "pubDate": "2026-04-23",
+   "url": "https://xuanchuan.66wz.com/system/2026/04/23/105738705.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "鹿城历史文化街区人流量破100万！",
+   "pubDate": "2025-10-07",
+   "url": "https://www.66wz.com/system/2025/10/07/105702672.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "“全城园博”分会场摊位亮点纷呈",
+   "pubDate": "2025-09-27",
+   "url": "https://www.66wz.com/system/2025/09/27/105701586.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "鹿城获评首批省级 新型消费城市建设试点",
+   "pubDate": "2023-09-26",
+   "url": "https://www.66wz.com/system/2023/09/26/105601711.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "温州廉洁文化新地标“五马清廉街区”开街",
+   "pubDate": "2022-10-10",
+   "url": "https://www.66wz.com/system/2022/10/10/105509114.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "五马历史文化街区获评首批省旅游休闲街区",
+   "pubDate": "2021-11-30",
+   "url": "https://www.66wz.com/system/2021/11/30/105421414.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "原始报道（题名未随证据返回）",
+   "pubDate": "2020-11-22",
+   "url": "https://www.66wz.com/system/2020/11/22/105326592.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "五马历史街区",
+   "pubDate": "2020-11-16",
+   "url": "https://www.66wz.com/system/2020/11/16/105325384.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "urn": "urn:wz:asset:66wz:news:20201116:105325384"
+  },
+  {
+   "title": "五马街区描绘蓝图 形神兼备讲好历史文化街区新故事",
+   "pubDate": "2020-10-26",
+   "url": "https://news.66wz.com/system/2020/10/26/105319794.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "永嘉麦饼品牌亮相五马历史文化街区",
+   "pubDate": "2020-09-30",
+   "url": "https://www.66wz.com/system/2020/09/30/105313750.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "urn": "urn:wz:asset:66wz:news:20200930:105313750"
+  },
+  {
+   "title": "五马街历史文化街区跨年活动开幕",
+   "pubDate": "2020-01-02",
+   "url": "https://www.66wz.com/system/2020/01/02/105221712.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "urn": "urn:wz:asset:66wz:news:20200102:105221712"
+  },
+  {
+   "title": "五马老街“活”出新姿态 历史文化可传承可触摸可带走",
+   "pubDate": "2019-10-08",
+   "url": "https://news.66wz.com/system/2019/10/08/105199832.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "历史城区计划实施10多个提升项目 江心屿公园路五马华盖里将迎蜕变",
+   "pubDate": "2019-06-11",
+   "url": "https://www.66wz.com/system/2019/06/11/105171688.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  }
+ ]
+}

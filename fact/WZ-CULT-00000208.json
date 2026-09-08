@@ -1,0 +1,493 @@
+{
+ "api": {
+  "name": "城市事实发布引擎",
+  "version": "v0.1",
+  "generatedAt": "2026-09-08T10:00:00+08:00",
+  "canonicalBase": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/"
+ },
+ "entity": {
+  "id": "WZ-CULT-00000208",
+  "standardName": "瓯菜（温州菜）",
+  "name": "瓯菜",
+  "aliases": [
+   "温州菜",
+   "瓯味",
+   "东瓯菜",
+   "瓯帮菜"
+  ],
+  "type": "饮食文化 · 非遗",
+  "schemaType": "Thing",
+  "domain": "历史文化",
+  "location": "浙江省温州市",
+  "hubRef": {
+   "fqn": "wz:entity:food:cuisine:oucai",
+   "entityRef": "wz:entity:food:cuisine:oucai",
+   "dataProduct": "瓯菜数据资产 ou_cuisine_asset v2.0（Authority.A / AIReady.L3，26年历史新闻全量底座×《中国瓯菜》典籍）"
+  },
+  "summary": "浙菜四大流派之一，以海鲜为主、\"轻油轻芡重刀工\"著称；温州正以瓯菜为抓手创建\"世界美食之都\"。",
+  "lastVerifiedAt": "2026-09-08",
+  "reviewAfter": null,
+  "ttlDays": 180,
+  "htmlUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-CULT-00000208/",
+  "jsonUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-CULT-00000208.json"
+ },
+ "facts": [
+  {
+   "factId": "WZ-F-00208-01",
+   "predicate": "菜系定位",
+   "value": "\"温州菜\"又称\"瓯菜\"，是中国八大菜系中浙菜的四大流派之一，以海鲜为主，特点为\"轻油、轻芡，重刀工\"",
+   "factType": "当前状态",
+   "status": "active",
+   "timePrecision": "当前有效",
+   "validFrom": "2025-06-01",
+   "validTo": null,
+   "sourcePublishedAt": "2025-06-15",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2027-03-08",
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20250615:105688569#61eb7e2d",
+    "asset:20091005:101453209"
+   ]
+  },
+  {
+   "factId": "WZ-F-00208-02",
+   "predicate": "代表性荣誉",
+   "value": "七星鱼丸、蒜子鱼皮、三丝敲鱼、炸熘黄鱼、八宝松饭等经典瓯菜曾登上北京人民大会堂国宴和G20峰会餐桌",
+   "factType": "已发生事实",
+   "status": "active",
+   "timePrecision": "当前有效",
+   "validFrom": "2025-06-01",
+   "validTo": null,
+   "sourcePublishedAt": "2025-06-15",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2027-03-08",
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20250615:105688569#b63802ce"
+   ]
+  },
+  {
+   "factId": "WZ-F-00208-03",
+   "predicate": "城市创建行动",
+   "value": "温州正推进\"世界美食之都\"创建，以美食推动城市文化、产业与国际交流",
+   "factType": "当前状态",
+   "status": "active",
+   "timePrecision": "进行中",
+   "validFrom": "2025-06-01",
+   "validTo": null,
+   "sourcePublishedAt": "2026-04-02",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-12-07",
+   "updateRiskLevel": "L2",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20250615:105688569#61eb7e2d",
+    "asset:20260402:105734433"
+   ]
+  },
+  {
+   "factId": "WZ-F-00208-04",
+   "predicate": "产业化建议",
+   "value": "市人大代表提出建设瓯菜博物馆、发展瓩味预制菜、推动美食经济全产业链等建议（2025年6月报道）",
+   "factType": "来源主张",
+   "status": "active",
+   "timePrecision": "月",
+   "validFrom": "2025-06-30",
+   "validTo": null,
+   "sourcePublishedAt": "2025-06-30",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2027-03-08",
+   "updateRiskLevel": "L2",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": "此为新闻报道中的建议性主张，非已落地方案，按\"来源主张\"类型发布，不与已发生事实混同。",
+   "evidence": [
+    "asset:20250630:105690492"
+   ]
+  }
+ ],
+ "timeline": [
+  {
+   "date": "2007-11-19",
+   "precision": "日",
+   "title": "瓯菜品牌化讨论",
+   "detail": "媒体讨论瓯菜突破地域局限、申报非物质文化遗产、借鉴杭帮菜经验走向全国。",
+   "factRef": null,
+   "evidence": [
+    "asset:20071119:100442877"
+   ],
+   "note": null
+  },
+  {
+   "date": "2009-10-05",
+   "precision": "日",
+   "title": "\"二轻一重\"技艺定调",
+   "detail": "《温州·瓯菜》专题：以海鲜为主，讲究\"二轻一重\"；三丝敲鱼、双味蝤蛑、炸溜黄鱼等经典菜肴成型。",
+   "factRef": "WZ-F-00208-01",
+   "evidence": [
+    "asset:20091005:101453209"
+   ],
+   "note": null
+  },
+  {
+   "date": "2016-11-25",
+   "precision": "日",
+   "title": "\"2016瓯菜成果展\"举行",
+   "detail": "瓯菜俱乐部打造，市区及县市60余家酒店100多位大厨献上上百道菜肴。",
+   "factRef": null,
+   "evidence": [
+    "20161125:104937577"
+   ],
+   "note": null
+  },
+  {
+   "date": "2019-01-09",
+   "precision": "日",
+   "title": "2019瓯菜文化节启动",
+   "detail": "以\"传承经典瓯菜 创新时尚消费\"为主题，推1000桌瓯菜宴，多家餐饮酒店参与。",
+   "factRef": null,
+   "evidence": [
+    "20190109:105141779"
+   ],
+   "note": null
+  },
+  {
+   "date": "2025-06-15",
+   "precision": "日",
+   "title": "助力\"世界美食之都\"创建",
+   "detail": "瓯菜登上国宴与G20餐桌的历史被系统梳理，创建\"世界美食之都\"路径披露。",
+   "factRef": "WZ-F-00208-03",
+   "evidence": [
+    "20250615:105688569#b63802ce",
+    "20250615:105688569#61eb7e2d"
+   ],
+   "note": null
+  },
+  {
+   "date": "2025-06-30",
+   "precision": "日",
+   "title": "人大代表支招瓯菜产业链",
+   "detail": "建议建设瓯菜博物馆、发展瓩味预制菜、文旅融合推广。",
+   "factRef": "WZ-F-00208-04",
+   "evidence": [
+    "asset:20250630:105690492"
+   ],
+   "note": null
+  },
+  {
+   "date": "2025-11-05",
+   "precision": "日",
+   "title": "老手艺人挖掘百道瓯菜",
+   "detail": "76岁瓯菜名厨柯五一定下挖掘一百道瓯菜的目标，为瓯菜出圈出海贡献力量。",
+   "factRef": null,
+   "evidence": [
+    "20251105:105706450"
+   ],
+   "note": null
+  },
+  {
+   "date": "2026-04-02",
+   "precision": "日",
+   "title": "美食城市策略传播",
+   "detail": "《你会为一道菜来温州吗》：以文化为食材、以生态为底料、以世界为舞台。",
+   "factRef": "WZ-F-00208-03",
+   "evidence": [
+    "asset:20260402:105734433"
+   ],
+   "note": null
+  }
+ ],
+ "evidence": [
+  {
+   "key": "20250615:105688569#61eb7e2d",
+   "sourceOrg": "温州新闻网",
+   "title": "助力“世界美食之都”创建，温州这么干！",
+   "publishedAt": "2025-06-15",
+   "quote": "“温州菜”又称“瓯菜”，是中国八大菜系中浙菜的四大流派之一，以“轻油、轻芡，重刀工；",
+   "statement": "《温州新闻网》于 2025-06-15 报道涉及【刀工与敲制】：助力“世界美食之都”创建，温州这么干！。",
+   "anchors": [
+    119,
+    161
+   ],
+   "spanHash": "61eb7e2d",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2025/06/15/105688569.shtml",
+   "urn": "urn:wz:asset:66wz:news:20250615:105688569"
+  },
+  {
+   "key": "asset:20091005:101453209",
+   "sourceOrg": "温州新闻网",
+   "title": "温州·瓯菜",
+   "publishedAt": "2009-10-05",
+   "quote": "瓯菜以海鲜为主，讲究‘二轻一重’，突出刀工与火候。三丝敲鱼、双味蝤蛑、炸溜黄鱼等经典菜肴展现温州饮食文化的独特魅力。金次凡创新的锦绣鱼丝、芙蓉蝤蛑等菜品，体现了瓯菜技艺的传承与创新。本文深入解析瓯菜的技艺、原料与文化内涵，展现其作为浙江菜系重要流派的特色。",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2009/10/05/101453209.shtml",
+   "urn": "urn:wz:asset:66wz:news:20091005:101453209"
+  },
+  {
+   "key": "20250615:105688569#b63802ce",
+   "sourceOrg": "温州新闻网",
+   "title": "助力“世界美食之都”创建，温州这么干！",
+   "publishedAt": "2025-06-15",
+   "quote": "而七星鱼丸、蒜子鱼皮、三丝敲鱼、炸熘黄鱼、八宝松饭等这些传统的经典瓯菜也都被端上过北京人民大会堂的国宴和G20峰会的餐桌。",
+   "statement": "《温州新闻网》于 2025-06-15 报道涉及【温州鱼丸】：助力“世界美食之都”创建，温州这么干！。",
+   "anchors": [
+    267,
+    328
+   ],
+   "spanHash": "b63802ce",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2025/06/15/105688569.shtml",
+   "urn": "urn:wz:asset:66wz:news:20250615:105688569"
+  },
+  {
+   "key": "asset:20260402:105734433",
+   "sourceOrg": "温州新闻网",
+   "title": "你会为一道菜来温州吗",
+   "publishedAt": "2026-04-02",
+   "quote": "本文围绕温州美食发展，提出以文化为食材、以生态为底料、以世界为舞台三大策略，旨在通过美食推动城市文化、产业与国际交流。文章强调瓯菜的历史底蕴与文化价值，探讨如何通过美食生态建设与全球推广，让温州成为世界美食之都。",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2026/04/02/105734433.shtml",
+   "urn": "urn:wz:asset:66wz:news:20260402:105734433"
+  },
+  {
+   "key": "asset:20250630:105690492",
+   "sourceOrg": "温州新闻网",
+   "title": "“链”上瓯菜，需要做好哪些文章？",
+   "publishedAt": "2025-06-30",
+   "quote": "本文聚焦瓯菜文化传承与产业发展，探讨如何通过品牌推广、文旅融合、预制菜创新及博物馆建设等举措，助力温州打造‘双万’城市。人大代表提出多项建议，包括建设瓯菜博物馆、发展瓯味预制菜、推动美食经济全产业链，以提升瓯菜知名度和影响力。",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2025/06/30/105690492.shtml",
+   "urn": "urn:wz:asset:66wz:news:20250630:105690492"
+  },
+  {
+   "key": "asset:20071119:100442877",
+   "sourceOrg": "温州新闻网",
+   "title": "品瓯菜 说瓯菜",
+   "publishedAt": "2007-11-19",
+   "quote": "本文围绕瓯菜如何突破地域局限、提升品牌影响力展开讨论，提出利用温州人经济优势、加强品牌宣传、申报非物质文化遗产等策略。同时强调瓯菜需创新品种与烹饪方法，借鉴杭帮菜的成功经验，以适应不同地域口味需求，推动瓯菜走向全国乃至海外。",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2007/11/19/100442877.shtml",
+   "urn": "urn:wz:asset:66wz:news:20071119:100442877"
+  },
+  {
+   "key": "20161125:104937577",
+   "sourceOrg": "温州新闻网",
+   "title": "最会做菜的男人都在这 百位大厨打造“瓯菜盛宴”",
+   "publishedAt": "2016-11-25",
+   "quote": "来自市区及各县市的60余家酒店的100多位大厨都献上了各自的拿手好菜",
+   "statement": "【溢香厅非遗工坊】参与：瓯菜展。",
+   "anchors": [
+    151,
+    185
+   ],
+   "spanHash": "28e55629",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2016/11/25/104937577.shtml",
+   "urn": "urn:wz:asset:66wz:news:20161125:104937577"
+  },
+  {
+   "key": "20190109:105141779",
+   "sourceOrg": "温州新闻网",
+   "title": "2019瓯菜文化节1月27日启动 推1000桌瓯菜宴",
+   "publishedAt": "2019-01-09",
+   "quote": "我市喜来登、云天楼、奥林匹克、溢香厅、周师傅瓯菜馆等餐饮酒店参加这次活动",
+   "statement": "【溢香厅非遗工坊】参与活动：作为餐饮酒店之一参与瓯菜节。",
+   "anchors": [
+    192,
+    228
+   ],
+   "spanHash": "b3ac155c",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2019/01/09/105141779.shtml",
+   "urn": "urn:wz:asset:66wz:news:20190109:105141779"
+  },
+  {
+   "key": "20251105:105706450",
+   "sourceOrg": "温州新闻网",
+   "title": "柯五一：76岁定个小目标，挖掘一百道瓯菜",
+   "publishedAt": "2025-11-05",
+   "quote": "为瓯菜出圈出海贡献老手艺人的力量",
+   "statement": "【溢香厅非遗工坊】传承瓯菜文化：为瓯菜出圈出海贡献老手艺人的力量。",
+   "anchors": [
+    112,
+    128
+   ],
+   "spanHash": "ee68ece1",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2025/11/05/105706450.shtml",
+   "urn": "urn:wz:asset:66wz:news:20251105:105706450"
+  }
+ ],
+ "relatedEntities": [
+  "WZ-GOOD-00000512",
+  "WZ-PLACE-00001237",
+  "WZ-PLACE-00000322",
+  "WZ-EVENT-00000073"
+ ],
+ "relatedNews": [
+  {
+   "title": "你会为一道菜来温州吗",
+   "pubDate": "2026-04-02",
+   "url": "https://www.66wz.com/system/2026/04/02/105734433.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "温州市工业与能源集团  “11子”抱团发力新赛道新领域",
+   "pubDate": "2026-03-11",
+   "url": "https://finance.66wz.com/system/2026/03/11/105730213.shtml",
+   "media": "温州新闻网"
+  },
+  {
+   "title": "柯五一：76岁定个小目标，挖掘一百道瓯菜",
+   "pubDate": "2025-11-05",
+   "url": "https://www.66wz.com/system/2025/11/05/105706450.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "“链”上瓯菜，需要做好哪些文章？",
+   "pubDate": "2025-06-30",
+   "url": "https://www.66wz.com/system/2025/06/30/105690492.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "助力“世界美食之都”创建，温州这么干！",
+   "pubDate": "2025-06-15",
+   "url": "https://www.66wz.com/system/2025/06/15/105688569.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "市现代集团：“中心制”模式助推企业高质量发展",
+   "pubDate": "2020-10-09",
+   "url": "https://news.66wz.com/system/2020/10/09/105315374.shtml",
+   "media": "温州新闻网"
+  },
+  {
+   "title": "2019瓯菜文化节1月27日启动 推1000桌瓯菜宴",
+   "pubDate": "2019-01-09",
+   "url": "https://www.66wz.com/system/2019/01/09/105141779.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "最会做菜的男人都在这 百位大厨打造“瓯菜盛宴”",
+   "pubDate": "2016-11-25",
+   "url": "https://www.66wz.com/system/2016/11/25/104937577.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "温州手机早报0809",
+   "pubDate": "2014-08-09",
+   "url": "https://sms.66wz.com/system/2014/08/09/104182719.shtml",
+   "media": "温州新闻网"
+  },
+  {
+   "title": "温州·瓯菜",
+   "pubDate": "2009-10-05",
+   "url": "https://www.66wz.com/system/2009/10/05/101453209.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "瓯菜历史",
+   "pubDate": "2009-10-05",
+   "url": "https://www.66wz.com/system/2009/10/05/101453224.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "urn": "urn:wz:asset:66wz:news:20091005:101453224"
+  },
+  {
+   "title": "在《中国瓯菜》里 把脉新派瓯菜",
+   "pubDate": "2008-06-25",
+   "url": "https://www.66wz.com/system/2008/06/25/100572554.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "urn": "urn:wz:asset:66wz:news:20080625:100572554"
+  },
+  {
+   "title": "瓯菜吃出“洋味” 《中国瓯菜》出版",
+   "pubDate": "2008-06-16",
+   "url": "https://www.66wz.com/system/2008/06/16/100566604.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "urn": "urn:wz:asset:66wz:news:20080616:100566604"
+  },
+  {
+   "title": "品瓯菜 说瓯菜",
+   "pubDate": "2007-11-19",
+   "url": "https://www.66wz.com/system/2007/11/19/100442877.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  }
+ ]
+}

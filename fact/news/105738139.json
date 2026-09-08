@@ -1,0 +1,82 @@
+{
+ "api": {
+  "name": "城市事实发布引擎 · News Event API",
+  "version": "v0.2",
+  "generatedAt": "2026-09-08T10:00:00+08:00",
+  "canonicalBase": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/"
+ },
+ "newsEvent": {
+  "contentId": "105738139",
+  "title": "\"一尾鱼\"游出19亿元产值，从鱼苗到餐桌的闭环如何炼成",
+  "source": "温州新闻网",
+  "publishedAt": "2026-04-21 09:05",
+  "modifiedAt": "2026-04-21 09:05",
+  "cmsUrl": "https://www.66wz.com/system/2026/04/21/105738139.shtml",
+  "lifecycle": "fact_updated",
+  "simulated": false,
+  "htmlUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/news/105738139/",
+  "excerpt": "2025年，温州交出的成绩单是：产量2.2万吨；2025年仅鹿西一地大黄鱼产量就达2780吨。"
+ },
+ "fastLane": [
+  {
+   "step": "新闻发布",
+   "time": "09:05:00",
+   "status": "success",
+   "result": "CMS 发布回调触发 · Content ID 入队"
+  },
+  {
+   "step": "Sitemap 更新",
+   "time": "09:05:02",
+   "status": "success",
+   "result": "sitemap.xml lastmod 已刷新 · 本次含 1 个新 URL"
+  },
+  {
+   "step": "IndexNow 提交",
+   "time": "09:05:03",
+   "status": "success",
+   "result": "HTTP 202 Accepted · 1 URL 提交至 Bing / Seznam / Yandex 通道"
+  },
+  {
+   "step": "百度收录提交",
+   "time": "09:05:04",
+   "status": "success",
+   "result": "普通收录推送成功 · 当日剩余配额 1987/2000"
+  },
+  {
+   "step": "Feed 追加",
+   "time": "09:05:05",
+   "status": "success",
+   "result": "RSS / JSON Feed 各追加 1 条（News = Event）"
+  }
+ ],
+ "entityAnchors": [
+  {
+   "entityId": "WZ-GOOD-00000512",
+   "entityName": "温州大黄鱼",
+   "matchMethod": "标准名 + 数值口径",
+   "confidence": 0.97,
+   "para": 1,
+   "start": 23,
+   "end": 46,
+   "quote": "2025年，温州交出的成绩单是：产量2.2万吨",
+   "state": "confirmed"
+  }
+ ],
+ "candidateClaims": [
+  {
+   "claimId": "cl-20260421-102",
+   "entityId": "WZ-GOOD-00000512",
+   "predicate": "aquaculture_output（养殖产量·年度）",
+   "value": "2.2万吨（2025年度）",
+   "claimType": "statistics",
+   "evidenceText": "文章第1段（原文引用，物理锚点 [23,46)）",
+   "confidence": 0.98,
+   "status": "accepted",
+   "changeId": "chg-20260421-102"
+  }
+ ],
+ "factChanges": [
+  "chg-20260421-102"
+ ],
+ "reviewSummary": "Update 已确认 → 替代 2022 年度 17318 吨旧口径（WZ-F-00512-02 → superseded）"
+}

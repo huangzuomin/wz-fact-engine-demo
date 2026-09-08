@@ -1,0 +1,494 @@
+{
+ "api": {
+  "name": "城市事实发布引擎",
+  "version": "v0.1",
+  "generatedAt": "2026-09-08T10:00:00+08:00",
+  "canonicalBase": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/"
+ },
+ "entity": {
+  "id": "WZ-TRANS-00000864",
+  "standardName": "城市轨道交通网络（市域铁路S线）",
+  "name": "温州市域铁路（S线网络）",
+  "aliases": [
+   "市域铁路",
+   "S1线",
+   "S2线",
+   "S3线",
+   "轨道交通"
+  ],
+  "type": "道路交通 · 公共交通",
+  "schemaType": "GovernmentService",
+  "domain": "交通",
+  "location": "浙江省温州市（市区—乐清—瑞安走廊）",
+  "hubRef": {
+   "fqn": "CityPublicSpaceGlossary.Transportation.RailTransit",
+   "entityRef": "CityPublicSpaceGlossary.Transportation.RailTransit",
+   "dataProduct": "城市公共空间数据资产 city_public_space_asset"
+  },
+  "summary": "S1线运营中（截至2024年12月已运营五周年），S2线已于2023年9月前开通；\"轨道+消费\"场景持续扩展。",
+  "lastVerifiedAt": "2026-09-08",
+  "reviewAfter": null,
+  "ttlDays": 30,
+  "htmlUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-TRANS-00000864/",
+  "jsonUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-TRANS-00000864.json"
+ },
+ "facts": [
+  {
+   "factId": "WZ-F-00864-01",
+   "predicate": "S1线运营状态",
+   "value": "运营中；截至2024年12月31日，浙江交通集团旗下幸福轨道公司已运营温州S1线五周年",
+   "factType": "当前状态",
+   "status": "active",
+   "timePrecision": "当前有效",
+   "validFrom": "2019-12-01",
+   "validTo": null,
+   "sourcePublishedAt": "2024-12-31",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-10-08",
+   "updateRiskLevel": "L2",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": "开通精确日期未随证据返回，\"约2019年末开通\"由五周年报道反推，精度=年。",
+   "evidence": [
+    "20241231:105667111"
+   ]
+  },
+  {
+   "factId": "WZ-F-00864-02",
+   "predicate": "S2线运营状态",
+   "value": "已开通运营；2023年9月1日报道市民已可\"坐享S1、S2快线\"",
+   "factType": "当前状态",
+   "status": "active",
+   "timePrecision": "月（开通不晚于2023年9月）",
+   "validFrom": "2023-09-01",
+   "validTo": null,
+   "sourcePublishedAt": "2023-09-01",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-10-08",
+   "updateRiskLevel": "L2",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": "S2线精确开通日期未在证据片段中出现，为避免虚构精度，仅表述为\"不晚于2023年9月\"。",
+   "evidence": [
+    "20230901:105597859"
+   ]
+  },
+  {
+   "factId": "WZ-F-00864-03",
+   "predicate": "线网规模（S1线一期）",
+   "value": "S1线一期全长52.22公里，西起桐岭站、东到半岛二站，全线设20个车站",
+   "factType": "已发生事实",
+   "status": "active",
+   "timePrecision": "工程口径",
+   "validFrom": "2013-03-21",
+   "validTo": null,
+   "sourcePublishedAt": "2013-03-21",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2027-03-08",
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "asset:20130321:103576506",
+    "asset:20130321:103576802"
+   ]
+  },
+  {
+   "factId": "WZ-F-00864-04",
+   "predicate": "历史计划（2013年口径，未按期实现）",
+   "value": "2013年开工典礼口径：力争\"十二五\"末S1建成投用；2014年启动S3线开工；2017年实现S2线建成",
+   "factType": "计划",
+   "status": "superseded",
+   "timePrecision": "年（计划）",
+   "validFrom": "2013-03-21",
+   "validTo": "2017-12-31",
+   "sourcePublishedAt": "2013-03-21",
+   "lastVerifiedAt": "2013-03-21",
+   "reviewAfter": null,
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": "WZ-F-00864-02",
+   "note": "后续证据显示S2实际开通不早于计划（不晚于2023年9月），该计划口径已被现实进度替代；保留以体现\"计划≠事实\"。",
+   "evidence": [
+    "asset:20130321:103576945"
+   ]
+  },
+  {
+   "factId": "WZ-F-00864-05",
+   "predicate": "轨道+消费场景",
+   "value": "2026年3月起凭S1/S2线车票可在惠民大排档等点位享满减；开设人文寻根线（五马街、朱自清旧居）与商贸潮流线（万象城、南塘风貌街）",
+   "factType": "当前状态",
+   "status": "active",
+   "timePrecision": "月",
+   "validFrom": "2026-03-01",
+   "validTo": null,
+   "sourcePublishedAt": "2026-03-09",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-10-08",
+   "updateRiskLevel": "L2",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20260309:105729688#a53a734c",
+    "20260309:105729688#52e0be02"
+   ]
+  }
+ ],
+ "timeline": [
+  {
+   "date": "2011-02-11",
+   "precision": "日",
+   "title": "S1线列入重点建设计划",
+   "detail": "2011年温州重点建设项目计划包含市域铁路客运S1线。",
+   "factRef": null,
+   "evidence": [
+    "asset:20110211:102389294"
+   ],
+   "note": "该报道质量等级C（不可直接用作证据），仅作时间线索记录。"
+  },
+  {
+   "date": "2013-03-21",
+   "precision": "日",
+   "title": "S1线一期开工",
+   "detail": "轨道交通建设动员大会暨市域铁路S1线一期工程开工典礼举行；工程全长52.22公里、设20站，预计2016年建成；温州驶入城市轨道交通时代。",
+   "factRef": "WZ-F-00864-03",
+   "evidence": [
+    "asset:20130321:103576506",
+    "asset:20130321:103576802",
+    "asset:20130321:103576945"
+   ],
+   "note": null
+  },
+  {
+   "date": "2013-03-21",
+   "precision": "日",
+   "title": "S2/S3线时间表（历史计划）",
+   "detail": "当年口径：年底前启动S2线开工，2017年实现S2线建成，2014年启动S3线开工建设。",
+   "factRef": "WZ-F-00864-04",
+   "evidence": [
+    "asset:20130321:103576945"
+   ],
+   "note": null
+  },
+  {
+   "date": "2014-05-21",
+   "precision": "日",
+   "title": "S1线建设全线铺开",
+   "detail": "全市轨道交通建设工作推进大会召开，鹿城、瓯海、龙湾、生态园、瓯江口签目标责任书；2013年3月21日一期正式开工、全线18个标段。",
+   "factRef": null,
+   "evidence": [
+    "asset:20140521:104108262"
+   ],
+   "note": null
+  },
+  {
+   "date": "2019-12-01",
+   "precision": "年",
+   "title": "S1线开通运营（约）",
+   "detail": "按2024年12月31日\"运营五周年\"报道反推，S1线约于2019年末开通；精确日期待权威公告核验。",
+   "factRef": "WZ-F-00864-01",
+   "evidence": [
+    "20241231:105667111"
+   ],
+   "note": null
+  },
+  {
+   "date": "2023-09-01",
+   "precision": "日",
+   "title": "S1、S2双线运营格局",
+   "detail": "鹿城推出免费接驳游江心屿服务，以S1线惠民站为始发，游客\"坐享S1、S2快线\"。",
+   "factRef": "WZ-F-00864-02",
+   "evidence": [
+    "20230901:105597859"
+   ],
+   "note": null
+  },
+  {
+   "date": "2024-12-31",
+   "precision": "日",
+   "title": "S1线运营五周年",
+   "detail": "幸福轨道公司运营温州S1线五周年，持续提升交通效率与服务质量。",
+   "factRef": "WZ-F-00864-01",
+   "evidence": [
+    "20241231:105667111"
+   ],
+   "note": null
+  },
+  {
+   "date": "2026-03-09",
+   "precision": "日",
+   "title": "\"轨道+美食\"消费联动",
+   "detail": "惠民大排档送福利，凭S1/S2线车票享满减；串联五马街、南塘风貌街等文旅消费空间。",
+   "factRef": "WZ-F-00864-05",
+   "evidence": [
+    "20260309:105729688#52e0be02"
+   ],
+   "note": null
+  }
+ ],
+ "evidence": [
+  {
+   "key": "20241231:105667111",
+   "sourceOrg": "温州新闻网",
+   "title": "浙江交通集团旗下幸福轨道公司运营温州S1线五周年：打造便利高效的“幸福美好”路",
+   "publishedAt": "2024-12-31",
+   "quote": "进入下一个五年，S1线将继续“开卷”交通效率和服务质量的提升，让S1线所经之处都能一路生花，为温州提速打造“全省第三极”贡献轨道交通之力。",
+   "statement": "《温州新闻网》于 2024-12-31 报道涉及【全省高质量发展第三极】：浙江交通集团旗下幸福轨道公司运营温州S1线五周年：打造便利高效的“幸福美好”路。",
+   "anchors": [
+    2661,
+    2730
+   ],
+   "spanHash": "5d174615",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2024/12/31/105667111.shtml",
+   "urn": "urn:wz:asset:66wz:news:20241231:105667111"
+  },
+  {
+   "key": "20230901:105597859",
+   "sourceOrg": "温州新闻网",
+   "title": "坐享S1、S2快线  鹿城推出免费接驳游江心屿服务",
+   "publishedAt": "2023-09-01",
+   "quote": "本次服务以S1线惠民站为始发，巴士途经温州行政中心、中央绿轴、滨江CBD等多个城市封面区块，除了终点江心屿，不少游客还以此为契机游览五马历史街区、南塘风景区，尽情享受半日鹿城好风光。",
+   "statement": "《温州新闻网》于 2023-09-01 报道涉及【南塘风貌街】：坐享S1、S2快线  鹿城推出免费接驳游江心屿服务。",
+   "anchors": [
+    320,
+    411
+   ],
+   "spanHash": "68fe3f3f",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2023/09/01/105597859.shtml",
+   "urn": "urn:wz:asset:66wz:news:20230901:105597859"
+  },
+  {
+   "key": "asset:20130321:103576506",
+   "sourceOrg": "温州新闻网",
+   "title": "市域铁路S1线一期今天开工了",
+   "publishedAt": "2013-03-21",
+   "quote": "温州网讯 温州市市域铁路建设迈出实质性的第一步。温州市定于今天上午举行轨道交通建设动员大会暨市域铁路S1线一期工程开工典礼。工程全长52.22公里，西起桐岭站，东到半岛二站，全线设置20个车站，预计2016年建成。\n开工典礼选在温州生态园区铁道南路(京都城北首)的市域铁路S1线SG6B标段举行。这一",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2013/03/21/103576506.shtml",
+   "urn": "urn:wz:asset:66wz:news:20130321:103576506"
+  },
+  {
+   "key": "asset:20130321:103576802",
+   "sourceOrg": "温州新闻网",
+   "title": "市域铁路S1线一期开工",
+   "publishedAt": "2013-03-21",
+   "quote": "我市市域铁路建设迈出实质性的第一步。我市定于今天上午举行轨道交通建设动员大会暨市域铁路S1线一期工程开工典礼。工程全长52.22公里，西起桐岭站，东到半岛二站，全线设置20个车站，预计2016年建成。\n开工典礼选在温州生态园区铁道南路(京都城北首)的市域铁路S1线SG6B标段举行。这一标段起点上江路",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2013/03/21/103576802.shtml",
+   "urn": "urn:wz:asset:66wz:news:20130321:103576802"
+  },
+  {
+   "key": "asset:20130321:103576945",
+   "sourceOrg": "温州新闻网",
+   "title": "市域铁路S1线一期开工 温州驶入城市轨道交通时代",
+   "publishedAt": "2013-03-21",
+   "quote": "力争“十二五”末实现S1线建成投用，今年年底前启动S2线开工建设 2017年实现S2线建成，2014年启动S3线开工建设",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2013/03/21/103576945.shtml",
+   "urn": "urn:wz:asset:66wz:news:20130321:103576945"
+  },
+  {
+   "key": "20260309:105729688#a53a734c",
+   "sourceOrg": "温州新闻网",
+   "title": "温州惠民大排档送福利 凭S1/S2线车票享满减",
+   "publishedAt": "2026-03-09",
+   "quote": "商贸潮流线连通温州万象城、南塘风貌街，赶潮流市集逛水乡风情，进一步丰富市民轨道出行的消费体验与游玩选择。",
+   "statement": "《温州新闻网》于 2026-03-09 报道涉及【南塘风貌街】：温州惠民大排档送福利 凭S1/S2线车票享满减。",
+   "anchors": [
+    769,
+    821
+   ],
+   "spanHash": "a53a734c",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2026/03/09/105729688.shtml",
+   "urn": "urn:wz:asset:66wz:news:20260309:105729688"
+  },
+  {
+   "key": "20260309:105729688#52e0be02",
+   "sourceOrg": "温州新闻网",
+   "title": "温州惠民大排档送福利 凭S1/S2线车票享满减",
+   "publishedAt": "2026-03-09",
+   "quote": "人文寻根线可从大排档前往五马街历史文化街区、朱自清旧居，品美食逛古街；",
+   "statement": "《温州新闻网》于 2026-03-09 报道涉及【五马历史文化街区】：温州惠民大排档送福利 凭S1/S2线车票享满减。",
+   "anchors": [
+    707,
+    742
+   ],
+   "spanHash": "52e0be02",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2026/03/09/105729688.shtml",
+   "urn": "urn:wz:asset:66wz:news:20260309:105729688"
+  },
+  {
+   "key": "asset:20110211:102389294",
+   "sourceOrg": "温州新闻网",
+   "title": "市域铁路客运S1线今年开工",
+   "publishedAt": "2011-02-11",
+   "quote": "本文主要报道了2011年温州重点建设项目计划，包括市域铁路客运S1线等交通项目，但未涉及瓯菜相关的内容。",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "C",
+   "usable": false,
+   "url": "https://www.66wz.com/system/2011/02/11/102389294.shtml",
+   "urn": "urn:wz:asset:66wz:news:20110211:102389294"
+  },
+  {
+   "key": "asset:20140521:104108262",
+   "sourceOrg": "温州新闻网",
+   "title": "市域铁路S1线建设今年全线铺开",
+   "publishedAt": "2014-05-21",
+   "quote": "5月20日上午，市政府组织召开全市轨道交通建设工作推进大会，分担市域铁路S1线建设任务的鹿城区、瓯海区、龙湾区、生态园管委会、瓯江口新区管委会分别与市政府签订了目标责任书。\n会上，市铁投集团董事长丁建宇介绍了去年以来项目建设与融资的情况，去年3月21日市域铁路S1线一期工程正式开工建设，全线18个标",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2014/05/21/104108262.shtml",
+   "urn": "urn:wz:asset:66wz:news:20140521:104108262"
+  }
+ ],
+ "relatedEntities": [
+  "WZ-PLACE-00000298",
+  "WZ-PLACE-00001237",
+  "WZ-PLACE-00000322",
+  "WZ-PROJECT-00000321"
+ ],
+ "relatedNews": [
+  {
+   "title": "S线解读 市域铁路四线交错勾勒都市新生活",
+   "pubDate": "未知日期",
+   "url": null,
+   "media": "温州新闻网",
+   "grade": "B",
+   "urn": "urn:wz:asset:66wz:news:19700101:102860071"
+  },
+  {
+   "title": "温州惠民大排档送福利 凭S1/S2线车票享满减",
+   "pubDate": "2026-03-09",
+   "url": "https://www.66wz.com/system/2026/03/09/105729688.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "浙江交通集团旗下幸福轨道公司运营温州S1线五周年：打造便利高效的“幸福美好”路",
+   "pubDate": "2024-12-31",
+   "url": "https://www.66wz.com/system/2024/12/31/105667111.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "坐享S1、S2快线  鹿城推出免费接驳游江心屿服务",
+   "pubDate": "2023-09-01",
+   "url": "https://www.66wz.com/system/2023/09/01/105597859.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "市域铁路S1线加快建设 确保西段完成铺轨首批列车下线",
+   "pubDate": "2017-02-18",
+   "url": "https://www.66wz.com/system/2017/02/18/104965889.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "urn": "urn:wz:asset:66wz:news:20170218:104965889"
+  },
+  {
+   "title": "市域铁路S1线建设今年全线铺开",
+   "pubDate": "2014-05-21",
+   "url": "https://www.66wz.com/system/2014/05/21/104108262.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "市域铁路S1线一期今天开工了",
+   "pubDate": "2013-03-21",
+   "url": "https://www.66wz.com/system/2013/03/21/103576506.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "市域铁路S1线一期开工",
+   "pubDate": "2013-03-21",
+   "url": "https://www.66wz.com/system/2013/03/21/103576802.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "市域铁路S1线一期开工 温州驶入城市轨道交通时代",
+   "pubDate": "2013-03-21",
+   "url": "https://www.66wz.com/system/2013/03/21/103576945.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "建设方大揭秘：市域铁路S1线“新”在哪里？",
+   "pubDate": "2013-03-21",
+   "url": "https://www.66wz.com/system/2013/03/21/103576952.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "urn": "urn:wz:asset:66wz:news:20130321:103576952"
+  },
+  {
+   "title": "市域铁路客运S1线今年开工",
+   "pubDate": "2011-02-11",
+   "url": "https://www.66wz.com/system/2011/02/11/102389294.shtml",
+   "media": "温州新闻网",
+   "grade": "C",
+   "viaEvidence": true
+  }
+ ]
+}

@@ -1,0 +1,94 @@
+{
+ "api": {
+  "name": "城市事实发布引擎 · News Event API",
+  "version": "v0.2",
+  "generatedAt": "2026-09-08T10:00:00+08:00",
+  "canonicalBase": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/"
+ },
+ "newsEvent": {
+  "contentId": "20260908-0347",
+  "title": "2025年温州大黄鱼全产业链产值达19.2亿元",
+  "source": "温州新闻网",
+  "publishedAt": "2026-09-08 10:32",
+  "modifiedAt": "2026-09-08 10:40",
+  "cmsUrl": "https://news.66wz.com/system/2026/09/08/105837220.shtml",
+  "lifecycle": "fact_updated",
+  "simulated": true,
+  "htmlUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/news/20260908-0347/",
+  "excerpt": "记者从温州大黄鱼产业高质量发展专题会上获悉，2025年温州大黄鱼全产业链产值达19.2亿元，养殖产量2.2万吨，其中洞头鹿西一地产量2780吨。会议明确下一步将推进\"温州大黄鱼\"标准化、品牌化、国际化。"
+ },
+ "fastLane": [
+  {
+   "step": "新闻发布",
+   "time": "10:32:00",
+   "status": "success",
+   "result": "CMS 发布回调触发 · Content ID 入队"
+  },
+  {
+   "step": "Sitemap 更新",
+   "time": "10:32:02",
+   "status": "success",
+   "result": "sitemap.xml lastmod 已刷新 · 本次含 1 个新 URL"
+  },
+  {
+   "step": "IndexNow 提交",
+   "time": "10:32:03",
+   "status": "success",
+   "result": "HTTP 202 Accepted · 1 URL 提交至 Bing / Seznam / Yandex 通道"
+  },
+  {
+   "step": "百度收录提交",
+   "time": "10:32:04",
+   "status": "success",
+   "result": "普通收录推送成功 · 当日剩余配额 1987/2000"
+  },
+  {
+   "step": "Feed 追加",
+   "time": "10:32:05",
+   "status": "success",
+   "result": "RSS / JSON Feed 各追加 1 条（News = Event）"
+  }
+ ],
+ "entityAnchors": [
+  {
+   "entityId": "WZ-GOOD-00000512",
+   "entityName": "温州大黄鱼",
+   "matchMethod": "标准名 + 产业关键词（产值/产量）",
+   "confidence": 0.97,
+   "para": 1,
+   "start": 12,
+   "end": 18,
+   "quote": "大黄鱼全产业链产值达19.2亿元",
+   "state": "confirmed"
+  }
+ ],
+ "candidateClaims": [
+  {
+   "claimId": "cl-20260908-0347-1",
+   "entityId": "WZ-GOOD-00000512",
+   "predicate": "industry_output_value（产业产值·年度）",
+   "value": "19.2亿元（2025年度）",
+   "claimType": "statistics",
+   "evidenceText": "文章第1段：\"2025年温州大黄鱼全产业链产值达19.2亿元\"",
+   "confidence": 0.95,
+   "status": "accepted",
+   "changeId": "chg-20260908-001"
+  },
+  {
+   "claimId": "cl-20260908-0347-2",
+   "entityId": "WZ-GOOD-00000512",
+   "predicate": "aquaculture_output_2025（养殖产量·2025）",
+   "value": "2.2万吨",
+   "claimType": "statistics",
+   "evidenceText": "文章第1段：\"养殖产量2.2万吨\"",
+   "confidence": 0.96,
+   "status": "accepted",
+   "changeId": "chg-20260908-006"
+  }
+ ],
+ "factChanges": [
+  "chg-20260908-001",
+  "chg-20260908-006"
+ ],
+ "reviewSummary": "1 项 Update 经确认生效；1 项与既有事实一致（No Change）"
+}

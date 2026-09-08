@@ -1,0 +1,82 @@
+{
+ "api": {
+  "name": "城市事实发布引擎 · News Event API",
+  "version": "v0.2",
+  "generatedAt": "2026-09-08T10:00:00+08:00",
+  "canonicalBase": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/"
+ },
+ "newsEvent": {
+  "contentId": "105743242",
+  "title": "张振丰专题研究文旅区域联动发展和大黄鱼产业高质量发展",
+  "source": "温州新闻网",
+  "publishedAt": "2026-05-08 18:22",
+  "modifiedAt": "2026-05-08 18:22",
+  "cmsUrl": "https://www.66wz.com/system/2026/05/08/105743242.shtml",
+  "lifecycle": "fact_updated",
+  "simulated": false,
+  "htmlUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/news/105743242/",
+  "excerpt": "强调以农文旅融合推动产业升级，打造\"温州大黄鱼\"品牌，推进标准化、品牌化和国际化路径。"
+ },
+ "fastLane": [
+  {
+   "step": "新闻发布",
+   "time": "18:22:00",
+   "status": "success",
+   "result": "CMS 发布回调触发 · Content ID 入队"
+  },
+  {
+   "step": "Sitemap 更新",
+   "time": "18:22:02",
+   "status": "success",
+   "result": "sitemap.xml lastmod 已刷新 · 本次含 1 个新 URL"
+  },
+  {
+   "step": "IndexNow 提交",
+   "time": "18:22:03",
+   "status": "success",
+   "result": "HTTP 202 Accepted · 1 URL 提交至 Bing / Seznam / Yandex 通道"
+  },
+  {
+   "step": "百度收录提交",
+   "time": "18:22:04",
+   "status": "success",
+   "result": "普通收录推送成功 · 当日剩余配额 1987/2000"
+  },
+  {
+   "step": "Feed 追加",
+   "time": "18:22:05",
+   "status": "success",
+   "result": "RSS / JSON Feed 各追加 1 条（News = Event）"
+  }
+ ],
+ "entityAnchors": [
+  {
+   "entityId": "WZ-GOOD-00000512",
+   "entityName": "温州大黄鱼",
+   "matchMethod": "标准名 + 会议主题",
+   "confidence": 0.93,
+   "para": 1,
+   "start": 0,
+   "end": 24,
+   "quote": "专题研究……大黄鱼产业高质量发展",
+   "state": "confirmed"
+  }
+ ],
+ "candidateClaims": [
+  {
+   "claimId": "cl-20260508-103",
+   "entityId": "WZ-GOOD-00000512",
+   "predicate": "city_industry_deployment（市级产业部署）",
+   "value": "市级专题推进大黄鱼产业高质量发展（2026-05）",
+   "claimType": "observed_fact",
+   "evidenceText": "文章标题与首段（标题/摘要级 → 经审核按\"当前状态\"口径建档）",
+   "confidence": 0.88,
+   "status": "accepted",
+   "changeId": "chg-20260508-103"
+  }
+ ],
+ "factChanges": [
+  "chg-20260508-103"
+ ],
+ "reviewSummary": "New Fact 已确认 → 事实 WZ-F-00512-08 现行有效"
+}

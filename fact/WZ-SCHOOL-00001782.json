@@ -1,0 +1,408 @@
+{
+ "api": {
+  "name": "城市事实发布引擎",
+  "version": "v0.1",
+  "generatedAt": "2026-09-08T10:00:00+08:00",
+  "canonicalBase": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/"
+ },
+ "entity": {
+  "id": "WZ-SCHOOL-00001782",
+  "standardName": "公建教育配套设施（中小学校新改扩建）",
+  "name": "温州市中小学校新建改扩建工程",
+  "aliases": [
+   "公建教育配套设施",
+   "学校点位",
+   "好学温州",
+   "新改扩建中小学项目"
+  ],
+  "type": "重要公共服务 · 教育设施",
+  "schemaType": "GovernmentService",
+  "domain": "公共服务（教育）",
+  "location": "浙江省温州市（全市域）",
+  "hubRef": {
+   "fqn": "CityPublicSpaceGlossary.PublicAmenities.EducationFacility",
+   "entityRef": "CityPublicSpaceGlossary.PublicAmenities.EducationFacility",
+   "dataProduct": "城市公共空间数据资产 city_public_space_asset（SourceType.OpenData / Authority.A / Spatial.PointLayer）"
+  },
+  "summary": "全市中小学新改扩建持续推进：2025年已实施项目92个、34个完工，一批新校园当年秋季投用。",
+  "lastVerifiedAt": "2026-09-08",
+  "reviewAfter": null,
+  "ttlDays": 30,
+  "htmlUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-SCHOOL-00001782/",
+  "jsonUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-SCHOOL-00001782.json"
+ },
+ "facts": [
+  {
+   "factId": "WZ-F-01782-01",
+   "predicate": "年度进度（2025）",
+   "value": "全市已实施中小学新改扩建项目92个，其中34个项目完工（含整校新建10个），一批新校园于2025年秋季投用",
+   "factType": "当前状态",
+   "status": "active",
+   "timePrecision": "学期",
+   "validFrom": "2025-08-01",
+   "validTo": null,
+   "sourcePublishedAt": "2025-08-31",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-10-08",
+   "updateRiskLevel": "L2",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20250829:105697993#b317a8d6",
+    "asset:20250831:105698188"
+   ]
+  },
+  {
+   "factId": "WZ-F-01782-02",
+   "predicate": "代表项目 · 温州榕园学校",
+   "value": "位于温州生态园黄屿B-01地块，总投资4.67亿元，总用地面积42063平方米，54个班的九年一贯制学校，2021年秋季建成投用",
+   "factType": "已发生事实",
+   "status": "active",
+   "timePrecision": "学期",
+   "validFrom": "2021-08-01",
+   "validTo": null,
+   "sourcePublishedAt": "2021-08-31",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2027-03-08",
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20210831:105398167#7b85ba13"
+   ]
+  },
+  {
+   "factId": "WZ-F-01782-03",
+   "predicate": "2025年投用名单（样本）",
+   "value": "温州市蒲鞋市小学瓯江新城分校列入2025年秋季投用名单",
+   "factType": "已发生事实",
+   "status": "active",
+   "timePrecision": "学期",
+   "validFrom": "2025-08-01",
+   "validTo": null,
+   "sourcePublishedAt": "2025-08-29",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-10-08",
+   "updateRiskLevel": "L2",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20250829:105697993#2ffee419"
+   ]
+  },
+  {
+   "factId": "WZ-F-01782-04",
+   "predicate": "历史年度总量（2019年报道口径）",
+   "value": "2019年2月市政府工作报告口径：全市新（改扩）建学校296所，新投用中小学（幼儿园）79所",
+   "factType": "统计数据",
+   "status": "unverified",
+   "timePrecision": "年度",
+   "validFrom": "2019-01-01",
+   "validTo": "2019-12-31",
+   "sourcePublishedAt": "2019-02-17",
+   "lastVerifiedAt": "2019-02-17",
+   "reviewAfter": "2019-08-31",
+   "updateRiskLevel": "L3",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": "机器抽取的主张与所附证据片段（涉\"中国眼谷\"、医疗床位）存在锚点错位，未能通过自动交叉验证，处于 unverified 状态，暂不进入权威口径引用。",
+   "evidence": [
+    "20190217:105148930"
+   ]
+  },
+  {
+   "factId": "WZ-F-01782-05",
+   "predicate": "高等教育配套（计划跟踪）",
+   "value": "温州理工学院乐清校区力争2025年建成投用（2023年3月报道的计划口径）",
+   "factType": "计划",
+   "status": "uncertain",
+   "timePrecision": "年",
+   "validFrom": "2023-03-14",
+   "validTo": "2025-12-31",
+   "sourcePublishedAt": "2023-03-14",
+   "lastVerifiedAt": "2023-03-14",
+   "reviewAfter": "2025-12-31",
+   "updateRiskLevel": "L2",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": "计划到期，实际建成投用情况未见后续权威证据，标记 uncertain 并进入重新核验队列。",
+   "evidence": [
+    "20230314:105553437"
+   ]
+  }
+ ],
+ "timeline": [
+  {
+   "date": "2009-09-03",
+   "precision": "日",
+   "title": "温州中学新疆部投用",
+   "detail": "投资1亿多元的特建校园投用，166名新疆学子来温上学；校园位于温州中学南首生态园区湿地边缘。",
+   "factRef": null,
+   "evidence": [
+    "20090903:101406947",
+    "20110815:102646945"
+   ],
+   "note": null
+  },
+  {
+   "date": "2019-02-17",
+   "precision": "日",
+   "title": "年度建校总量口径披露",
+   "detail": "媒体报道市政府工作口径\"全市新（改扩）建学校296所、新投用中小学（幼儿园）79所\"；该证据锚点存在错位，事实处于未核验状态。",
+   "factRef": "WZ-F-01782-04",
+   "evidence": [
+    "20190217:105148930"
+   ],
+   "note": null
+  },
+  {
+   "date": "2021-08-31",
+   "precision": "日",
+   "title": "榕园学校建成投用",
+   "detail": "总投资4.67亿元、54个班的九年一贯制学校于新学期投用；同期全市建成投用一批新校园。",
+   "factRef": "WZ-F-01782-02",
+   "evidence": [
+    "20210831:105398167#7b85ba13"
+   ],
+   "note": null
+  },
+  {
+   "date": "2023-03-14",
+   "precision": "日",
+   "title": "理工学院乐清校区计划",
+   "detail": "温州理工学院乐清校区力争2025年建成投用；同报道提及乐清2022年GDP首超1500亿元。",
+   "factRef": "WZ-F-01782-05",
+   "evidence": [
+    "20230314:105553437"
+   ],
+   "note": null
+  },
+  {
+   "date": "2025-08-29",
+   "precision": "日",
+   "title": "92个项目、34个完工",
+   "detail": "全市已实施中小学新改扩建项目92个，34个顺利完工（含整校新建10个），新校园陆续投用，为\"好学温州 教育强市\"注入力量。",
+   "factRef": "WZ-F-01782-01",
+   "evidence": [
+    "20250829:105697993#b317a8d6",
+    "20250829:105697993#2ffee419"
+   ],
+   "note": null
+  }
+ ],
+ "evidence": [
+  {
+   "key": "20250829:105697993#b317a8d6",
+   "sourceOrg": "温州新闻网",
+   "title": "温州一批新改扩建中小学校，今秋投用！",
+   "publishedAt": "2025-08-29",
+   "quote": "截至目前，全市已实施中小学新改扩建项目92个，其中34个项目顺利完工，包括整校新建项目10个，一批现代化、高品质新校园正陆续投用，为“好学温州 教育强市”建设注入坚实力量。",
+   "statement": "《温州新闻网》于 2025-08-29 报道涉及【“好学温州”品牌】：温州一批新改扩建中小学校，今秋投用！。",
+   "anchors": [
+    28,
+    114
+   ],
+   "spanHash": "b317a8d6",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2025/08/29/105697993.shtml",
+   "urn": "urn:wz:asset:66wz:news:20250829:105697993"
+  },
+  {
+   "key": "asset:20250831:105698188",
+   "sourceOrg": "温州新闻网",
+   "title": "温州全市已实施新改扩建中小学项目92个",
+   "publishedAt": "2025-08-31",
+   "quote": "温州全市已实施新改扩建中小学项目92个，其中34个完工，为学生提供现代化校园和优质教育资源。新校园配备智慧教室、科创实验室、双语教学等设施，助力温州教育高质量发展。",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2025/08/31/105698188.shtml",
+   "urn": "urn:wz:asset:66wz:news:20250831:105698188"
+  },
+  {
+   "key": "20210831:105398167#7b85ba13",
+   "sourceOrg": "温州新闻网",
+   "title": "新学期，温州建成投用一批新校园！",
+   "publishedAt": "2021-08-31",
+   "quote": "温州榕园学校位于温州生态园黄屿b-01地块，总投资4.67亿元，总用地面积42063平方米，是一所能容纳54个班级的九年一贯制学校。",
+   "statement": "《温州新闻网》于 2021-08-31 报道涉及【生态园】：新学期，温州建成投用一批新校园！。",
+   "anchors": [
+    721,
+    787
+   ],
+   "spanHash": "7b85ba13",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2021/08/31/105398167.shtml",
+   "urn": "urn:wz:asset:66wz:news:20210831:105398167"
+  },
+  {
+   "key": "20250829:105697993#2ffee419",
+   "sourceOrg": "温州新闻网",
+   "title": "温州一批新改扩建中小学校，今秋投用！",
+   "publishedAt": "2025-08-29",
+   "quote": "温州市蒲鞋市小学瓯江新城分校\n",
+   "statement": "《温州新闻网》于 2025-08-29 报道涉及【瓯江新城】：温州一批新改扩建中小学校，今秋投用！。",
+   "anchors": [
+    256,
+    271
+   ],
+   "spanHash": "2ffee419",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2025/08/29/105697993.shtml",
+   "urn": "urn:wz:asset:66wz:news:20250829:105697993"
+  },
+  {
+   "key": "20190217:105148930",
+   "sourceOrg": "温州新闻网",
+   "title": "姚高员：全市新（改扩）建学校296所 新投用中小学(幼儿园)79所",
+   "publishedAt": "2019-02-17",
+   "quote": "健康温州和区域医疗康养中心城市建设有力推进，获批2个国家级研究中心，“中国眼谷”等引领性项目加快实施，新增公办医院床位3600张。",
+   "statement": "《温州新闻网》于 2019-02-17 报道涉及【中国眼谷】：姚高员：全市新（改扩）建学校296所 新投用中小学(幼儿园)79所。",
+   "anchors": [
+    110,
+    175
+   ],
+   "spanHash": "31a32933",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2019/02/17/105148930.shtml",
+   "urn": "urn:wz:asset:66wz:news:20190217:105148930"
+  },
+  {
+   "key": "20230314:105553437",
+   "sourceOrg": "温州新闻网",
+   "title": "乐清将有本科大学啦！温州理工学院乐清校区力争2025年建成投用",
+   "publishedAt": "2023-03-14",
+   "quote": "2022年，实现地区生产总值首次超过1500亿元，总量稳居温州第一。",
+   "statement": "《温州新闻网》于 2023-03-14 报道涉及【地区生产总值（GDP）】：乐清将有本科大学啦！温州理工学院乐清校区力争2025年建成投用。",
+   "anchors": [
+    967,
+    1001
+   ],
+   "spanHash": "b6e10003",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2023/03/14/105553437.shtml",
+   "urn": "urn:wz:asset:66wz:news:20230314:105553437"
+  },
+  {
+   "key": "20090903:101406947",
+   "sourceOrg": "温州新闻网",
+   "title": "投资1亿多的特建校园投用 166名新疆学子来温上学",
+   "publishedAt": "2009-09-03",
+   "quote": "温州中学新疆部坐落在温州中学南首的生态园区湿地边缘，西临梧田大道、东北两侧为景区河流、南有规划道路。",
+   "statement": "《温州新闻网》于 2009-09-03 报道涉及【生态园】：投资1亿多的特建校园投用 166名新疆学子来温上学。",
+   "anchors": [
+    63,
+    113
+   ],
+   "spanHash": "02f59630",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2009/09/03/101406947.shtml",
+   "urn": "urn:wz:asset:66wz:news:20090903:101406947"
+  },
+  {
+   "key": "20110815:102646945",
+   "sourceOrg": "温州新闻网",
+   "title": "投资1亿多的特建校园投用 166名新疆学子来温上学",
+   "publishedAt": "2011-08-15",
+   "quote": "温州中学新疆部坐落在温州中学南首的生态园区湿地边缘，西临梧田大道、东北两侧为景区河流、南有规划道路。",
+   "statement": "《温州新闻网》于 2011-08-15 报道涉及【生态园】：投资1亿多的特建校园投用 166名新疆学子来温上学。",
+   "anchors": [
+    63,
+    113
+   ],
+   "spanHash": "02f59630",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2011/08/15/102646945.shtml",
+   "urn": "urn:wz:asset:66wz:news:20110815:102646945"
+  }
+ ],
+ "relatedEntities": [
+  "WZ-POLICY-00000873"
+ ],
+ "relatedNews": [
+  {
+   "title": "温州全市已实施新改扩建中小学项目92个",
+   "pubDate": "2025-08-31",
+   "url": "https://www.66wz.com/system/2025/08/31/105698188.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "温州一批新改扩建中小学校，今秋投用！",
+   "pubDate": "2025-08-29",
+   "url": "https://www.66wz.com/system/2025/08/29/105697993.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "乐清将有本科大学啦！温州理工学院乐清校区力争2025年建成投用",
+   "pubDate": "2023-03-14",
+   "url": "https://www.66wz.com/system/2023/03/14/105553437.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "新学期，温州建成投用一批新校园！",
+   "pubDate": "2021-08-31",
+   "url": "https://www.66wz.com/system/2021/08/31/105398167.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "姚高员：全市新（改扩）建学校296所 新投用中小学(幼儿园)79所",
+   "pubDate": "2019-02-17",
+   "url": "https://www.66wz.com/system/2019/02/17/105148930.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "投资1亿多的特建校园投用 166名新疆学子来温上学",
+   "pubDate": "2009-09-03",
+   "url": "https://www.66wz.com/system/2009/09/03/101406947.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  }
+ ]
+}

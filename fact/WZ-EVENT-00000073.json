@@ -1,0 +1,774 @@
+{
+ "api": {
+  "name": "城市事实发布引擎",
+  "version": "v0.1",
+  "generatedAt": "2026-09-08T10:00:00+08:00",
+  "canonicalBase": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/"
+ },
+ "entity": {
+  "id": "WZ-EVENT-00000073",
+  "standardName": "第十五届中国国际园博会与全城园博",
+  "name": "第十五届中国国际园林博览会（温州）",
+  "aliases": [
+   "园博会",
+   "全城园博",
+   "园博园",
+   "温州园博"
+  ],
+  "type": "重大工程 · 国家级博览会",
+  "schemaType": "Event",
+  "domain": "城市建设",
+  "location": "浙江省温州市瓯海区（主会场园博园）；全市\"1+13+N\"分会场体系",
+  "hubRef": {
+   "fqn": "QiangChengGlossary.LandmarkAchievements.CitywideGardenExpo",
+   "entityRef": "QiangChengGlossary.LandmarkAchievements.CitywideGardenExpo",
+   "dataProduct": "强城奋进路·争创第三极数字资产 qiangcheng_third_pole_asset"
+  },
+  "summary": "以\"百姓园博、国际园博、先锋园博、文化园博、全城园博\"为定位；园博园2024年10月主体开工，2026年已开园运行，夜游日均客流超1万人次。",
+  "lastVerifiedAt": "2026-09-08",
+  "reviewAfter": null,
+  "ttlDays": 30,
+  "htmlUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-EVENT-00000073/",
+  "jsonUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-EVENT-00000073.json"
+ },
+ "facts": [
+  {
+   "factId": "WZ-F-00073-01",
+   "predicate": "建设里程碑",
+   "value": "园博园主体于2024年10月开工建设",
+   "factType": "已发生事实",
+   "status": "active",
+   "timePrecision": "月",
+   "validFrom": "2024-10-01",
+   "validTo": null,
+   "sourcePublishedAt": "2025-03-04",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2027-03-08",
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20250304:105674829#8d96a8d3"
+   ]
+  },
+  {
+   "factId": "WZ-F-00073-02",
+   "predicate": "开园运行状态",
+   "value": "园区已进入运行阶段：2026年3月官方督导已察看各展园\"建设运行情况\"；2026年8—9月园博园夜游日均客流突破1万人次",
+   "factType": "当前状态",
+   "status": "active",
+   "timePrecision": "月",
+   "validFrom": "2026-05-01",
+   "validTo": null,
+   "sourcePublishedAt": "2026-09-01",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-10-08",
+   "updateRiskLevel": "L2",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20260901:105831512#54634ba2",
+    "ctx:https://news.66wz.com/system/2026/03/20/105731904.shtml"
+   ]
+  },
+  {
+   "factId": "WZ-F-00073-03",
+   "predicate": "开园日期（精确）",
+   "value": "未取得权威公告级证据",
+   "factType": "当前状态",
+   "status": "uncertain",
+   "timePrecision": "未知",
+   "validFrom": null,
+   "validTo": null,
+   "sourcePublishedAt": "2026-04-05",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-10-08",
+   "updateRiskLevel": "L3",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": "证据仅能证明\"2026年五一前已可游园\"（2025年3月报道以2026年开园为目标节点）。为避免虚构精度，系统明确表达\"不确定\"，待官方公告后转 active 并回填 precise 日期。",
+   "evidence": [
+    "20250305:105674976#6b444c3a",
+    "20260405:105734844"
+   ]
+  },
+  {
+   "factId": "WZ-F-00073-04",
+   "predicate": "办会体系",
+   "value": "\"1+13+N\"全城园博体系：1个主会场+13个分会场+N个全域场景（含永嘉、梧田老街、五马街区等）",
+   "factType": "当前状态",
+   "status": "active",
+   "timePrecision": "当前有效",
+   "validFrom": "2025-10-01",
+   "validTo": null,
+   "sourcePublishedAt": "2025-11-18",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-12-07",
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20251020:105704118",
+    "asset:20251118:105709077",
+    "asset:20250927:105701586"
+   ]
+  },
+  {
+   "factId": "WZ-F-00073-05",
+   "predicate": "办会定位",
+   "value": "\"百姓园博、国际园博、先锋园博、文化园博、全城园博\"，办好\"简约、安全、精彩\"园博盛会",
+   "factType": "当前状态",
+   "status": "active",
+   "timePrecision": "当前有效",
+   "validFrom": "2026-04-01",
+   "validTo": null,
+   "sourcePublishedAt": "2026-04-05",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-12-07",
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20260405:105734844"
+   ]
+  },
+  {
+   "factId": "WZ-F-00073-06",
+   "predicate": "生态改造理念",
+   "value": "园博园变废弃矿坑、老旧厂区为园林；保留9棵百年榕树与数百株原生乔木",
+   "factType": "已发生事实",
+   "status": "active",
+   "timePrecision": "当前有效",
+   "validFrom": "2026-07-01",
+   "validTo": null,
+   "sourcePublishedAt": "2026-07-29",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2027-03-08",
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20260729:105812982"
+   ]
+  },
+  {
+   "factId": "WZ-F-00073-07",
+   "predicate": "会期品牌活动（样本）",
+   "value": "2026温州大黄鱼品牌嘉年华（7月19—24日）、园博印象开街（4月15日）、纪念邮票发行（4月16日）",
+   "factType": "活动",
+   "status": "expired",
+   "timePrecision": "日",
+   "validFrom": "2026-04-15",
+   "validTo": "2026-07-24",
+   "sourcePublishedAt": "2026-07-16",
+   "lastVerifiedAt": "2026-08-21",
+   "reviewAfter": null,
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": "会期活动已结束，状态置 expired；历届活动保留为档案事实。",
+   "evidence": [
+    "20260716:105805477#b11fa700",
+    "ctx:https://wztv.66wz.com/system/2026/04/16/105736934.shtml",
+    "19700101:105736338"
+   ]
+  }
+ ],
+ "timeline": [
+  {
+   "date": "2024-10-01",
+   "precision": "月",
+   "title": "园博园主体开工",
+   "detail": "园博园主体部分于2024年10月开工建设。",
+   "factRef": "WZ-F-00073-01",
+   "evidence": [
+    "20250304:105674829#8d96a8d3"
+   ],
+   "note": null
+  },
+  {
+   "date": "2025-03-05",
+   "precision": "日",
+   "title": "全市节点联动",
+   "detail": "朔门古港改造提升锚定\"2026年园博园开园重要节点\"同步推进。",
+   "factRef": "WZ-F-00073-03",
+   "evidence": [
+    "20250305:105674976#6b444c3a"
+   ],
+   "note": null
+  },
+  {
+   "date": "2025-09-27",
+   "precision": "日",
+   "title": "\"全城园博\"分会场活动预热",
+   "detail": "13个分会场特色摊位亮相五马历史文化街区，永嘉麦饼、瓯柑等成为焦点。",
+   "factRef": null,
+   "evidence": [
+    "asset:20250927:105701586"
+   ],
+   "note": null
+  },
+  {
+   "date": "2025-10-20",
+   "precision": "日",
+   "title": "分会场筹备推进",
+   "detail": "永嘉县委书记调研园博会永嘉分会场筹备，强调融入\"1+13+N\"全城园博体系。",
+   "factRef": "WZ-F-00073-04",
+   "evidence": [
+    "20251020:105704118"
+   ],
+   "note": null
+  },
+  {
+   "date": "2025-11-18",
+   "precision": "日",
+   "title": "设计主创解码\"全城园博\"",
+   "detail": "综合展园设计主创余伟专访：园博会空间拓展至整座城市，\"1+13+49\"多维布局、\"三享三探\"活动体系。",
+   "factRef": "WZ-F-00073-04",
+   "evidence": [
+    "asset:20251118:105709077"
+   ],
+   "note": null
+  },
+  {
+   "date": "2025-12-19",
+   "precision": "日",
+   "title": "国际园筹备核验",
+   "detail": "省外办调研组实地踏勘园博园建设现场，了解国际园展区设计理念、布局规划及施工进展。",
+   "factRef": null,
+   "evidence": [
+    "20251219:105714902"
+   ],
+   "note": null
+  },
+  {
+   "date": "2026-03-19",
+   "precision": "日",
+   "title": "开园季报道",
+   "detail": "《从初绽到盛放》：春风吹过郭溪的田野，园博园开启关于色彩的苏醒与城市的测试。",
+   "factRef": null,
+   "evidence": [
+    "ctx:https://news.66wz.com/system/2026/03/19/105731896.shtml"
+   ],
+   "note": null
+  },
+  {
+   "date": "2026-03-20",
+   "precision": "日",
+   "title": "市级督导筹办",
+   "detail": "张振丰督导中国国际园林博览会筹办工作，实地察看瓯越园、苏州园、浙山浙水展园、中国馆等建设运行情况。",
+   "factRef": null,
+   "evidence": [
+    "ctx:https://news.66wz.com/system/2026/03/20/105731904.shtml"
+   ],
+   "note": null
+  },
+  {
+   "date": "2026-04-05",
+   "precision": "日",
+   "title": "办会定位明确",
+   "detail": "调研筹备：紧扣\"百姓园博、国际园博、先锋园博、文化园博、全城园博\"，办好\"简约、安全、精彩\"园博盛会。",
+   "factRef": "WZ-F-00073-05",
+   "evidence": [
+    "20260405:105734844"
+   ],
+   "note": null
+  },
+  {
+   "date": "2026-04-15",
+   "precision": "日",
+   "title": "园博印象开街",
+   "detail": "\"来园博，逛印象\"：温州大馄饨、灯盏糕、山粉糊、瓯柑冰淇淋等老味道进场（该证据档案日期缺失，以报道所载4月15日记）。",
+   "factRef": "WZ-F-00073-07",
+   "evidence": [
+    "19700101:105736338"
+   ],
+   "note": null
+  },
+  {
+   "date": "2026-04-16",
+   "precision": "日",
+   "title": "园博会纪念邮票发行",
+   "detail": "园博会纪念邮票发布（温州电视台报道）。",
+   "factRef": null,
+   "evidence": [
+    "ctx:https://wztv.66wz.com/system/2026/04/16/105736934.shtml"
+   ],
+   "note": null
+  },
+  {
+   "date": "2026-05-01",
+   "precision": "日",
+   "title": "五一假期游园报道",
+   "detail": "\"五一\"假期游园博园报道出现，印证园区已具备游览条件。",
+   "factRef": null,
+   "evidence": [
+    "asset:20260501:105741875"
+   ],
+   "note": "该来源质量等级 C（不可直接用作事实依据），仅作时间线索。"
+  },
+  {
+   "date": "2026-07-19",
+   "precision": "日",
+   "title": "大黄鱼品牌嘉年华登陆园博园",
+   "detail": "7月19日—24日每天18:00-20:30，渔港夜市与主题宴在园博园滨水草坪开席。",
+   "factRef": "WZ-F-00073-07",
+   "evidence": [
+    "20260716:105805477#b11fa700"
+   ],
+   "note": null
+  },
+  {
+   "date": "2026-08-23",
+   "precision": "日",
+   "title": "园博工坊商业进场",
+   "detail": "园博园旁园博工坊室内游乐场宣布9月21日正式开业；\"温州园博园就在家门口\"成为商户选址理由。",
+   "factRef": null,
+   "evidence": [
+    "20260823:105826293"
+   ],
+   "note": null
+  },
+  {
+   "date": "2026-09-01",
+   "precision": "日",
+   "title": "夜游日均客流破万",
+   "detail": "园博园夜游凭借光影体验圈粉无数，日均客流突破1万人次，带动周边餐饮消费。",
+   "factRef": "WZ-F-00073-02",
+   "evidence": [
+    "20260901:105831512#54634ba2"
+   ],
+   "note": null
+  }
+ ],
+ "evidence": [
+  {
+   "key": "20250304:105674829#8d96a8d3",
+   "sourceOrg": "温州新闻网",
+   "title": "张文杰调研推进“强城行动”（一园多点 全城园博）建设",
+   "publishedAt": "2025-03-04",
+   "quote": "主体部分于去年10月开工建设",
+   "statement": "【园博园】建设进度：主体部分于去年10月开工建设。",
+   "anchors": [
+    244,
+    258
+   ],
+   "spanHash": "8d96a8d3",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2025/03/04/105674829.shtml",
+   "urn": "urn:wz:asset:66wz:news:20250304:105674829"
+  },
+  {
+   "key": "20260901:105831512#54634ba2",
+   "sourceOrg": "温州新闻网",
+   "title": "暑期文旅点燃消费活力 餐饮增长19.7% 线上零售大涨24.9%",
+   "publishedAt": "2026-09-01",
+   "quote": "园博园夜游凭借光影体验圈粉无数",
+   "statement": "【园博园】带动周边餐饮消费：日均客流突破1万人次。",
+   "anchors": [
+    245,
+    260
+   ],
+   "spanHash": "54634ba2",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2026/09/01/105831512.shtml",
+   "urn": "urn:wz:asset:66wz:news:20260901:105831512"
+  },
+  {
+   "key": "ctx:https://news.66wz.com/system/2026/03/20/105731904.shtml",
+   "sourceOrg": "温州新闻网",
+   "title": "张振丰督导中国国际园林博览会筹办工作",
+   "publishedAt": "2026-03-20",
+   "quote": "来到园博园，张振丰实地察看瓯越园、苏州园、浙山浙水展园、中国馆等建设运行情况，充分肯定前阶段各项运行准备工作，对日夜奋战在一线的建设者们表示慰问和感谢。",
+   "statement": "规范新闻样本（枢纽核验）",
+   "anchors": [
+    360,
+    436
+   ],
+   "spanHash": "6eebae2a",
+   "confidence": null,
+   "verification": "rule_verified",
+   "directness": "原文引用",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://news.66wz.com/system/2026/03/20/105731904.shtml",
+   "urn": null
+  },
+  {
+   "key": "20250305:105674976#6b444c3a",
+   "sourceOrg": "温州新闻网",
+   "title": "朔门历史文化街区改造提升工程即将开工！",
+   "publishedAt": "2025-03-05",
+   "quote": "锚定“世界文化遗产核心展示区、千年斗城5A级景区、全国知名文旅打卡点”打造目标，立足2026年园博园开园重要节点，今年，温州朔门古港国家考古遗址公园将先行启动遗址本体保护展示工程一期、朔门街区改造。",
+   "statement": "《温州新闻网》于 2025-03-05 报道涉及【园博园】：朔门历史文化街区改造提升工程即将开工！。",
+   "anchors": [
+    461,
+    560
+   ],
+   "spanHash": "6b444c3a",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2025/03/05/105674976.shtml",
+   "urn": "urn:wz:asset:66wz:news:20250305:105674976"
+  },
+  {
+   "key": "20260405:105734844",
+   "sourceOrg": "温州新闻网",
+   "title": "张振丰调研园博会筹备工作：践行人民城市理念 放大园博综合效应",
+   "publishedAt": "2026-04-05",
+   "quote": "他强调，要深学笃行习近平生态文明思想和习近平总书记关于城市工作的重要论述，深入践行人民城市理念，全面落实住房城乡建设部和省委省政府部署要求，紧扣“百姓园博、国际园博、先锋园博、文化园博、全城园博”，精益求精抓好各项筹备工作，全力办好一届“简约、安全、精彩”的园博盛会，充分发挥园博园的长远综合效益。",
+   "statement": "《温州新闻网》于 2026-04-05 报道涉及【园博园】：张振丰调研园博会筹备工作：践行人民城市理念 放大园博综合效应。",
+   "anchors": [
+    32,
+    181
+   ],
+   "spanHash": "c2cd788a",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2026/04/05/105734844.shtml",
+   "urn": "urn:wz:asset:66wz:news:20260405:105734844"
+  },
+  {
+   "key": "20251020:105704118",
+   "sourceOrg": "温州新闻网",
+   "title": "永嘉县委书记吴呈钱调研园博会永嘉分会场筹备工作",
+   "publishedAt": "2025-10-20",
+   "quote": "他强调，要深入践行习近平生态文明思想，认真学习贯彻习近平总书记关于城市工作的重要论述，精心策划、周密组织，主动融入“1+13+N”全城园博体系，高水平高质量做好园博会永嘉分会场各项筹备工作，持续放大园博会效应，提升城市功能品质，展示永嘉独特魅力，赋能特色产业发展，为加快“人产城融合、农文旅共富”注入新动能。",
+   "statement": "《温州新闻网》于 2025-10-20 报道涉及【第十五届中国国际园博会与全城园博】：永嘉县委书记吴呈钱调研园博会永嘉分会场筹备工作。",
+   "anchors": [
+    54,
+    208
+   ],
+   "spanHash": "61418c2d",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2025/10/20/105704118.shtml",
+   "urn": "urn:wz:asset:66wz:news:20251020:105704118"
+  },
+  {
+   "key": "asset:20251118:105709077",
+   "sourceOrg": "温州新闻网",
+   "title": "温州园博会综合展园设计主创余伟接受专访：解开温州“全城园博”的设计密码",
+   "publishedAt": "2025-11-18",
+   "quote": "温州园博会提出‘全城园博’理念，将园博会空间拓展至整座城市，形成‘1+13+49’多维布局。专访设计主创余伟，解析‘全城园博’如何通过‘三享三探’活动体系，融合城市更新、文旅融合与生态体验，打造全民共享的城市文化节日。",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2025/11/18/105709077.shtml",
+   "urn": "urn:wz:asset:66wz:news:20251118:105709077"
+  },
+  {
+   "key": "asset:20250927:105701586",
+   "sourceOrg": "温州新闻网",
+   "title": "“全城园博”分会场摊位亮点纷呈",
+   "publishedAt": "2025-09-27",
+   "quote": "在五马历史文化街区举行的‘全城园博’活动，汇聚了温州13个分会场的特色摊位，展示了瓯菜与非遗文化的融合。永嘉麦饼、瓯柑等地方美食成为焦点，活动结合了花卉市集、非遗文创、美食试吃等元素，呈现了一场多元文化交融的金秋派对。",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2025/09/27/105701586.shtml",
+   "urn": "urn:wz:asset:66wz:news:20250927:105701586"
+  },
+  {
+   "key": "20260729:105812982",
+   "sourceOrg": "温州新闻网",
+   "title": "全国网媒一线问“新” 温州答“变”见未来",
+   "publishedAt": "2026-07-29",
+   "quote": "变废弃矿坑、老旧厂区为园林；保留9棵百年榕树、数百株原生乔木留住温州文化的根须",
+   "statement": "【园博园】改造利用：变废弃矿坑、老旧厂区为园林。",
+   "anchors": [
+    1804,
+    1843
+   ],
+   "spanHash": "1bf0b7d5",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2026/07/29/105812982.shtml",
+   "urn": "urn:wz:asset:66wz:news:20260729:105812982"
+  },
+  {
+   "key": "20260716:105805477#b11fa700",
+   "sourceOrg": "温州新闻网",
+   "title": "快来园博寻鲜打卡！2026温州大黄鱼嘉年华来袭，黄鱼体验官火热招募中",
+   "publishedAt": "2026-07-16",
+   "quote": "2026温州大黄鱼品牌嘉年华，7月19日—24日每天18:00-20:30登陆温州园博园滨水草坪。",
+   "statement": "【园博园】举办活动：2026温州大黄鱼品牌嘉年华。",
+   "anchors": [
+    36,
+    85
+   ],
+   "spanHash": "b11fa700",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2026/07/16/105805477.shtml",
+   "urn": "urn:wz:asset:66wz:news:20260716:105805477"
+  },
+  {
+   "key": "ctx:https://wztv.66wz.com/system/2026/04/16/105736934.shtml",
+   "quote": null,
+   "statement": null,
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "directness": null,
+   "qualityGrade": null,
+   "usable": true,
+   "url": null,
+   "urn": null
+  },
+  {
+   "key": "19700101:105736338",
+   "sourceOrg": "温州新闻网",
+   "title": "来园博，逛印象！园博印象4月15日开街，邀你来打卡！",
+   "publishedAt": null,
+   "quote": "温州大馄饨、灯盏糕、山粉糊、瓯柑冰淇淋……老味道让人安心；",
+   "statement": "《温州新闻网》于 None 报道涉及【温州馄饨】：来园博，逛印象！园博印象4月15日开街，邀你来打卡！。",
+   "anchors": [
+    1064,
+    1093
+   ],
+   "spanHash": "f1804bce",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": null,
+   "urn": "urn:wz:asset:66wz:news:19700101:105736338"
+  },
+  {
+   "key": "20251219:105714902",
+   "sourceOrg": "温州新闻网",
+   "title": "省外办副主任姚国文来温调研园博会国际园筹备工作",
+   "publishedAt": "2025-12-19",
+   "quote": "调研组一行实地踏勘园博园建设现场，详细了解国际园展区设计理念、布局规划及施工进展。",
+   "statement": "《温州新闻网》于 2025-12-19 报道涉及【园博园】：省外办副主任姚国文来温调研园博会国际园筹备工作。",
+   "anchors": [
+    134,
+    175
+   ],
+   "spanHash": "29c1f382",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2025/12/19/105714902.shtml",
+   "urn": "urn:wz:asset:66wz:news:20251219:105714902"
+  },
+  {
+   "key": "ctx:https://news.66wz.com/system/2026/03/19/105731896.shtml",
+   "sourceOrg": "温州新闻网",
+   "title": "从初绽到盛放",
+   "publishedAt": "2026-03-19",
+   "quote": "当春风吹过郭溪的田野，园博园开始了一场关于色彩的苏醒，也开启了一场关于城市的测试。",
+   "statement": "规范新闻样本（枢纽核验）",
+   "anchors": [
+    0,
+    41
+   ],
+   "spanHash": "08851f33",
+   "confidence": null,
+   "verification": "rule_verified",
+   "directness": "原文引用",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://news.66wz.com/system/2026/03/19/105731896.shtml",
+   "urn": null
+  },
+  {
+   "key": "asset:20260501:105741875",
+   "sourceOrg": "温州新闻网",
+   "title": "“五一”假期游园博园，玩转全城！",
+   "publishedAt": "2026-05-01",
+   "quote": "本文主要介绍第十五届中国国际园林博览会的举办情况及各分会场的特色，未涉及瓯菜相关专业内容。",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "C",
+   "usable": false,
+   "url": "https://www.66wz.com/system/2026/05/01/105741875.shtml",
+   "urn": "urn:wz:asset:66wz:news:20260501:105741875"
+  },
+  {
+   "key": "20260823:105826293",
+   "sourceOrg": "温州新闻网",
+   "title": "日均客流近千，瓯海园博工坊这家室内游乐场点燃消费热",
+   "publishedAt": "2026-08-23",
+   "quote": "温州园博园就在家门口，既有知名度又富有文化底蕴，因此我最终选择将门店落地在园博园旁的园博工坊，9月21日将迎来正式开业。",
+   "statement": "《温州新闻网》于 2026-08-23 报道涉及【园博园】：日均客流近千，瓯海园博工坊这家室内游乐场点燃消费热。",
+   "anchors": [
+    457,
+    517
+   ],
+   "spanHash": "5016f125",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2026/08/23/105826293.shtml",
+   "urn": "urn:wz:asset:66wz:news:20260823:105826293"
+  }
+ ],
+ "relatedEntities": [
+  "WZ-GOOD-00000512",
+  "WZ-PLACE-00001237",
+  "WZ-PROJECT-00000321",
+  "WZ-CULT-00000208",
+  "WZ-POLICY-00000873"
+ ],
+ "relatedNews": [
+  {
+   "title": "园博夜话 | 园如其名",
+   "pubDate": "未知日期",
+   "url": null,
+   "media": "温州新闻网",
+   "grade": "A",
+   "urn": "urn:wz:asset:66wz:news:19700101:105729368"
+  },
+  {
+   "title": "暑期文旅点燃消费活力 餐饮增长19.7% 线上零售大涨24.9%",
+   "pubDate": "2026-09-01",
+   "url": "https://www.66wz.com/system/2026/09/01/105831512.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "日均客流近千，瓯海园博工坊这家室内游乐场点燃消费热",
+   "pubDate": "2026-08-23",
+   "url": "https://www.66wz.com/system/2026/08/23/105826293.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "全国网媒一线问“新” 温州答“变”见未来",
+   "pubDate": "2026-07-29",
+   "url": "https://www.66wz.com/system/2026/07/29/105812982.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "快来园博寻鲜打卡！2026温州大黄鱼嘉年华来袭，黄鱼体验官火热招募中",
+   "pubDate": "2026-07-16",
+   "url": "https://www.66wz.com/system/2026/07/16/105805477.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "全城园博+春假！温州“五一”文旅热度拉满",
+   "pubDate": "2026-05-02",
+   "url": "https://www.66wz.com/system/2026/05/02/105741990.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "urn": "urn:wz:asset:66wz:news:20260502:105741990"
+  },
+  {
+   "title": "“五一”假期游园博园，玩转全城！",
+   "pubDate": "2026-05-01",
+   "url": "https://www.66wz.com/system/2026/05/01/105741875.shtml",
+   "media": "温州新闻网",
+   "grade": "C",
+   "viaEvidence": true
+  },
+  {
+   "title": "园博风漫染五马街！打卡即大片，快来投稿“园博映像”摄影征集",
+   "pubDate": "2026-04-23",
+   "url": "https://xuanchuan.66wz.com/system/2026/04/23/105738705.shtml",
+   "media": "温州新闻网"
+  },
+  {
+   "title": "张振丰调研园博会筹备工作：践行人民城市理念 放大园博综合效应",
+   "pubDate": "2026-04-05",
+   "url": "https://www.66wz.com/system/2026/04/05/105734844.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "张振丰督导中国国际园林博览会筹办工作",
+   "pubDate": "2026-03-20",
+   "url": "https://news.66wz.com/system/2026/03/20/105731904.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "从初绽到盛放",
+   "pubDate": "2026-03-19",
+   "url": "https://news.66wz.com/system/2026/03/19/105731896.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "省外办副主任姚国文来温调研园博会国际园筹备工作",
+   "pubDate": "2025-12-19",
+   "url": "https://www.66wz.com/system/2025/12/19/105714902.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "温州园博会综合展园设计主创余伟接受专访：解开温州“全城园博”的设计密码",
+   "pubDate": "2025-11-18",
+   "url": "https://www.66wz.com/system/2025/11/18/105709077.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "永嘉县委书记吴呈钱调研园博会永嘉分会场筹备工作",
+   "pubDate": "2025-10-20",
+   "url": "https://www.66wz.com/system/2025/10/20/105704118.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  }
+ ]
+}

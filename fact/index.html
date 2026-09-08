@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>城市实时可信内容分发系统 | 温州在线 · 城市实时可信内容分发系统</title>
+<meta name="description" content="让最新城市新闻更快进入搜索与 AI，让重要事实持续沉淀为可信城市知识。">
+<meta name="robots" content="index,follow,max-snippet:-1">
+
+<style>
+:root{--ink:#1c2430;--sub:#5a6572;--line:#e3e7ec;--paper:#f6f7f9;--card:#ffffff;--blue:#0b5cab;--blue-dk:#08427a;--amber:#9c6b1d;--amber-bg:#fdf5e6;--green:#22764a;--green-bg:#e7f4ec;--red:#b23b3b;--purple:#6b46c1;--purple-bg:#f1e9fd;--gray:#66707d;--gray-bg:#eceff3;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"PingFang SC","Microsoft YaHei","Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;font-size:15px}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+header.site{background:linear-gradient(135deg,#0b2f56 0%,#0b5cab 100%);color:#fff;padding:18px 0 0}
+header.site .bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.brand{display:flex;align-items:baseline;gap:12px}
+.brand .logo{font-size:20px;font-weight:700;letter-spacing:.5px}
+.brand .logo b{color:#ffd166}
+.brand .sub{font-size:12px;opacity:.85}
+header.site nav a{color:#dce9f7;font-size:13px;margin-left:16px}
+.crumbs{font-size:12.5px;color:#c9d9ea;padding:12px 0 14px;font-family:Consolas,Menlo,monospace}
+.crumbs b{color:#fff}
+.hero{background:#fff;border-bottom:1px solid var(--line);padding:26px 0 22px}
+h1.title{font-size:26px;line-height:1.3;margin-bottom:6px}
+.entity-id{font-family:Consolas,Menlo,monospace;font-size:13px;color:var(--blue);background:#eaf2fb;border:1px solid #cfE0f2;border-radius:4px;padding:2px 8px;display:inline-block}
+.lede{color:var(--sub);margin-top:10px;max-width:820px}
+.metagrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:16px}
+.metagrid .cell{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:9px 12px}
+.metagrid .cell .k{font-size:12px;color:var(--sub)}
+.metagrid .cell .v{font-size:13.5px;margin-top:2px}
+.verified-strip{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:16px;background:var(--green-bg);border:1px solid #cfe7d8;border-radius:6px;padding:10px 14px;font-size:13px}
+.verified-strip .dot{width:8px;height:8px;border-radius:50%;background:var(--green);display:inline-block;margin-right:6px}
+section{padding:30px 0 6px}
+h2.sec{font-size:19px;padding-left:10px;border-left:4px solid var(--blue);margin-bottom:6px}
+p.secdesc{color:var(--sub);font-size:13px;margin-bottom:14px}
+.chip{display:inline-block;font-size:12px;border-radius:3px;padding:1px 8px;border:1px solid transparent;margin-right:6px;vertical-align:middle}
+.st-active{color:var(--green);background:var(--green-bg);border-color:#bfe0cc}
+.st-superseded{color:var(--gray);background:var(--gray-bg);border-color:#d5dbe3}
+.st-expired{color:#5f6b78;background:#e8ebef;border-color:#d5dbe3}
+.st-uncertain{color:var(--amber);background:var(--amber-bg);border-color:#eedcb8}
+.st-unverified{color:var(--purple);background:var(--purple-bg);border-color:#ddcdf5}
+.ty{color:#0b5cab;background:#eaf2fb;border-color:#cfe0f2}
+.risk{color:#8a5a00;background:#fff7e6;border-color:#f0dcae}
+.prec{color:var(--sub);background:var(--gray-bg);border-color:#d5dbe3}
+.factcard{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px 18px;margin-bottom:14px}
+.factcard .pred{font-weight:600;font-size:15.5px}
+.factcard .val{margin-top:5px;font-size:15px}
+.factcard .meta{margin-top:9px;font-size:12.5px;color:var(--sub);display:flex;flex-wrap:wrap;gap:7px 16px}
+.factcard .note{margin-top:9px;font-size:13px;color:#6d4b0d;background:var(--amber-bg);border:1px dashed #eedcb8;border-radius:5px;padding:8px 11px}
+.factcard .evs{margin-top:9px;font-size:12.5px}
+.factcard .evs a{margin-right:10px;white-space:nowrap}
+.timeline{position:relative;margin:10px 0 30px 8px;padding-left:26px;border-left:2px solid #cfd8e2}
+.tl-item{position:relative;padding-bottom:22px}
+.tl-item::before{content:"";position:absolute;left:-33px;top:6px;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--blue)}
+.tl-item.sup::before{border-color:#9aa5b1}
+.tl-item .tl-date{font-family:Consolas,Menlo,monospace;font-size:13px;color:var(--blue-dk);font-weight:700}
+.tl-item .tl-date .prec{margin-left:8px;font-weight:400}
+.tl-item .tl-title{font-weight:600;margin-top:2px}
+.tl-item .tl-detail{color:var(--sub);font-size:13.5px;margin-top:2px}
+.tl-item .tl-refs{font-size:12px;margin-top:4px}
+.evcard{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:15px 18px;margin-bottom:14px}
+.evcard .evhead{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;font-size:13px;color:var(--sub)}
+.evcard .evno{font-family:Consolas,Menlo,monospace;font-weight:700;color:var(--blue);font-size:13.5px}
+.evcard .evtitle{font-weight:600;font-size:14.5px;margin-top:6px}
+.evcard blockquote{margin:9px 0;padding:10px 14px;background:#f8fafc;border-left:3px solid var(--blue);color:#2a3542;font-size:14px;border-radius:0 5px 5px 0}
+.evcard .anchors{font-family:Consolas,Menlo,monospace;font-size:12px;color:var(--sub);margin-top:6px;word-break:break-all}
+.evcard .evlinks{margin-top:7px;font-size:13px}
+.gradeA{color:var(--green);background:var(--green-bg);border-color:#bfe0cc}
+.gradeB{color:#8a5a00;background:#fff7e6;border-color:#f0dcae}
+.gradeC{color:var(--red);background:#fdecec;border-color:#f3cccc}
+.relgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-bottom:26px}
+.relcard{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:13px 15px}
+.relcard .rn{font-weight:600}
+.relcard .rt{font-size:12px;color:var(--sub);margin-top:2px}
+.relcard .rid{font-family:Consolas,Menlo,monospace;font-size:11.5px;color:var(--blue);margin-top:6px}
+.newslist{margin-bottom:26px}
+.newsrow{display:flex;gap:12px;padding:9px 4px;border-bottom:1px dashed var(--line);font-size:13.5px;align-items:baseline}
+.newsrow .nd{font-family:Consolas,Menlo,monospace;color:var(--sub);white-space:nowrap;font-size:12.5px}
+.newsrow .nm{color:var(--sub);white-space:nowrap;font-size:12.5px}
+.machine{background:#0e1726;color:#c8d6e5;border-radius:8px;padding:16px 18px;font-size:13px;margin-bottom:30px}
+.machine code{color:#8fd3ff;font-family:Consolas,Menlo,monospace}
+.machine a{color:#8fd3ff}
+footer.site{border-top:1px solid var(--line);background:#fff;margin-top:20px;padding:22px 0 40px;color:var(--sub);font-size:12.5px}
+footer.site .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+footer.site h4{font-size:13px;color:var(--ink);margin-bottom:6px}
+.tagline{font-size:12.5px;color:#c9d9ea}
+.statrow{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 4px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:6px;padding:8px 14px;font-size:12.5px;color:var(--sub)}
+.stat b{display:block;font-size:18px;color:var(--ink)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin:18px 0 8px}
+.ecard{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px 18px;display:block;color:var(--ink)}
+.ecard:hover{border-color:var(--blue);text-decoration:none;box-shadow:0 2px 10px rgba(11,92,171,.08)}
+.ecard .en{font-weight:700;font-size:16px}
+.ecard .et{color:var(--sub);font-size:12.5px;margin-top:2px}
+.ecard .es{font-size:13px;color:#3c4654;margin-top:8px}
+.ecard .em{font-family:Consolas,Menlo,monospace;font-size:11.5px;margin-top:9px;color:var(--blue)}
+.ecard .est{margin-top:8px;font-size:11.5px}
+.mech{background:#fff;border:1px solid var(--line);border-radius:8px;padding:18px 20px;margin-bottom:14px}
+.mech h3{font-size:15.5px;margin-bottom:8px}
+.mech p,.mech li{font-size:13.5px;color:#3c4654}
+.mech ul{padding-left:20px}
+.mech code{background:#f1f4f8;border:1px solid var(--line);border-radius:3px;padding:0 5px;font-size:12px;font-family:Consolas,Menlo,monospace}
+table.kv{border-collapse:collapse;width:100%;font-size:13px;margin-top:6px}
+table.kv td{border:1px solid var(--line);padding:6px 10px}
+table.kv td:first-child{background:#f8fafc;color:var(--sub);white-space:nowrap;width:170px}
+
+.pipeline{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin-top:16px}
+.pipeline .pl-title{font-size:13px;color:var(--sub);margin-bottom:8px}
+.lane{display:flex;align-items:flex-start;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.lane .lane-name{flex:0 0 84px;font-size:12px;font-weight:700;padding:2px 0}
+.lane-fast .lane-name{color:#0b5cab}
+.lane-fact .lane-name{color:#22764a}
+.lanestep{font-size:12px;background:#f2f6fb;border:1px solid #d8e4f2;border-radius:4px;padding:2px 8px;color:#27425f}
+.lanestep.ok{background:#e7f4ec;border-color:#bfe0cc;color:#22764a}
+.lanestep.warn{background:#fdf5e6;border-color:#eedcb8;color:#8a5a00}
+.lanesep{color:#b9c5d2;font-size:12px;align-self:center}
+.newsrow2{background:#fff;border:1px solid var(--line);border-radius:8px;padding:13px 16px;margin-bottom:11px}
+.newsrow2 .nr-top{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline}
+.newsrow2 .nr-time{font-family:Consolas,Menlo,monospace;font-size:13px;color:var(--blue-dk);font-weight:700}
+.newsrow2 .nr-title{font-size:15px;font-weight:600}
+.newsrow2 .nr-title a{color:var(--ink)}
+.newsrow2 .nr-title a:hover{color:var(--blue)}
+.newsrow2 .nr-meta{font-size:12px;color:var(--sub);margin-top:5px;display:flex;flex-wrap:wrap;gap:5px 14px}
+.newsrow2 .nr-meta code{font-family:Consolas,Menlo,monospace;font-size:11.5px}
+.chg{display:inline-block;font-size:12px;border-radius:3px;padding:1px 8px;border:1px solid transparent;margin-right:6px}
+.chg-new{color:var(--green);background:var(--green-bg);border-color:#bfe0cc}
+.chg-update{color:var(--blue);background:#eaf2fb;border-color:#cfe0f2}
+.chg-supersede,.chg-expire,.chg-no_change{color:var(--gray);background:var(--gray-bg);border-color:#d5dbe3}
+.chg-conflict{color:var(--red);background:#fdecec;border-color:#f3cccc}
+.rev-pending{color:var(--amber);background:var(--amber-bg);border-color:#eedcb8}
+.rev-approved{color:var(--green);background:var(--green-bg);border-color:#bfe0cc}
+.rev-modified{color:var(--blue);background:#eaf2fb;border-color:#cfe0f2}
+.rev-rejected{color:var(--red);background:#fdecec;border-color:#f3cccc}
+.rev-disputed{color:#8a5a00;background:#fff7e6;border-color:#f0dcae}
+.simbadge{display:inline-block;font-size:11.5px;color:#8a5a00;background:#fff7e6;border:1px dashed #e3c687;border-radius:3px;padding:1px 8px;margin-left:8px}
+.realbadge{display:inline-block;font-size:11.5px;color:var(--green);background:var(--green-bg);border:1px solid #bfe0cc;border-radius:3px;padding:1px 8px;margin-left:8px}
+.claim-planned{color:#8a5a00;background:#fff7e6;border-color:#f0dcae}
+.claim-observed{color:var(--green);background:var(--green-bg);border-color:#bfe0cc}
+.claim-stat{color:var(--blue);background:#eaf2fb;border-color:#cfe0f2}
+.anchor-state-confirmed{color:var(--green);background:var(--green-bg);border-color:#bfe0cc}
+.anchor-state-candidate{color:var(--amber);background:var(--amber-bg);border-color:#eedcb8}
+.anchor-state-rejected{color:var(--red);background:#fdecec;border-color:#f3cccc}
+.fasttable{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0 4px}
+.fasttable td{border:1px solid var(--line);padding:7px 11px}
+.fasttable td:first-child{font-weight:600;white-space:nowrap}
+.fasttable .ft{font-family:Consolas,Menlo,monospace;color:var(--blue-dk);white-space:nowrap;width:110px}
+.fastok{color:var(--green);font-weight:600;white-space:nowrap}
+.fastfail{color:var(--red);font-weight:600;white-space:nowrap}
+.anchorcard{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin-bottom:12px}
+.anchorcard .conf{font-family:Consolas,Menlo,monospace;font-weight:700}
+.quoteanchor{font-family:Consolas,Menlo,monospace;font-size:12.5px;background:#f8fafc;border:1px dashed #cfd8e2;border-radius:5px;padding:7px 11px;margin-top:7px;color:#2a3542}
+.claimcard{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin-bottom:12px}
+.claimcard .cpred{font-family:Consolas,Menlo,monospace;font-weight:700;font-size:13.5px;color:var(--blue-dk)}
+.claimcard .cval{margin-top:4px}
+.changebox{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px 18px;margin-bottom:14px}
+.changebox .cb-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
+.cb-cell{background:#f8fafc;border:1px solid var(--line);border-radius:6px;padding:10px 13px;font-size:13.5px}
+.cb-cell .k{font-size:11.5px;color:var(--sub);margin-bottom:4px}
+.oldval{color:#8a4b08;text-decoration:line-through;text-decoration-color:#d8b27a}
+.newval{color:var(--green);font-weight:600}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:14px 0 6px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px 18px}
+.kpi .kv{font-size:30px;font-weight:800;color:var(--blue-dk);font-family:Consolas,Menlo,monospace}
+.kpi .kl{font-size:13px;font-weight:700;margin-top:2px}
+.kpi .ks{font-size:12px;color:var(--sub);margin-top:4px}
+.review3{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:13px;margin:14px 0}
+.review3 .rcol{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 16px}
+.review3 .rcol h3{font-size:14px;margin-bottom:9px;padding-bottom:7px;border-bottom:1px dashed var(--line)}
+.rcol-context .factmini{border-left:3px solid #cfd8e2;padding:6px 10px;margin-bottom:9px;font-size:13px;background:#fafbfc;border-radius:0 5px 5px 0}
+.rbtns{display:flex;gap:9px;flex-wrap:wrap;margin:14px 0 8px}
+.rbtn{font-size:14px;padding:8px 20px;border-radius:5px;border:1px solid var(--blue);background:#fff;color:var(--blue);cursor:pointer}
+.rbtn:hover{background:#eaf2fb}
+.rbtn.active{background:var(--blue);color:#fff}
+.rresult{font-size:13.5px;background:var(--green-bg);border:1px solid #bfe0cc;border-radius:6px;padding:10px 14px;color:#1f5c3a}
+.trackmile{display:flex;gap:10px;align-items:baseline;padding:5px 0;border-bottom:1px dashed #eef1f5;font-size:13.5px}
+.trackmile .tm-at{font-family:Consolas,Menlo,monospace;color:var(--sub);white-space:nowrap;font-size:12.5px;min-width:170px}
+.track-done{color:var(--green);font-weight:700}
+.track-tracking{color:#8a5a00;font-weight:700}
+.track-planned{color:var(--sub)}
+.qtable{width:100%;border-collapse:collapse;font-size:13px;background:#fff}
+.qtable th,.qtable td{border:1px solid var(--line);padding:8px 11px;text-align:left}
+.qtable th{background:#f2f6fb}
+.cite-yes{color:var(--green);font-weight:600}
+.cite-no{color:var(--sub)}
+.cite-track{color:#8a5a00;font-weight:600}
+@media (max-width:900px){.review3{grid-template-columns:1fr}.cb-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"温州城市实时可信内容分发系统","url":"https://huangzuomin.github.io/wz-fact-engine-demo/fact/","inLanguage":"zh-CN","sdDatePublished":"2026-09-08","sdPublisher":{"@type":"NewsMediaOrganization","name":"温州新闻网（温州日报报业集团）"}}</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <div class="bar">
+      <div class="brand"><span class="logo">温州在线 · <b>城市事实</b></span><span class="sub">City Real-time Trusted Content Distribution</span></div>
+      <nav><a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/#news">实时新闻</a><a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/#catalog">事实目录</a><a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/review/">审核工作台</a><a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/observatory/">AI 引用监测</a><a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/#machine">API · Feed</a></nav>
+    </div>
+    <div class="crumbs">huangzuomin.github.io/wz-fact-engine-demo/fact / <b>fact</b></div>
+  </div>
+</header>
+<div style="background:#fff7e6;border-bottom:1px solid #f0dcae;color:#8a5a00;font-size:12.5px;text-align:center;padding:6px 14px">交付验证 · 演示部署（GitHub Pages）· 生产规划发布域为 https://www.66wz.net/fact/</div>
+<div class="wrap">
+
+  <section style="padding-top:24px">
+    <h1 class="title" style="font-size:28px">城市实时可信内容分发系统</h1>
+    <p class="lede" style="font-size:15.5px">让最新城市新闻<b>更快进入搜索与 AI</b>（Fast Lane），让重要事实<b>持续沉淀为可信城市知识</b>（Fact Lane）。新闻是事件（News = Event），事实是状态（Fact = State）——这台流水线让城市信息从发生、发布、核验、沉淀，一路进入 AI 的认知链路。</p>
+    
+  <div class="pipeline">
+    <div class="pl-title">最近一条新闻的实时旅程（点击步骤可进入 <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/news/20260908-0361/">News Event</a>）：</div>
+    <div class="lane lane-fast">
+      <span class="lane-name">Fast Lane</span>
+      <span class="lanestep ok">13:05:00 发布</span><span class="lanesep">→</span>
+      <span class="lanestep ok">05:02 Sitemap</span><span class="lanesep">→</span>
+      <span class="lanestep ok">05:03 IndexNow</span><span class="lanesep">→</span>
+      <span class="lanestep ok">05:04 百度提交</span><span class="lanesep">→</span>
+      <span class="lanestep ok">已进入搜索 / AI 检索通道</span>
+    </div>
+    <div class="lane lane-fact">
+      <span class="lane-name">Fact Lane</span>
+      <span class="lanestep ok">13:12 锚定 WZ-SCHOOL-00001782</span><span class="lanesep">→</span>
+      <span class="lanestep ok">13:14 抽取 3 条 Claim</span><span class="lanesep">→</span>
+      <span class="lanestep warn">3 项 Fact Change</span><span class="lanesep">→</span>
+      <span class="lanestep warn">待人工确认 → <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/review/">审核工作台</a></span>
+    </div>
+  </div>
+    
+  <div class="statrow">
+    <div class="stat"><b>4</b>今日新闻事件</div>
+    <div class="stat"><b>6</b>今日 Fact Change</div>
+    <div class="stat"><b>3</b>待人工确认</div>
+    <div class="stat"><b>16%</b>AI Citation Rate</div>
+  </div>
+  <div class="verified-strip" style="margin-top:0">
+    <span><span class="dot"></span>最近一次 AI Citation：2026-09-05 16:42 · 元宝 → <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/fact/WZ-PLACE-00000322/">南塘风貌街事实页</a></span>
+    <span><a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/observatory/">进入 AI 引用监测 →</a></span>
+  </div>
+  </section>
+
+  <section id="news">
+    <h2 class="sec">实时新闻流 · 最近进入系统</h2>
+    <p class="secdesc">每条新闻发布即进入 Fast Lane 分发；涉及受控实体的，同步进入 Fact Lane 做锚定、抽取与事实变化检测。<span class="simbadge">今日事件为演示模拟 · 历史事件为真实档案</span></p>
+    
+    <div class="newsrow2">
+      <div class="nr-top">
+        <span class="nr-time">13:05</span>
+        <span class="nr-title"><a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/news/20260908-0361/">温州市实验中学教育集团滨江校区工程今日正式开工</a></span>
+      </div>
+      <div class="nr-meta">
+        <span>Content ID：<code>CMS-20260908-0361</code></span>
+        <span>来源：温州新闻网</span>
+        <span class="chip ty">检测到事实变化</span>
+        <span class="chip st-active">Fast Lane：已推送搜索</span>
+        <span class="chip rev-pending">Fact Lane：3 项待确认</span>
+      </div>
+      <div class="nr-meta">
+        <span>识别实体：<a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-SCHOOL-00001782/"><code>WZ-SCHOOL-00001782</code></a></span>
+        <span>Claim 3 条</span>
+      </div>
+    </div>
+
+    <div class="newsrow2">
+      <div class="nr-top">
+        <span class="nr-time">12:10</span>
+        <span class="nr-title"><a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/news/20260908-0368/">瓯海泽雅高山番薯迎来丰收季 村民增收有盼头</a></span>
+      </div>
+      <div class="nr-meta">
+        <span>Content ID：<code>CMS-20260908-0368</code></span>
+        <span>来源：温州新闻网</span>
+        <span class="chip ty">已分发</span>
+        <span class="chip st-active">Fast Lane：已推送搜索</span>
+        <span class="chip prec">Fact Lane：不适用（无锚定实体）</span>
+      </div>
+      <div class="nr-meta">
+        <span>识别实体：<i>无（未达锚定阈值）</i></span>
+        
+      </div>
+    </div>
+
+    <div class="newsrow2">
+      <div class="nr-top">
+        <span class="nr-time">11:48</span>
+        <span class="nr-title"><a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/news/20260908-0365/">S1线惠民路站&quot;轨道+美食&quot;惠民市集本周末开市</a></span>
+      </div>
+      <div class="nr-meta">
+        <span>Content ID：<code>CMS-20260908-0365</code></span>
+        <span>来源：温州新闻网</span>
+        <span class="chip ty">已完成审核</span>
+        <span class="chip st-active">Fast Lane：已推送搜索</span>
+        <span class="chip st-active">Fact Lane：事实已更新</span>
+      </div>
+      <div class="nr-meta">
+        <span>识别实体：<a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-TRANS-00000864/"><code>WZ-TRANS-00000864</code></a></span>
+        <span>Claim 1 条</span>
+      </div>
+    </div>
+
+    <div class="newsrow2">
+      <div class="nr-top">
+        <span class="nr-time">10:32</span>
+        <span class="nr-title"><a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/news/20260908-0347/">2025年温州大黄鱼全产业链产值达19.2亿元</a></span>
+      </div>
+      <div class="nr-meta">
+        <span>Content ID：<code>CMS-20260908-0347</code></span>
+        <span>来源：温州新闻网</span>
+        <span class="chip ty">事实已更新</span>
+        <span class="chip st-active">Fast Lane：已推送搜索</span>
+        <span class="chip st-active">Fact Lane：事实已更新</span>
+      </div>
+      <div class="nr-meta">
+        <span>识别实体：<a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-GOOD-00000512/"><code>WZ-GOOD-00000512</code></a></span>
+        <span>Claim 2 条</span>
+      </div>
+    </div>
+
+    <div class="newsrow2">
+      <div class="nr-top">
+        <span class="nr-time">2026-05-08 18:22</span>
+        <span class="nr-title"><a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/news/105743242/">张振丰专题研究文旅区域联动发展和大黄鱼产业高质量发展</a></span>
+      </div>
+      <div class="nr-meta">
+        <span>Content ID：<code>CMS-105743242</code></span>
+        <span>来源：温州新闻网</span>
+        <span class="chip ty">事实已更新</span>
+        <span class="chip st-active">Fast Lane：已推送搜索</span>
+        <span class="chip st-active">Fact Lane：事实已更新</span>
+      </div>
+      <div class="nr-meta">
+        <span>识别实体：<a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-GOOD-00000512/"><code>WZ-GOOD-00000512</code></a></span>
+        <span>Claim 1 条</span>
+      </div>
+    </div>
+
+    <div class="newsrow2">
+      <div class="nr-top">
+        <span class="nr-time">2026-04-21 09:05</span>
+        <span class="nr-title"><a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/news/105738139/">&quot;一尾鱼&quot;游出19亿元产值，从鱼苗到餐桌的闭环如何炼成</a></span>
+      </div>
+      <div class="nr-meta">
+        <span>Content ID：<code>CMS-105738139</code></span>
+        <span>来源：温州新闻网</span>
+        <span class="chip ty">事实已更新</span>
+        <span class="chip st-active">Fast Lane：已推送搜索</span>
+        <span class="chip st-active">Fact Lane：事实已更新</span>
+      </div>
+      <div class="nr-meta">
+        <span>识别实体：<a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-GOOD-00000512/"><code>WZ-GOOD-00000512</code></a></span>
+        <span>Claim 1 条</span>
+      </div>
+    </div>
+
+    <div class="newsrow2">
+      <div class="nr-top">
+        <span class="nr-time">2025-08-29 08:31</span>
+        <span class="nr-title"><a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/news/105697993/">温州全市已实施新改扩建中小学项目92个</a></span>
+      </div>
+      <div class="nr-meta">
+        <span>Content ID：<code>CMS-105697993</code></span>
+        <span>来源：温州新闻网</span>
+        <span class="chip ty">事实已更新</span>
+        <span class="chip st-active">Fast Lane：已推送搜索</span>
+        <span class="chip st-active">Fact Lane：事实已更新</span>
+      </div>
+      <div class="nr-meta">
+        <span>识别实体：<a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-SCHOOL-00001782/"><code>WZ-SCHOOL-00001782</code></a></span>
+        <span>Claim 1 条</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="changes">
+    <h2 class="sec">最近事实变化 · Fact Change Feed</h2>
+    <p class="secdesc">机器出口：<a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/changes.json">changes.json</a> —— 每一次事实变化都可被外部系统订阅。旧值不覆盖，全部保留版本关系。</p>
+    
+    <div class="newsrow2">
+      <div class="nr-top">
+        <span class="nr-time">2026-09-08 13:18:22</span>
+        <a class="entity-id" href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-GOOD-00000512/">温州大黄鱼</a>
+        <span class="chg chg-update">Update</span>
+        <span class="chip rev-approved">已确认</span>
+      </div>
+      <div style="font-size:14px;margin-top:6px">industry_output_value（产业产值·年度）：<span class="oldval">产值突破15亿元（2022年度口径）</span> → <span class="newval">19.2亿元（2025年度·全产业链口径）</span></div>
+      <div class="nr-meta">
+        <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-GOOD-00000512/">Entity Page</a>
+        <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/news/20260908-0347/">来源新闻</a>
+        <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/review/chg-20260908-001/">审核记录</a>
+      </div>
+    </div>
+
+    <div class="newsrow2">
+      <div class="nr-top">
+        <span class="nr-time">2026-09-08 13:17:58</span>
+        <a class="entity-id" href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-GOOD-00000512/">温州大黄鱼</a>
+        <span class="chg chg-no_change">No Change</span>
+        <span class="chip rev-approved">已确认</span>
+      </div>
+      <div style="font-size:14px;margin-top:6px">aquaculture_output_2025（养殖产量·2025） · 与现行事实一致</div>
+      <div class="nr-meta">
+        <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-GOOD-00000512/">Entity Page</a>
+        <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/news/20260908-0347/">来源新闻</a>
+        <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/review/chg-20260908-006/">审核记录</a>
+      </div>
+    </div>
+
+    <div class="newsrow2">
+      <div class="nr-top">
+        <span class="nr-time">2026-09-08 13:14:42</span>
+        <a class="entity-id" href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-SCHOOL-00001782/">温州市中小学校新建改扩建工程</a>
+        <span class="chg chg-new">New Fact</span>
+        <span class="chip rev-pending">待人工确认</span>
+      </div>
+      <div style="font-size:14px;margin-top:6px">project_total_investment（项目总投资）：<span class="newval">新增「滨江校区总投资约 4.2 亿元（概算口径）」</span></div>
+      <div class="nr-meta">
+        <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-SCHOOL-00001782/">Entity Page</a>
+        <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/news/20260908-0361/">来源新闻</a>
+        <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/review/chg-20260908-005/">审核记录</a>
+      </div>
+    </div>
+
+    <div class="newsrow2">
+      <div class="nr-top">
+        <span class="nr-time">2026-09-08 13:14:41</span>
+        <a class="entity-id" href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-SCHOOL-00001782/">温州市中小学校新建改扩建工程</a>
+        <span class="chg chg-new">New Fact</span>
+        <span class="chip rev-pending">待人工确认</span>
+      </div>
+      <div style="font-size:14px;margin-top:6px">planned_completion_year（计划建成年份）：<span class="newval">新增「预计 2028 年秋季建成投用（计划口径）」</span></div>
+      <div class="nr-meta">
+        <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-SCHOOL-00001782/">Entity Page</a>
+        <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/news/20260908-0361/">来源新闻</a>
+        <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/review/chg-20260908-003/">审核记录</a>
+      </div>
+    </div>
+
+    <div class="newsrow2">
+      <div class="nr-top">
+        <span class="nr-time">2026-09-08 13:14:40</span>
+        <a class="entity-id" href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-SCHOOL-00001782/">温州市中小学校新建改扩建工程</a>
+        <span class="chg chg-new">New Fact</span>
+        <span class="chip rev-pending">待人工确认</span>
+      </div>
+      <div style="font-size:14px;margin-top:6px">construction_started_on（开工日期）：<span class="newval">新增「滨江校区项目于 2026-09-08 开工」</span></div>
+      <div class="nr-meta">
+        <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-SCHOOL-00001782/">Entity Page</a>
+        <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/news/20260908-0361/">来源新闻</a>
+        <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/review/chg-20260908-002/">审核记录</a>
+      </div>
+    </div>
+
+    <div class="newsrow2">
+      <div class="nr-top">
+        <span class="nr-time">2026-09-08 12:02:10</span>
+        <a class="entity-id" href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-TRANS-00000864/">温州市域铁路（S线网络）</a>
+        <span class="chg chg-no_change">No Change</span>
+        <span class="chip rev-approved">已确认</span>
+      </div>
+      <div style="font-size:14px;margin-top:6px">rail_plus_consumption（轨道+消费场景） · 与现行事实一致</div>
+      <div class="nr-meta">
+        <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-TRANS-00000864/">Entity Page</a>
+        <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/news/20260908-0365/">来源新闻</a>
+        <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/review/chg-20260908-004/">审核记录</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalog">
+    <h2 class="sec">城市事实目录 · 底层资产入口</h2>
+    <p class="secdesc">一期 MVP 10 个高价值实体：永久 ID · 事实页 · 核心事实 · 历史时间线 · 证据链 · JSON-LD · JSON API。</p>
+    <div class="cards">
+    <a class="ecard" href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-PLACE-00001237/">
+      <div class="en">五马街（五马历史文化街区）</div>
+      <div class="et">历史文化街区 · 文旅空间 · 文化旅游</div>
+      <div class="es">温州老城核心商业与文化街区：2018年起整体改造提升，2021年入选首批浙江省旅游休闲街区，现为主城区文旅核心地标。</div>
+      <div class="em">WZ-PLACE-00001237</div>
+      <div class="est"><span class="chip st-active">当前有效</span> 6 条 · 证据 13 条 · <span class="chip st-superseded">替代/失效 1</span></div>
+    </a>
+
+    <a class="ecard" href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-PLACE-00000322/">
+      <div class="en">南塘风貌街</div>
+      <div class="et">历史文化街区 · 夜间消费空间 · 文化旅游</div>
+      <div class="es">塘河沿线餐饮与夜间消费街区：2025年8月入选浙江首批20个夜经济坐标，&quot;塘河夜画&quot;为温州月光经济代表品牌。</div>
+      <div class="em">WZ-PLACE-00000322</div>
+      <div class="est"><span class="chip st-active">当前有效</span> 4 条 · 证据 7 条</div>
+    </a>
+
+    <a class="ecard" href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-PLACE-00000298/">
+      <div class="en">江心屿</div>
+      <div class="et">岛屿景区 · 文旅空间 · 文化旅游</div>
+      <div class="es">瓯江中的千年名屿、&quot;诗之岛&quot;：2019年起整岛提升，2024年推进西园再开发，2025年开通低空观光航线。</div>
+      <div class="em">WZ-PLACE-00000298</div>
+      <div class="est"><span class="chip st-active">当前有效</span> 4 条 · 证据 8 条</div>
+    </a>
+
+    <a class="ecard" href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-GOOD-00000512/">
+      <div class="en">温州大黄鱼</div>
+      <div class="et">地理标志农产品 · 海水养殖产业 · 产业经济</div>
+      <div class="es">温州海洋养殖支柱品种：深水网箱养殖全国领先，2025年全市产量2.2万吨、全产业链产值19.2亿元；&quot;温州大黄鱼&quot;品牌加速标准化、品牌化。</div>
+      <div class="em">WZ-GOOD-00000512</div>
+      <div class="est"><span class="chip st-active">当前有效</span> 6 条 · 证据 18 条 · <span class="chip st-superseded">替代/失效 3</span></div>
+    </a>
+
+    <a class="ecard" href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-CULT-00000208/">
+      <div class="en">瓯菜</div>
+      <div class="et">饮食文化 · 非遗 · 历史文化</div>
+      <div class="es">浙菜四大流派之一，以海鲜为主、&quot;轻油轻芡重刀工&quot;著称；温州正以瓯菜为抓手创建&quot;世界美食之都&quot;。</div>
+      <div class="em">WZ-CULT-00000208</div>
+      <div class="est"><span class="chip st-active">当前有效</span> 4 条 · 证据 9 条</div>
+    </a>
+
+    <a class="ecard" href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-SCHOOL-00001782/">
+      <div class="en">温州市中小学校新建改扩建工程</div>
+      <div class="et">重要公共服务 · 教育设施 · 公共服务（教育）</div>
+      <div class="es">全市中小学新改扩建持续推进：2025年已实施项目92个、34个完工，一批新校园当年秋季投用。</div>
+      <div class="em">WZ-SCHOOL-00001782</div>
+      <div class="est"><span class="chip st-active">当前有效</span> 3 条 · 证据 8 条 · <span class="chip st-uncertain">待核 2</span></div>
+    </a>
+
+    <a class="ecard" href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-TRANS-00000864/">
+      <div class="en">温州市域铁路（S线网络）</div>
+      <div class="et">道路交通 · 公共交通 · 交通</div>
+      <div class="es">S1线运营中（截至2024年12月已运营五周年），S2线已于2023年9月前开通；&quot;轨道+消费&quot;场景持续扩展。</div>
+      <div class="em">WZ-TRANS-00000864</div>
+      <div class="est"><span class="chip st-active">当前有效</span> 4 条 · 证据 9 条 · <span class="chip st-superseded">替代/失效 1</span></div>
+    </a>
+
+    <a class="ecard" href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-PROJECT-00000321/">
+      <div class="en">滨江商务区CBD总部大楼群</div>
+      <div class="et">重大工程 · 总部经济集聚区 · 城市建设</div>
+      <div class="es">&quot;强城行动&quot;十大标志性成果之首：2.4平方公里滨江CBD，正泰、华峰、青山、万洋、民商银行等总部大楼在建，缤江中心已投用。</div>
+      <div class="em">WZ-PROJECT-00000321</div>
+      <div class="est"><span class="chip st-active">当前有效</span> 5 条 · 证据 15 条</div>
+    </a>
+
+    <a class="ecard" href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-EVENT-00000073/">
+      <div class="en">第十五届中国国际园林博览会（温州）</div>
+      <div class="et">重大工程 · 国家级博览会 · 城市建设</div>
+      <div class="es">以&quot;百姓园博、国际园博、先锋园博、文化园博、全城园博&quot;为定位；园博园2024年10月主体开工，2026年已开园运行，夜游日均客流超1万人次。</div>
+      <div class="em">WZ-EVENT-00000073</div>
+      <div class="est"><span class="chip st-active">当前有效</span> 5 条 · 证据 16 条 · <span class="chip st-superseded">替代/失效 1</span> · <span class="chip st-uncertain">待核 1</span></div>
+    </a>
+
+    <a class="ecard" href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-POLICY-00000873/">
+      <div class="en">温州城市更新与旧城改造</div>
+      <div class="et">重要公共服务 · 民生实事 · 公共服务（住建）</div>
+      <div class="es">2023年以来实施老旧小区改造项目138个、完成投资6.2亿元，做法获住建部可复制经验推广；城中村改造涌现梧田老街等全国典型。</div>
+      <div class="em">WZ-POLICY-00000873</div>
+      <div class="est"><span class="chip st-active">当前有效</span> 3 条 · 证据 10 条 · <span class="chip st-superseded">替代/失效 1</span></div>
+    </a></div>
+  </section>
+
+  <section id="schema">
+    <h2 class="sec">Entity → Schema.org 映射表</h2>
+    <p class="secdesc">不为 rich result 强行套类型；不确定时使用 Thing。</p>
+    <table class="kv"><tr><td>place（街区/景区/地标）</td><td><code>Place</code><br><span style="font-size:12px;color:var(--sub)">WZ-PLACE-00001237 五马街 · WZ-PLACE-00000322 南塘风貌街 · WZ-PLACE-00000298 江心屿</span></td></tr><tr><td>event（博览会/活动）</td><td><code>Event</code><br><span style="font-size:12px;color:var(--sub)">WZ-EVENT-00000073 第十五届园博会</span></td></tr><tr><td>project（重大工程）</td><td><code>Project</code><br><span style="font-size:12px;color:var(--sub)">WZ-PROJECT-00000321 滨江CBD总部大楼群</span></td></tr><tr><td>policy / public service / transport program</td><td><code>GovernmentService</code><br><span style="font-size:12px;color:var(--sub)">WZ-SCHOOL-00001782 教育工程 · WZ-TRANS-00000864 市域铁路 · WZ-POLICY-00000873 城市更新</span></td></tr><tr><td>food / cultural concept</td><td><code>Thing</code><br><span style="font-size:12px;color:var(--sub)">WZ-GOOD-00000512 温州大黄鱼 · WZ-CULT-00000208 瓯菜</span></td></tr><tr><td>school（单所学校建档时）</td><td><code>EducationalOrganization</code><br><span style="font-size:12px;color:var(--sub)">市级工程类不套用，仍为 GovernmentService</span><br><span style="font-size:12px;color:var(--sub)"></span></td></tr><tr><td>uncertain（缺省兜底）</td><td><code>Thing</code><br><span style="font-size:12px;color:var(--sub)"></span></td></tr></table>
+  </section>
+
+  <section id="machine">
+    <div class="machine">
+      <b style="color:#fff">机器出口（Machine-readable outputs）</b><br><br>
+      Fact： <code>/fact/&lt;ID&gt;/</code> HTML（服务端直出） · <code>/fact/&lt;ID&gt;.json</code> JSON API · 页面内嵌 JSON-LD<br>
+      News： <code>/fact/news/&lt;content-id&gt;/</code> HTML · <code>/fact/news/&lt;content-id&gt;.json</code> News Event JSON<br>
+      变化流： <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/changes.json" style="color:#8fd3ff">/fact/changes.json</a>（entity / predicate / old_value / new_value / changed_at / evidence_url）<br>
+      索引与订阅： <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/sitemap.xml" style="color:#8fd3ff">sitemap.xml</a> · <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/feed.xml" style="color:#8fd3ff">feed.xml</a> · <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/feed.json" style="color:#8fd3ff">feed.json</a> · <a href="https://huangzuomin.github.io/wz-fact-engine-demo/fact/catalog.json" style="color:#8fd3ff">catalog.json</a><br>
+      MCP： 枢纽侧 news-base-mcp 为 Agent 直连通道（list_entities / search_evidence / get_entity_timeline）
+    </div>
+  </section>
+</div>
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div><h4>城市事实发布引擎</h4>fact-publishing-engine v0.1（MVP 交付验证）<br>生成时间：2026-09-08T10:00:00+08:00<br>发布域：https://huangzuomin.github.io/wz-fact-engine-demo/fact/</div>
+      <div><h4>双链路分工</h4>News = Event：本系统新闻页回答"刚刚发生了什么"；<br>Fact = State：事实页回答"现在是什么状态"。<br>新闻不承担长期状态管理，事实页不重写新闻。</div>
+      <div><h4>版权</h4>内容版权归 温州新闻网（温州日报报业集团）；<br>演示数据中标注 Demo Simulation 的内容为模拟。</div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

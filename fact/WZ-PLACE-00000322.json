@@ -1,0 +1,408 @@
+{
+ "api": {
+  "name": "城市事实发布引擎",
+  "version": "v0.1",
+  "generatedAt": "2026-09-08T10:00:00+08:00",
+  "canonicalBase": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/"
+ },
+ "entity": {
+  "id": "WZ-PLACE-00000322",
+  "standardName": "南塘风貌街",
+  "name": "南塘风貌街",
+  "aliases": [
+   "南塘街",
+   "印象南塘",
+   "南塘餐饮街",
+   "南塘文化旅游区"
+  ],
+  "type": "历史文化街区 · 夜间消费空间",
+  "schemaType": "Place",
+  "domain": "文化旅游",
+  "location": "浙江省温州市鹿城区（南塘河沿线）",
+  "hubRef": {
+   "fqn": "OuCuisineGlossary.CulinaryPlaces.FoodStreets.NanTangDistrict",
+   "entityRef": "wz:entity:food:poi:nantang_street",
+   "dataProduct": "瓯菜数据资产 ou_cuisine_asset v2.0（Authority.A / AIReady.L3）"
+  },
+  "summary": "塘河沿线餐饮与夜间消费街区：2025年8月入选浙江首批20个夜经济坐标，\"塘河夜画\"为温州月光经济代表品牌。",
+  "lastVerifiedAt": "2026-09-08",
+  "reviewAfter": null,
+  "ttlDays": 90,
+  "htmlUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-PLACE-00000322/",
+  "jsonUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-PLACE-00000322.json"
+ },
+ "facts": [
+  {
+   "factId": "WZ-F-00322-01",
+   "predicate": "空间定位",
+   "value": "鹿城区南塘河沿线餐饮与夜间消费空间，适合瓯菜、海鲜和文旅餐饮观察",
+   "factType": "当前状态",
+   "status": "active",
+   "timePrecision": "当前有效",
+   "validFrom": "2021-01-01",
+   "validTo": null,
+   "sourcePublishedAt": null,
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-12-07",
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "hub:nantang"
+   ]
+  },
+  {
+   "factId": "WZ-F-00322-02",
+   "predicate": "省级夜经济地位",
+   "value": "2025年8月入选浙江首批20个夜经济坐标（浙江省商务厅\"购在中国·浙夜好生活\"发布）",
+   "factType": "已发生事实",
+   "status": "active",
+   "timePrecision": "月",
+   "validFrom": "2025-08-01",
+   "validTo": null,
+   "sourcePublishedAt": "2025-08-12",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-12-07",
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20250812:105695850"
+   ]
+  },
+  {
+   "factId": "WZ-F-00322-03",
+   "predicate": "月光经济品牌",
+   "value": "\"塘河夜画\"游船项目为温州月光经济\"明星品牌\"（2020年5月报道）",
+   "factType": "当前状态",
+   "status": "active",
+   "timePrecision": "当前有效",
+   "validFrom": "2020-05-01",
+   "validTo": null,
+   "sourcePublishedAt": "2020-05-20",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-12-07",
+   "updateRiskLevel": "L2",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": "最近一次活跃证据为2020年；运营现势性建议列入下一轮巡检。",
+   "evidence": [
+    "20200520:105273908"
+   ]
+  },
+  {
+   "factId": "WZ-F-00322-04",
+   "predicate": "文旅定位",
+   "value": "全面改造提升后成为温州都市圈文旅目的地，是展示温州地域文化的\"城市客厅\"",
+   "factType": "当前状态",
+   "status": "active",
+   "timePrecision": "当前有效",
+   "validFrom": "2020-05-01",
+   "validTo": null,
+   "sourcePublishedAt": "2020-05-11",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-12-07",
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20200511:105270379"
+   ]
+  }
+ ],
+ "timeline": [
+  {
+   "date": "2007-05-24",
+   "precision": "日",
+   "title": "风貌区开建计划披露",
+   "detail": "南塘街风貌区下半年开建，北段规划总平图由温州市建筑设计研究院提供。",
+   "factRef": null,
+   "evidence": [
+    "ctx:https://www.pub.wzqw.com/system/2007/05/24/100317056.shtml"
+   ],
+   "note": null
+  },
+  {
+   "date": "2013-05-17",
+   "precision": "日",
+   "title": "街区文化底蕴梳理",
+   "detail": "南塘风貌街传统文化底蕴浓厚，留存众多文化名人足迹。",
+   "factRef": null,
+   "evidence": [
+    "ctx:https://edu.66wz.com/system/2013/05/17/103647535.shtml"
+   ],
+   "note": null
+  },
+  {
+   "date": "2014-10-13",
+   "precision": "日",
+   "title": "夜游点亮\"夜经济\"",
+   "detail": "每当夜色降临，南塘街华灯点亮，塘河两岸呈现美丽夜景；夜游被寄望点亮温州\"夜经济\"。",
+   "factRef": null,
+   "evidence": [
+    "20141013:104241058"
+   ],
+   "note": null
+  },
+  {
+   "date": "2020-05-11",
+   "precision": "日",
+   "title": "改造提升后重新定位",
+   "detail": "全面改造提升后的南塘成为温州都市圈文旅目的地、\"城市客厅\"；街区文创夜市预计当年8月开市。",
+   "factRef": "WZ-F-00322-04",
+   "evidence": [
+    "20200511:105270379"
+   ],
+   "note": null
+  },
+  {
+   "date": "2020-05-20",
+   "precision": "日",
+   "title": "\"塘河夜画\"成明星品牌",
+   "detail": "夜晚南塘河上游船游弋，璀璨光影如梦如幻；\"塘河夜画\"成为温州月光经济\"明星品牌\"。",
+   "factRef": "WZ-F-00322-03",
+   "evidence": [
+    "20200520:105273908"
+   ],
+   "note": null
+  },
+  {
+   "date": "2025-08-12",
+   "precision": "日",
+   "title": "入选浙江首批夜经济坐标",
+   "detail": "凭借多元夜间消费生态、深厚文化底蕴与创新科技应用成功入选，成为温州\"月光经济\"活力地标。",
+   "factRef": "WZ-F-00322-02",
+   "evidence": [
+    "20250812:105695850"
+   ],
+   "note": null
+  }
+ ],
+ "evidence": [
+  {
+   "key": "hub:nantang",
+   "sourceOrg": "城市可信内容枢纽 · 受控实体词表",
+   "title": "南塘风貌街（官方定义）",
+   "quote": "鹿城区南塘河沿线餐饮与夜间消费空间，适合瓯菜、海鲜和文旅餐饮观察。",
+   "statement": "鹿城区南塘河沿线餐饮与夜间消费空间，适合瓯菜、海鲜和文旅餐饮观察。",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "controlled_vocabulary",
+   "directness": null,
+   "qualityGrade": null,
+   "usable": true,
+   "url": null,
+   "urn": null
+  },
+  {
+   "key": "20250812:105695850",
+   "sourceOrg": "温州新闻网",
+   "title": "南塘文化旅游区入选全省夜经济坐标",
+   "publishedAt": "2025-08-12",
+   "quote": "温州网讯 日前，在浙江省商务厅主办的“购在中国·浙夜好生活”2025暑期消费嘉年华启动仪式上，备受瞩目的浙江首批20个夜经济坐标正式发布，温州南塘文化旅游区凭借其多元的夜间消费生态、深厚的文化底蕴与创新的科技应用，成功入选，成为展现温州“月光经济”蓬勃活力的重要地标。",
+   "statement": "《温州新闻网》于 2025-08-12 报道涉及【南塘风貌街】：南塘文化旅游区入选全省夜经济坐标。",
+   "anchors": [
+    0,
+    134
+   ],
+   "spanHash": "db2e95b7",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2025/08/12/105695850.shtml",
+   "urn": "urn:wz:asset:66wz:news:20250812:105695850"
+  },
+  {
+   "key": "20200520:105273908",
+   "sourceOrg": "温州新闻网",
+   "title": "“塘河夜画”成月光经济“明星品牌”",
+   "publishedAt": "2020-05-20",
+   "quote": "温州网讯 夜晚，市区南塘河上，游船游弋河面，在璀璨光影下，如梦如幻……作为温州月光经济“明星品牌”的“塘河夜画”，连日来吸引了市民的目光。",
+   "statement": "《温州新闻网》于 2020-05-20 报道涉及【南塘风貌街】：“塘河夜画”成月光经济“明星品牌”。",
+   "anchors": [
+    0,
+    69
+   ],
+   "spanHash": "ff5151c2",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2020/05/20/105273908.shtml",
+   "urn": "urn:wz:asset:66wz:news:20200520:105273908"
+  },
+  {
+   "key": "20200511:105270379",
+   "sourceOrg": "温州新闻网",
+   "title": "南塘街区文创夜市预计8月开市",
+   "publishedAt": "2020-05-11",
+   "quote": "全面改造提升后的南塘，成为温州都市圈文旅目的地，是展示温州地域文化的“城市客厅”。",
+   "statement": "《温州新闻网》于 2020-05-11 报道涉及【温州都市圈】：南塘街区文创夜市预计8月开市。",
+   "anchors": [
+    889,
+    930
+   ],
+   "spanHash": "41efb803",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2020/05/11/105270379.shtml",
+   "urn": "urn:wz:asset:66wz:news:20200511:105270379"
+  },
+  {
+   "key": "ctx:https://www.pub.wzqw.com/system/2007/05/24/100317056.shtml",
+   "sourceOrg": "温州新闻网",
+   "title": "南塘街风貌区下半年开建 市区商业格局将逐步完善",
+   "publishedAt": "2007-05-24",
+   "quote": "南塘街风貌区北段规划总平图(温州市建筑设计研究院提供)\n",
+   "statement": "规范新闻样本（枢纽核验）",
+   "anchors": [
+    0,
+    28
+   ],
+   "spanHash": "a56ac912",
+   "confidence": null,
+   "verification": "rule_verified",
+   "directness": "原文引用",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.pub.wzqw.com/system/2007/05/24/100317056.shtml",
+   "urn": null
+  },
+  {
+   "key": "ctx:https://edu.66wz.com/system/2013/05/17/103647535.shtml",
+   "sourceOrg": "温州新闻网",
+   "title": "南汇街道 南塘风貌街",
+   "publishedAt": "2013-05-17",
+   "quote": "南塘风貌街传统文化底蕴浓厚，千百年来，这里留存了众多文化名人的足迹。",
+   "statement": "规范新闻样本（枢纽核验）",
+   "anchors": [
+    0,
+    34
+   ],
+   "spanHash": "0e43056f",
+   "confidence": null,
+   "verification": "rule_verified",
+   "directness": "原文引用",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://edu.66wz.com/system/2013/05/17/103647535.shtml",
+   "urn": null
+  },
+  {
+   "key": "20141013:104241058",
+   "sourceOrg": "温州新闻网",
+   "title": "夜游，期待点亮温州“夜经济”",
+   "publishedAt": "2014-10-13",
+   "quote": "每当夜色降临，市区南塘街华灯点亮，塘河两岸呈现美丽夜景。",
+   "statement": "《温州新闻网》于 2014-10-13 报道涉及【南塘风貌街】：夜游，期待点亮温州“夜经济”。",
+   "anchors": [
+    0,
+    28
+   ],
+   "spanHash": "79eb1752",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2014/10/13/104241058.shtml",
+   "urn": "urn:wz:asset:66wz:news:20141013:104241058"
+  }
+ ],
+ "relatedEntities": [
+  "WZ-PLACE-00001237",
+  "WZ-TRANS-00000864",
+  "WZ-POLICY-00000873",
+  "WZ-CULT-00000208"
+ ],
+ "relatedNews": [
+  {
+   "title": "南塘文化旅游区入选全省夜经济坐标",
+   "pubDate": "2025-08-12",
+   "url": "https://www.66wz.com/system/2025/08/12/105695850.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "从印象南塘到瓯江星港 温州城乡风貌“美景图”轮番上线",
+   "pubDate": "2024-07-04",
+   "url": "https://www.66wz.com/system/2024/07/04/105642908.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "urn": "urn:wz:asset:66wz:news:20240704:105642908"
+  },
+  {
+   "title": "“塘河夜画”成月光经济“明星品牌”",
+   "pubDate": "2020-05-20",
+   "url": "https://www.66wz.com/system/2020/05/20/105273908.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "南塘街区文创夜市预计8月开市",
+   "pubDate": "2020-05-11",
+   "url": "https://www.66wz.com/system/2020/05/11/105270379.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "南塘风貌街人气旺 将成温州新印象",
+   "pubDate": "2015-09-25",
+   "url": "https://news.66wz.com/system/2015/09/25/104583762.shtml",
+   "media": "温州新闻网"
+  },
+  {
+   "title": "夜游，期待点亮温州“夜经济”",
+   "pubDate": "2014-10-13",
+   "url": "https://www.66wz.com/system/2014/10/13/104241058.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "南塘街道--南塘风貌街",
+   "pubDate": "2013-06-07",
+   "url": "https://www.66wz.com/system/2013/06/07/103678751.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "urn": "urn:wz:asset:66wz:news:20130607:103678751"
+  },
+  {
+   "title": "南塘风貌街",
+   "pubDate": "2013-06-07",
+   "url": "https://www.66wz.com/system/2013/06/07/103678752.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "urn": "urn:wz:asset:66wz:news:20130607:103678752"
+  },
+  {
+   "title": "南汇街道 南塘风貌街",
+   "pubDate": "2013-05-17",
+   "url": "https://edu.66wz.com/system/2013/05/17/103647535.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "南塘街风貌区下半年开建 市区商业格局将逐步完善",
+   "pubDate": "2007-05-24",
+   "url": "https://www.pub.wzqw.com/system/2007/05/24/100317056.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  }
+ ]
+}

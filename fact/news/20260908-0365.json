@@ -1,0 +1,82 @@
+{
+ "api": {
+  "name": "城市事实发布引擎 · News Event API",
+  "version": "v0.2",
+  "generatedAt": "2026-09-08T10:00:00+08:00",
+  "canonicalBase": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/"
+ },
+ "newsEvent": {
+  "contentId": "20260908-0365",
+  "title": "S1线惠民路站\"轨道+美食\"惠民市集本周末开市",
+  "source": "温州新闻网",
+  "publishedAt": "2026-09-08 11:48",
+  "modifiedAt": "2026-09-08 11:52",
+  "cmsUrl": "https://news.66wz.com/system/2026/09/08/105837365.shtml",
+  "lifecycle": "reviewed",
+  "simulated": true,
+  "htmlUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/news/20260908-0365/",
+  "excerpt": "本周末，S1线惠民路站\"轨道+美食\"惠民市集将开市，市民凭S1/S2线车票在大排档等点位消费可享满减优惠，人文寻根线可前往五马街历史文化街区、朱自清旧居。"
+ },
+ "fastLane": [
+  {
+   "step": "新闻发布",
+   "time": "11:48:00",
+   "status": "success",
+   "result": "CMS 发布回调触发 · Content ID 入队"
+  },
+  {
+   "step": "Sitemap 更新",
+   "time": "11:48:02",
+   "status": "success",
+   "result": "sitemap.xml lastmod 已刷新 · 本次含 1 个新 URL"
+  },
+  {
+   "step": "IndexNow 提交",
+   "time": "11:48:03",
+   "status": "success",
+   "result": "HTTP 202 Accepted · 1 URL 提交至 Bing / Seznam / Yandex 通道"
+  },
+  {
+   "step": "百度收录提交",
+   "time": "11:48:04",
+   "status": "success",
+   "result": "普通收录推送成功 · 当日剩余配额 1987/2000"
+  },
+  {
+   "step": "Feed 追加",
+   "time": "11:48:05",
+   "status": "success",
+   "result": "RSS / JSON Feed 各追加 1 条（News = Event）"
+  }
+ ],
+ "entityAnchors": [
+  {
+   "entityId": "WZ-TRANS-00000864",
+   "entityName": "温州市域铁路（S线网络）",
+   "matchMethod": "标准名 + 线路关键词",
+   "confidence": 0.95,
+   "para": 1,
+   "start": 4,
+   "end": 10,
+   "quote": "S1线惠民路站",
+   "state": "confirmed"
+  }
+ ],
+ "candidateClaims": [
+  {
+   "claimId": "cl-20260908-0365-1",
+   "entityId": "WZ-TRANS-00000864",
+   "predicate": "rail_plus_consumption（轨道+消费场景）",
+   "value": "凭S1/S2线车票享满减（惠民市集本周末开市）",
+   "claimType": "planned",
+   "evidenceText": "文章第1段：与既有事实 WZ-F-00864-05（轨道+消费联动）口径一致",
+   "confidence": 0.94,
+   "status": "accepted",
+   "changeId": "chg-20260908-004"
+  }
+ ],
+ "factChanges": [
+  "chg-20260908-004"
+ ],
+ "reviewSummary": "Claim 与既有事实一致 → No Change，无需人工介入，不产生新版本"
+}

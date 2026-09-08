@@ -1,0 +1,205 @@
+{
+ "engine": {
+  "name": "城市事实发布引擎",
+  "version": "v0.1",
+  "org": "温州新闻网（温州日报报业集团）",
+  "generatedAt": "2026-09-08T10:00:00+08:00",
+  "canonicalBase": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/"
+ },
+ "endpoints": {
+  "factHtml": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/<ENTITY_ID>/",
+  "factJson": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/<ENTITY_ID>.json",
+  "sitemap": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/sitemap.xml",
+  "feeds": [
+   "https://huangzuomin.github.io/wz-fact-engine-demo/fact/feed.xml",
+   "https://huangzuomin.github.io/wz-fact-engine-demo/fact/feed.json"
+  ],
+  "mcp": "news-base-mcp（城市可信内容枢纽侧 Agent Interface；工具：list_entities / get_entity_timeline / search_evidence / search_assets / get_asset_detail）"
+ },
+ "policy": {
+  "statuses": [
+   "active",
+   "superseded",
+   "expired",
+   "corrected",
+   "retracted",
+   "disputed",
+   "uncertain",
+   "unverified"
+  ],
+  "factTypes": [
+   "已发生事实",
+   "当前状态",
+   "统计数据",
+   "计划",
+   "活动",
+   "来源主张"
+  ],
+  "riskLevels": {
+   "L1": "L1 自动更新",
+   "L2": "L2 人工快速确认",
+   "L3": "L3 强制人工审核"
+  },
+  "timePrecision": [
+   "日",
+   "月",
+   "年",
+   "区间",
+   "约数",
+   "未知"
+  ],
+  "sourcePolicy": "不提供综合可信度分；按来源权威性/证据直接性/新鲜度/多源一致性/置信度/核验状态分项标注"
+ },
+ "entities": [
+  {
+   "id": "WZ-PLACE-00001237",
+   "name": "五马历史文化街区",
+   "type": "历史文化街区 · 文旅空间",
+   "domain": "文化旅游",
+   "url": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-PLACE-00001237/",
+   "jsonUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-PLACE-00001237.json",
+   "lastVerifiedAt": "2026-09-08",
+   "factCount": 7,
+   "activeFacts": 6,
+   "supersededOrExpired": 1,
+   "uncertainOrUnverified": 0,
+   "evidenceCount": 13,
+   "hubRef": "wz:entity:food:poi:wuma_street"
+  },
+  {
+   "id": "WZ-PLACE-00000322",
+   "name": "南塘风貌街",
+   "type": "历史文化街区 · 夜间消费空间",
+   "domain": "文化旅游",
+   "url": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-PLACE-00000322/",
+   "jsonUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-PLACE-00000322.json",
+   "lastVerifiedAt": "2026-09-08",
+   "factCount": 4,
+   "activeFacts": 4,
+   "supersededOrExpired": 0,
+   "uncertainOrUnverified": 0,
+   "evidenceCount": 7,
+   "hubRef": "wz:entity:food:poi:nantang_street"
+  },
+  {
+   "id": "WZ-PLACE-00000298",
+   "name": "江心屿（江心孤屿）",
+   "type": "岛屿景区 · 文旅空间",
+   "domain": "文化旅游",
+   "url": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-PLACE-00000298/",
+   "jsonUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-PLACE-00000298.json",
+   "lastVerifiedAt": "2026-09-08",
+   "factCount": 4,
+   "activeFacts": 4,
+   "supersededOrExpired": 0,
+   "uncertainOrUnverified": 0,
+   "evidenceCount": 8,
+   "hubRef": "wz:entity:food:poi:jiangxinyu"
+  },
+  {
+   "id": "WZ-GOOD-00000512",
+   "name": "温州大黄鱼（南麂/洞头大黄鱼）",
+   "type": "地理标志农产品 · 海水养殖产业",
+   "domain": "产业经济",
+   "url": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-GOOD-00000512/",
+   "jsonUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-GOOD-00000512.json",
+   "lastVerifiedAt": "2026-09-08",
+   "factCount": 9,
+   "activeFacts": 6,
+   "supersededOrExpired": 3,
+   "uncertainOrUnverified": 0,
+   "evidenceCount": 18,
+   "hubRef": "wz:entity:food:ingredient:yellow_croaker"
+  },
+  {
+   "id": "WZ-CULT-00000208",
+   "name": "瓯菜（温州菜）",
+   "type": "饮食文化 · 非遗",
+   "domain": "历史文化",
+   "url": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-CULT-00000208/",
+   "jsonUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-CULT-00000208.json",
+   "lastVerifiedAt": "2026-09-08",
+   "factCount": 4,
+   "activeFacts": 4,
+   "supersededOrExpired": 0,
+   "uncertainOrUnverified": 0,
+   "evidenceCount": 9,
+   "hubRef": "wz:entity:food:cuisine:oucai"
+  },
+  {
+   "id": "WZ-SCHOOL-00001782",
+   "name": "公建教育配套设施（中小学校新改扩建）",
+   "type": "重要公共服务 · 教育设施",
+   "domain": "公共服务（教育）",
+   "url": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-SCHOOL-00001782/",
+   "jsonUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-SCHOOL-00001782.json",
+   "lastVerifiedAt": "2026-09-08",
+   "factCount": 5,
+   "activeFacts": 3,
+   "supersededOrExpired": 0,
+   "uncertainOrUnverified": 2,
+   "evidenceCount": 8,
+   "hubRef": "CityPublicSpaceGlossary.PublicAmenities.EducationFacility"
+  },
+  {
+   "id": "WZ-TRANS-00000864",
+   "name": "城市轨道交通网络（市域铁路S线）",
+   "type": "道路交通 · 公共交通",
+   "domain": "交通",
+   "url": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-TRANS-00000864/",
+   "jsonUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-TRANS-00000864.json",
+   "lastVerifiedAt": "2026-09-08",
+   "factCount": 5,
+   "activeFacts": 4,
+   "supersededOrExpired": 1,
+   "uncertainOrUnverified": 0,
+   "evidenceCount": 9,
+   "hubRef": "CityPublicSpaceGlossary.Transportation.RailTransit"
+  },
+  {
+   "id": "WZ-PROJECT-00000321",
+   "name": "滨江商务区CBD总部大楼群",
+   "type": "重大工程 · 总部经济集聚区",
+   "domain": "城市建设",
+   "url": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-PROJECT-00000321/",
+   "jsonUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-PROJECT-00000321.json",
+   "lastVerifiedAt": "2026-09-08",
+   "factCount": 5,
+   "activeFacts": 5,
+   "supersededOrExpired": 0,
+   "uncertainOrUnverified": 0,
+   "evidenceCount": 15,
+   "hubRef": "QiangChengGlossary.LandmarkAchievements.CBDHeadquartersCluster"
+  },
+  {
+   "id": "WZ-EVENT-00000073",
+   "name": "第十五届中国国际园博会与全城园博",
+   "type": "重大工程 · 国家级博览会",
+   "domain": "城市建设",
+   "url": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-EVENT-00000073/",
+   "jsonUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-EVENT-00000073.json",
+   "lastVerifiedAt": "2026-09-08",
+   "factCount": 7,
+   "activeFacts": 5,
+   "supersededOrExpired": 1,
+   "uncertainOrUnverified": 1,
+   "evidenceCount": 16,
+   "hubRef": "QiangChengGlossary.LandmarkAchievements.CitywideGardenExpo"
+  },
+  {
+   "id": "WZ-POLICY-00000873",
+   "name": "城市更新与旧城改造（老旧小区/城中村）",
+   "type": "重要公共服务 · 民生实事",
+   "domain": "公共服务（住建）",
+   "url": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-POLICY-00000873/",
+   "jsonUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-POLICY-00000873.json",
+   "lastVerifiedAt": "2026-09-08",
+   "factCount": 4,
+   "activeFacts": 3,
+   "supersededOrExpired": 1,
+   "uncertainOrUnverified": 0,
+   "evidenceCount": 10,
+   "hubRef": "QiangChengGlossary.Planning.UrbanRenewal"
+  }
+ ]
+}

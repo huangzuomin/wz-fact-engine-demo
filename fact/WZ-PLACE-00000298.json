@@ -1,0 +1,468 @@
+{
+ "api": {
+  "name": "城市事实发布引擎",
+  "version": "v0.1",
+  "generatedAt": "2026-09-08T10:00:00+08:00",
+  "canonicalBase": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/"
+ },
+ "entity": {
+  "id": "WZ-PLACE-00000298",
+  "standardName": "江心屿（江心孤屿）",
+  "name": "江心屿",
+  "aliases": [
+   "江心孤屿",
+   "孤屿",
+   "江心寺",
+   "江心古屿",
+   "海上蓬莱"
+  ],
+  "type": "岛屿景区 · 文旅空间",
+  "schemaType": "Place",
+  "domain": "文化旅游",
+  "location": "浙江省温州市鹿城区（瓯江之中）",
+  "hubRef": {
+   "fqn": "wz:entity:food:poi:jiangxinyu",
+   "entityRef": "wz:entity:food:poi:jiangxinyu",
+   "dataProduct": "瓯菜数据资产 ou_cuisine_asset v2.0"
+  },
+  "summary": "瓯江中的千年名屿、\"诗之岛\"：2019年起整岛提升，2024年推进西园再开发，2025年开通低空观光航线。",
+  "lastVerifiedAt": "2026-09-08",
+  "reviewAfter": null,
+  "ttlDays": 90,
+  "htmlUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-PLACE-00000298/",
+  "jsonUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-PLACE-00000298.json"
+ },
+ "facts": [
+  {
+   "factId": "WZ-F-00298-01",
+   "predicate": "城市名片地位",
+   "value": "\"江心古屿\"为鹿城四张国字号文化金名片之一（与五马古街、朔门古港、九山古戏并列）",
+   "factType": "当前状态",
+   "status": "active",
+   "timePrecision": "当前有效",
+   "validFrom": "2023-09-01",
+   "validTo": null,
+   "sourcePublishedAt": "2023-09-26",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2027-03-08",
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20230926:105601711"
+   ]
+  },
+  {
+   "factId": "WZ-F-00298-02",
+   "predicate": "整岛再开发",
+   "value": "整岛再开发推进中：西园开放实景展示，江心屿将与朔门古港\"梦幻联动\"，古港遗址出土沉船有望入驻岛上实验室",
+   "factType": "当前状态",
+   "status": "active",
+   "timePrecision": "进行中",
+   "validFrom": "2024-05-01",
+   "validTo": null,
+   "sourcePublishedAt": "2024-05-31",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-10-08",
+   "updateRiskLevel": "L2",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20240531:105637714"
+   ]
+  },
+  {
+   "factId": "WZ-F-00298-03",
+   "predicate": "低空观光航线",
+   "value": "2025年3月鹿城城市阳台—江心屿直升机航线完成试飞，同步举办500架无人机编队夜空表演",
+   "factType": "已发生事实",
+   "status": "active",
+   "timePrecision": "日",
+   "validFrom": "2025-03-14",
+   "validTo": null,
+   "sourcePublishedAt": "2025-03-14",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-12-07",
+   "updateRiskLevel": "L2",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20250314:105676342"
+   ]
+  },
+  {
+   "factId": "WZ-F-00298-04",
+   "predicate": "低空配送场景",
+   "value": "江心屿低空无人机外卖配送场景亮相新华网首页报道（2025年10月）",
+   "factType": "已发生事实",
+   "status": "active",
+   "timePrecision": "月",
+   "validFrom": "2025-10-01",
+   "validTo": null,
+   "sourcePublishedAt": "2025-10-28",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-12-07",
+   "updateRiskLevel": "L2",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20251028:105705064"
+   ]
+  }
+ ],
+ "timeline": [
+  {
+   "date": "2006-09-01",
+   "precision": "日",
+   "title": "\"灯光秀\"方案敲定",
+   "detail": "作为江滨路亮丽工程一部分，江心屿\"灯光秀\"于当年10月6日首演，打造\"夜温州\"。",
+   "factRef": null,
+   "evidence": [
+    "asset:20060901:100176508"
+   ],
+   "note": null
+  },
+  {
+   "date": "2011-10-14",
+   "precision": "日",
+   "title": "旅游区指南收录瓯菜地图",
+   "detail": "江心屿旅游区指南收录松糕、灯盏糕、鱼丸、三丝敲鱼等温州小吃与瓯菜名录。",
+   "factRef": null,
+   "evidence": [
+    "20111014:102812805"
+   ],
+   "note": null
+  },
+  {
+   "date": "2019-03-11",
+   "precision": "日",
+   "title": "整岛提升启动",
+   "detail": "与五马街区\"串珠成链\"同步，江心屿启动整岛提升。",
+   "factRef": null,
+   "evidence": [
+    "20190311:105153244"
+   ],
+   "note": null
+  },
+  {
+   "date": "2023-09-01",
+   "precision": "日",
+   "title": "S1快线免费接驳游线开通",
+   "detail": "鹿城推出免费接驳游江心屿服务，以S1线惠民站为始发，途经滨江CBD等城市封面区块。",
+   "factRef": null,
+   "evidence": [
+    "20230901:105597859"
+   ],
+   "note": null
+  },
+  {
+   "date": "2024-05-31",
+   "precision": "日",
+   "title": "西园实景亮相",
+   "detail": "江心屿整岛再开发，西园实景抢\"新\"看；将与朔门古港梦幻联动。",
+   "factRef": "WZ-F-00298-02",
+   "evidence": [
+    "20240531:105637714"
+   ],
+   "note": null
+  },
+  {
+   "date": "2025-03-14",
+   "precision": "日",
+   "title": "首条\"空中通道\"试飞",
+   "detail": "鹿城城市阳台—江心屿直升机航线完成试飞，500架无人机编队呈现\"你好温州\"\"白鹿衔花\"等图案。",
+   "factRef": "WZ-F-00298-03",
+   "evidence": [
+    "20250314:105676342"
+   ],
+   "note": null
+  },
+  {
+   "date": "2025-10-28",
+   "precision": "日",
+   "title": "无人机外卖配送场景出圈",
+   "detail": "新华网首页报道江心屿低空无人机外卖配送场景。",
+   "factRef": "WZ-F-00298-04",
+   "evidence": [
+    "20251028:105705064"
+   ],
+   "note": null
+  }
+ ],
+ "evidence": [
+  {
+   "key": "20230926:105601711",
+   "sourceOrg": "温州新闻网",
+   "title": "鹿城获评首批省级 新型消费城市建设试点",
+   "publishedAt": "2023-09-26",
+   "quote": "文旅消费呈蓬勃兴起之势，目前全区已拥有江心古屿、五马古街、朔门古港、九山古戏四张国字号文化金名片，推出全国首个戏曲生活市集“九山书会·大宋戏仓”，高峰期日均客流量达到25万人次，年文旅收入超30亿元。",
+   "statement": "《温州新闻网》于 2023-09-26 报道涉及【温州朔门古港遗址】：鹿城获评首批省级 新型消费城市建设试点。",
+   "anchors": [
+    237,
+    337
+   ],
+   "spanHash": "b222b9bc",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2023/09/26/105601711.shtml",
+   "urn": "urn:wz:asset:66wz:news:20230926:105601711"
+  },
+  {
+   "key": "20240531:105637714",
+   "sourceOrg": "温州新闻网",
+   "title": "温州江心屿整岛再开发，西园实景抢“新”看",
+   "publishedAt": "2024-05-31",
+   "quote": "今后江心屿将和朔门古港实现梦幻联动，古港遗址挖出的沉船也有望入驻岛上的实验室。",
+   "statement": "《温州新闻网》于 2024-05-31 报道涉及【温州朔门古港遗址】：温州江心屿整岛再开发，西园实景抢“新”看。",
+   "anchors": [
+    757,
+    796
+   ],
+   "spanHash": "b53aa858",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2024/05/31/105637714.shtml",
+   "urn": "urn:wz:asset:66wz:news:20240531:105637714"
+  },
+  {
+   "key": "20250314:105676342",
+   "sourceOrg": "温州新闻网",
+   "title": "江心屿开辟首条“空中通道”  鹿城城市阳台-江心屿航线完成试飞",
+   "publishedAt": "2025-03-14",
+   "quote": "当天晚上，500架无人机编队整齐划一，从江心屿起飞，在夜空中不断变幻出“你好温州”“朔门古港”“帆船出海”“白鹿衔花”等图案以及栩栩如生的动态画面，为市民带来一场低空表演的视觉盛宴。",
+   "statement": "《温州新闻网》于 2025-03-14 报道涉及【温州朔门古港遗址】：江心屿开辟首条“空中通道”  鹿城城市阳台-江心屿航线完成试飞。",
+   "anchors": [
+    524,
+    615
+   ],
+   "spanHash": "4ad5e8b8",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2025/03/14/105676342.shtml",
+   "urn": "urn:wz:asset:66wz:news:20250314:105676342"
+  },
+  {
+   "key": "20251028:105705064",
+   "sourceOrg": "温州新闻网",
+   "title": "新华网首页！温州交运集团江心屿低空无人机外卖配送场景亮相",
+   "publishedAt": "2025-10-28",
+   "quote": "漫步智慧公园感受科技赋能生活，体验无人机外卖解锁配送新场景，深入瓯江实验室探寻科研创新脉络……来自坦桑尼亚的瓯江实验室副研究员唐立山探寻温州，于日常处见证：在温州，看见创新中国。",
+   "statement": "《温州新闻网》于 2025-10-28 报道涉及【瓯江实验室】：新华网首页！温州交运集团江心屿低空无人机外卖配送场景亮相。",
+   "anchors": [
+    74,
+    163
+   ],
+   "spanHash": "6e6fee1e",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2025/10/28/105705064.shtml",
+   "urn": "urn:wz:asset:66wz:news:20251028:105705064"
+  },
+  {
+   "key": "asset:20060901:100176508",
+   "sourceOrg": "温州新闻网",
+   "title": "江心屿“灯光秀”10月6日首演",
+   "publishedAt": "2006-09-01",
+   "quote": "江心屿“灯光秀”表演动画效果图\n商报讯（通讯员 虞冬青 记者 刘娜筱）用灯光和音乐制造如诗如画、如歌如潮的视觉效果和听觉感受，为古老的江心屿披上华丽“晚礼服”，打造美丽的“夜温州”,吸收更多的游客。昨天，记者从鹿城区市政园林局获悉，作为江滨路亮丽工程一部分的江心屿“灯光秀”方案几经修改已于日前正式敲",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2006/09/01/100176508.shtml",
+   "urn": "urn:wz:asset:66wz:news:20060901:100176508"
+  },
+  {
+   "key": "20111014:102812805",
+   "sourceOrg": "温州新闻网",
+   "title": "江心屿旅游区指南",
+   "publishedAt": "2011-10-14",
+   "quote": "小吃：松糕、米面、炒粉干、马蹄松、灯盏糕、鱼圆、胶冻、敲鱼、县前汤团、鱼丸、白蛇烧饼、长人馄饨、陡门头灯盏糕、马蹄松、永强泥蒜糕、洞头的带鱼番薯粉、温州馄饨、楠溪麦饼、白象香糕、麻巧、李大同双炊糕、虹桥绿豆糕特色菜：鸭头、鸭脖、茶鸭、家烧凤尾鱼、解乡愁的鱼生、西郭的羊肉煲、永嘉黄田的黄牛骨、软壳蚰蠓汤、鲜脆沙蒜汤、清水“水潺汤”、温州高梁肉、肉骨、鱼头炖豆腐、蒸溪鱼干、海瓜子、鸭掌芹菜、蒸溪鱼干、白虾咸菜、瓯柑、瓯江凤尾鱼、乐清牡蛎。",
+   "statement": "《温州新闻网》于 2011-10-14 报道涉及【温州馄饨】：江心屿旅游区指南。",
+   "anchors": [
+    590,
+    809
+   ],
+   "spanHash": "b96ca714",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2011/10/14/102812805.shtml",
+   "urn": "urn:wz:asset:66wz:news:20111014:102812805"
+  },
+  {
+   "key": "20190311:105153244",
+   "sourceOrg": "温州新闻网",
+   "title": "江心屿整岛提升 五马街区“串珠成链”",
+   "publishedAt": "2019-03-11",
+   "quote": "另据了解，作为禅街、五马街改造提升工程的重要部分，公园路改造提升工程已完成沿街商铺和住户的入户排摸和前期宣传，率先启动管线“上改下”工程。",
+   "statement": "《温州新闻网》于 2019-03-11 报道涉及【五马历史文化街区】：江心屿整岛提升 五马街区“串珠成链”。",
+   "anchors": [
+    539,
+    608
+   ],
+   "spanHash": "a96da58c",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2019/03/11/105153244.shtml",
+   "urn": "urn:wz:asset:66wz:news:20190311:105153244"
+  },
+  {
+   "key": "20230901:105597859",
+   "sourceOrg": "温州新闻网",
+   "title": "坐享S1、S2快线  鹿城推出免费接驳游江心屿服务",
+   "publishedAt": "2023-09-01",
+   "quote": "本次服务以S1线惠民站为始发，巴士途经温州行政中心、中央绿轴、滨江CBD等多个城市封面区块，除了终点江心屿，不少游客还以此为契机游览五马历史街区、南塘风景区，尽情享受半日鹿城好风光。",
+   "statement": "《温州新闻网》于 2023-09-01 报道涉及【南塘风貌街】：坐享S1、S2快线  鹿城推出免费接驳游江心屿服务。",
+   "anchors": [
+    320,
+    411
+   ],
+   "spanHash": "68fe3f3f",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2023/09/01/105597859.shtml",
+   "urn": "urn:wz:asset:66wz:news:20230901:105597859"
+  }
+ ],
+ "relatedEntities": [
+  "WZ-PLACE-00001237",
+  "WZ-TRANS-00000864",
+  "WZ-CULT-00000208"
+ ],
+ "relatedNews": [
+  {
+   "title": "扫码即飞！江心屿无人机可以“共享”了！",
+   "pubDate": "未知日期",
+   "url": null,
+   "media": "温州新闻网",
+   "grade": "A",
+   "urn": "urn:wz:asset:66wz:news:19700101:105712205"
+  },
+  {
+   "title": "扫码即飞 江心屿无人机可以“共享”了",
+   "pubDate": "2025-12-05",
+   "url": "https://www.66wz.com/system/2025/12/05/105712254.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "urn": "urn:wz:asset:66wz:news:20251205:105712254"
+  },
+  {
+   "title": "新华网首页！温州交运集团江心屿低空无人机外卖配送场景亮相",
+   "pubDate": "2025-10-28",
+   "url": "https://www.66wz.com/system/2025/10/28/105705064.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "温州“夜经济”观察：夜消费，越夜越有“味”",
+   "pubDate": "2025-09-19",
+   "url": "https://finance.66wz.com/system/2025/09/19/105700593.shtml",
+   "media": "温州新闻网"
+  },
+  {
+   "title": "温州夜消费，越夜越有“味”",
+   "pubDate": "2025-09-12",
+   "url": "https://finance.66wz.com/system/2025/09/12/105699874.shtml",
+   "media": "温州新闻网"
+  },
+  {
+   "title": "江心屿开辟首条“空中通道”  鹿城城市阳台-江心屿航线完成试飞",
+   "pubDate": "2025-03-14",
+   "url": "https://www.66wz.com/system/2025/03/14/105676342.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "夏夜凉爽，温州哪里有夜市可以逛吃？攻略来了",
+   "pubDate": "2024-07-12",
+   "url": "https://news.66wz.com/system/2024/07/12/105643981.shtml",
+   "media": "温州新闻网"
+  },
+  {
+   "title": "温州江心屿整岛再开发，西园实景抢“新”看",
+   "pubDate": "2024-05-31",
+   "url": "https://www.66wz.com/system/2024/05/31/105637714.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "鹿城获评首批省级 新型消费城市建设试点",
+   "pubDate": "2023-09-26",
+   "url": "https://www.66wz.com/system/2023/09/26/105601711.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "坐享S1、S2快线  鹿城推出免费接驳游江心屿服务",
+   "pubDate": "2023-09-01",
+   "url": "https://www.66wz.com/system/2023/09/01/105597859.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "江心屿整岛提升 五马街区“串珠成链”",
+   "pubDate": "2019-03-11",
+   "url": "https://www.66wz.com/system/2019/03/11/105153244.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "江心屿旅游区指南",
+   "pubDate": "2011-10-14",
+   "url": "https://www.66wz.com/system/2011/10/14/102812805.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "江心屿旅游区美食概述",
+   "pubDate": "2011-10-14",
+   "url": "https://www.66wz.com/system/2011/10/14/102812815.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "urn": "urn:wz:asset:66wz:news:20111014:102812815"
+  },
+  {
+   "title": "江心屿“灯光秀”10月6日首演",
+   "pubDate": "2006-09-01",
+   "url": "https://www.66wz.com/system/2006/09/01/100176508.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  }
+ ]
+}

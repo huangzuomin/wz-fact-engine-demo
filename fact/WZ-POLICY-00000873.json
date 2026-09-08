@@ -1,0 +1,477 @@
+{
+ "api": {
+  "name": "城市事实发布引擎",
+  "version": "v0.1",
+  "generatedAt": "2026-09-08T10:00:00+08:00",
+  "canonicalBase": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/"
+ },
+ "entity": {
+  "id": "WZ-POLICY-00000873",
+  "standardName": "城市更新与旧城改造（老旧小区/城中村）",
+  "name": "温州城市更新与旧城改造",
+  "aliases": [
+   "棚户区改造",
+   "旧改项目",
+   "城中村改造",
+   "老旧小区改造"
+  ],
+  "type": "重要公共服务 · 民生实事",
+  "schemaType": "GovernmentService",
+  "domain": "公共服务（住建）",
+  "location": "浙江省温州市（全市域）",
+  "hubRef": {
+   "fqn": "QiangChengGlossary.Planning.UrbanRenewal",
+   "entityRef": "QiangChengGlossary.Planning.UrbanRenewal",
+   "dataProduct": "强城奋进路·争创第三极数字资产 qiangcheng_third_pole_asset"
+  },
+  "summary": "2023年以来实施老旧小区改造项目138个、完成投资6.2亿元，做法获住建部可复制经验推广；城中村改造涌现梧田老街等全国典型。",
+  "lastVerifiedAt": "2026-09-08",
+  "reviewAfter": null,
+  "ttlDays": 90,
+  "htmlUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-POLICY-00000873/",
+  "jsonUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/WZ-POLICY-00000873.json"
+ },
+ "facts": [
+  {
+   "factId": "WZ-F-00873-01",
+   "predicate": "年度进度（2023年以来）",
+   "value": "实施老旧小区改造项目138个，完成投资额6.2亿元，向上争取补助资金1.4亿元；\"一老一小\"服务设施等做法被住建部列入可复制经验清单",
+   "factType": "统计数据",
+   "status": "active",
+   "timePrecision": "年度（2023—2024口径）",
+   "validFrom": "2023-01-01",
+   "validTo": "2024-12-31",
+   "sourcePublishedAt": "2024-01-19",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-12-07",
+   "updateRiskLevel": "L2",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20240119:105619093",
+    "asset:20240119:105619093"
+   ]
+  },
+  {
+   "factId": "WZ-F-00873-02",
+   "predicate": "市级民生实事（2023年度）",
+   "value": "市级民生实事老旧小区改造63个（2023年12月报道口径）",
+   "factType": "统计数据",
+   "status": "superseded",
+   "timePrecision": "年度",
+   "validFrom": "2023-01-01",
+   "validTo": "2023-12-31",
+   "sourcePublishedAt": "2023-12-12",
+   "lastVerifiedAt": "2023-12-12",
+   "reviewAfter": "2024-12-31",
+   "updateRiskLevel": "L2",
+   "supersedes": null,
+   "supersededBy": "WZ-F-00873-01",
+   "note": "年度任务数已被覆盖性统计（138个项目口径）替代，保留旧口径备查。",
+   "evidence": [
+    "20231212:105613585"
+   ]
+  },
+  {
+   "factId": "WZ-F-00873-03",
+   "predicate": "城中村改造典型",
+   "value": "梧田老街由典型老旧城中村蜕变为文旅街区，入选全国典型（2024年9月报道）",
+   "factType": "已发生事实",
+   "status": "active",
+   "timePrecision": "月",
+   "validFrom": "2024-09-01",
+   "validTo": null,
+   "sourcePublishedAt": "2024-09-08",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2026-12-07",
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20240908:105652110"
+   ]
+  },
+  {
+   "factId": "WZ-F-00873-04",
+   "predicate": "安置房建设（样本）",
+   "value": "鹿城吴宅城中村改造安置小区（南汇街道南塘村）2017年初开展工程扫尾、开春验收",
+   "factType": "已发生事实",
+   "status": "active",
+   "timePrecision": "月",
+   "validFrom": "2017-01-01",
+   "validTo": null,
+   "sourcePublishedAt": "2017-01-10",
+   "lastVerifiedAt": "2026-09-08",
+   "reviewAfter": "2027-03-08",
+   "updateRiskLevel": "L1",
+   "supersedes": null,
+   "supersededBy": null,
+   "note": null,
+   "evidence": [
+    "20170110:104953956"
+   ]
+  }
+ ],
+ "timeline": [
+  {
+   "date": "2016-01-05",
+   "precision": "日",
+   "title": "城中村改造\"三垟速度\"",
+   "detail": "攻坚组设政策释疑小组，解答三产安置、拆迁安置、货币安置等问题，做好瓯柑临时储存点、老人周转房选址。",
+   "factRef": null,
+   "evidence": [
+    "20160105:104683737"
+   ],
+   "note": null
+  },
+  {
+   "date": "2017-01-10",
+   "precision": "日",
+   "title": "吴宅安置小区工程扫尾",
+   "detail": "城市中心区横渎河西A18-1地块安置小区开展工程扫尾、开春验收。",
+   "factRef": "WZ-F-00873-04",
+   "evidence": [
+    "20170110:104953956"
+   ],
+   "note": null
+  },
+  {
+   "date": "2022-03-23",
+   "precision": "日",
+   "title": "改造出24小时共享自习室",
+   "detail": "老旧小区公共空间改造再利用，共享自习室于2021年12月底开放。",
+   "factRef": null,
+   "evidence": [
+    "asset:20220323:105450369"
+   ],
+   "note": null
+  },
+  {
+   "date": "2022-11-27",
+   "precision": "日",
+   "title": "老旧小区\"逆生长\"",
+   "detail": "高田公寓借助\"共享社·幸福里\"建设打造居民活动中心。",
+   "factRef": null,
+   "evidence": [
+    "20221127:105523747",
+    "asset:20221127:105523747"
+   ],
+   "note": null
+  },
+  {
+   "date": "2023-04-07",
+   "precision": "日",
+   "title": "平阳昆阳党建引领改造",
+   "detail": "昆阳镇依托\"共享社·幸福里\"创建，推进十年以上房龄老旧小区硬件改造。",
+   "factRef": null,
+   "evidence": [
+    "asset:20230407:105559598"
+   ],
+   "note": null
+  },
+  {
+   "date": "2023-12-12",
+   "precision": "日",
+   "title": "民生实事年度口径发布",
+   "detail": "市级民生实事老旧小区改造63个，居民从\"忧居\"到\"优居\"。",
+   "factRef": "WZ-F-00873-02",
+   "evidence": [
+    "20231212:105613585"
+   ],
+   "note": null
+  },
+  {
+   "date": "2024-01-19",
+   "precision": "日",
+   "title": "138个项目、6.2亿投资",
+   "detail": "2023年以来实施138个改造项目，完成投资6.2亿元；获住建部可复制经验推广。",
+   "factRef": "WZ-F-00873-01",
+   "evidence": [
+    "20240119:105619093"
+   ],
+   "note": null
+  },
+  {
+   "date": "2024-09-08",
+   "precision": "日",
+   "title": "梧田老街成全国典型",
+   "detail": "昔日城中村点燃夜经济，瓯海打造文旅街区成全国典型。",
+   "factRef": "WZ-F-00873-03",
+   "evidence": [
+    "20240908:105652110"
+   ],
+   "note": null
+  }
+ ],
+ "evidence": [
+  {
+   "key": "20240119:105619093",
+   "sourceOrg": "温州新闻网",
+   "title": "温州去年改造138个老旧小区 让幸福感持续升级",
+   "publishedAt": "2024-01-19",
+   "quote": "与此同时，为健全管理机制，我市还成立了温州市物业行业党委，创建瓯江红“共享社·幸福里”党建品牌。",
+   "statement": "《温州新闻网》于 2024-01-19 报道涉及【“共享社·幸福里”】：温州去年改造138个老旧小区 让幸福感持续升级。",
+   "anchors": [
+    1222,
+    1270
+   ],
+   "spanHash": "bc0e4893",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2024/01/19/105619093.shtml",
+   "urn": "urn:wz:asset:66wz:news:20240119:105619093"
+  },
+  {
+   "key": "asset:20240119:105619093",
+   "sourceOrg": "温州新闻网",
+   "title": "温州去年改造138个老旧小区 让幸福感持续升级",
+   "publishedAt": "2024-01-19",
+   "quote": "温州网讯 近日，记者从市住建局获悉，2023年以来，我市共实施老旧小区改造项目138个，完成投资额6.2亿元，向上争取补助资金1.4亿元。此外，我市完善“一老一小”服务设施、积极发行地方政府专项债券、动员居民出资等做法还被住建部列入可复制经验清单，“温暖安居”幸福感持续升级。\n消隐患\n拆除防盗窗11",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2024/01/19/105619093.shtml",
+   "urn": "urn:wz:asset:66wz:news:20240119:105619093"
+  },
+  {
+   "key": "20231212:105613585",
+   "sourceOrg": "温州新闻网",
+   "title": "从“忧居”到“优居” 市级民生实事老旧小区改造63个",
+   "publishedAt": "2023-12-12",
+   "quote": "”不仅如此，王女士还很享受该组团同步打造的“共享社·幸福里”空间，“里面有各种儿童玩耍的器材、棋牌室等活动室，退休后的日子过得可充实了。",
+   "statement": "《温州新闻网》于 2023-12-12 报道涉及【“共享社·幸福里”】：从“忧居”到“优居” 市级民生实事老旧小区改造63个。",
+   "anchors": [
+    1390,
+    1458
+   ],
+   "spanHash": "7a7d736f",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2023/12/12/105613585.shtml",
+   "urn": "urn:wz:asset:66wz:news:20231212:105613585"
+  },
+  {
+   "key": "20240908:105652110",
+   "sourceOrg": "温州新闻网",
+   "title": "昔日城中村点燃夜经济 瓯海打造文旅街区成全国典型",
+   "publishedAt": "2024-09-08",
+   "quote": "去年，这里还是老旧的城中村",
+   "statement": "【梧田老街】改造背景：昔日城中村。",
+   "anchors": [
+    117,
+    130
+   ],
+   "spanHash": "c006db8a",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2024/09/08/105652110.shtml",
+   "urn": "urn:wz:asset:66wz:news:20240908:105652110"
+  },
+  {
+   "key": "20170110:104953956",
+   "sourceOrg": "温州新闻网",
+   "title": "鹿城吴宅城中村改造安置小区开展工程扫尾 开春验收",
+   "publishedAt": "2017-01-10",
+   "quote": "温州网讯 市民路过市区锦绣路和开源路交叉口，会发现交运加油站后排，出现一个米黄色高楼外墙的小区——城市中心区横渎河西A18-1地块，是鹿城区南汇街道南塘村吴宅自然村城中村改造安置小区。",
+   "statement": "《温州新闻网》于 2017-01-10 报道涉及【南塘风貌街】：鹿城吴宅城中村改造安置小区开展工程扫尾 开春验收。",
+   "anchors": [
+    27,
+    119
+   ],
+   "spanHash": "a3864cc1",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2017/01/10/104953956.shtml",
+   "urn": "urn:wz:asset:66wz:news:20170110:104953956"
+  },
+  {
+   "key": "20160105:104683737",
+   "sourceOrg": "温州新闻网",
+   "title": "我市城中村改造跑出“三垟速度”",
+   "publishedAt": "2016-01-05",
+   "quote": "为了更好解答群众疑问，攻坚组组建专门的政策释疑小组，解答三产安置、拆迁安置、货币安置以及其他关系村民切身利益的问题，特别是做好瓯柑临时储存点、老人周转房选址。",
+   "statement": "《温州新闻网》于 2016-01-05 报道涉及【瓯柑】：我市城中村改造跑出“三垟速度”。",
+   "anchors": [
+    451,
+    530
+   ],
+   "spanHash": "fda7a3d1",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": null,
+   "usable": true,
+   "url": "https://www.66wz.com/system/2016/01/05/104683737.shtml",
+   "urn": "urn:wz:asset:66wz:news:20160105:104683737"
+  },
+  {
+   "key": "asset:20220323:105450369",
+   "sourceOrg": "温州新闻网",
+   "title": "老旧小区改造出24小时共享自习室",
+   "publishedAt": "2022-03-23",
+   "quote": "这个共享自习室由小区公共空间改造而成，去年12月底正式开放。",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2022/03/23/105450369.shtml",
+   "urn": "urn:wz:asset:66wz:news:20220323:105450369"
+  },
+  {
+   "key": "20221127:105523747",
+   "sourceOrg": "温州新闻网",
+   "title": "老旧小区实现“逆生长” 改造改在居民“心坎上”",
+   "publishedAt": "2022-11-27",
+   "quote": "温州网讯 11月23日下午，在小区溜达了一圈的朱老伯来到了位于小区10栋地下室的居民活动中心，这里是今年高田公寓开展“共享社·幸福里”建设为小区居民打造的一方“小天地”。",
+   "statement": "《温州新闻网》于 2022-11-27 报道涉及【“共享社·幸福里”】：老旧小区实现“逆生长” 改造改在居民“心坎上”。",
+   "anchors": [
+    0,
+    85
+   ],
+   "spanHash": "ab1a54bd",
+   "confidence": 1,
+   "verification": "rule_verified",
+   "directness": "原文引用（物理锚点）",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2022/11/27/105523747.shtml",
+   "urn": "urn:wz:asset:66wz:news:20221127:105523747"
+  },
+  {
+   "key": "asset:20221127:105523747",
+   "sourceOrg": "温州新闻网",
+   "title": "老旧小区实现“逆生长” 改造改在居民“心坎上”",
+   "publishedAt": "2022-11-27",
+   "quote": "温州网讯 11月23日下午，在小区溜达了一圈的朱老伯来到了位于小区10栋地下室的居民活动中心，这里是今年高田公寓开展“共享社·幸福里”建设为小区居民打造的一方“小天地”。朱老伯和几位同样爱好书画艺术的小区居民常常相约在这里的共享画室探讨艺术、切磋书画技艺，墙上挂满了他们的作品。\n“共享社·幸福里”建",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2022/11/27/105523747.shtml",
+   "urn": "urn:wz:asset:66wz:news:20221127:105523747"
+  },
+  {
+   "key": "asset:20230407:105559598",
+   "sourceOrg": "温州新闻网",
+   "title": "党建引领老旧小区改造 平阳昆阳让幸福感“旧地升温”",
+   "publishedAt": "2023-04-07",
+   "quote": "温州网讯 “经过改造后，我们小区周边的环境卫生、停车秩序、服务内容都有了很大改善。”对于身边的环境变化，家住平阳县昆阳镇九凰花苑小区的陈先生深有感触。\n老旧小区综合改造工作是改善居民生活环境、提高居民生活品质、增强居民幸福感的重要工程。去年以来，昆阳镇依托“共享社·幸福里”创建，全力推进十年以上房龄",
+   "statement": "检索命中资产（标题/摘要级）",
+   "anchors": null,
+   "spanHash": null,
+   "confidence": null,
+   "verification": "metadata_only",
+   "directness": "标题/摘要级",
+   "qualityGrade": "A",
+   "usable": true,
+   "url": "https://www.66wz.com/system/2023/04/07/105559598.shtml",
+   "urn": "urn:wz:asset:66wz:news:20230407:105559598"
+  }
+ ],
+ "relatedEntities": [
+  "WZ-SCHOOL-00001782",
+  "WZ-EVENT-00000073",
+  "WZ-PLACE-00000322"
+ ],
+ "relatedNews": [
+  {
+   "title": "昔日城中村点燃夜经济 瓯海打造文旅街区成全国典型",
+   "pubDate": "2024-09-08",
+   "url": "https://www.66wz.com/system/2024/09/08/105652110.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "温州去年改造138个老旧小区 让幸福感持续升级",
+   "pubDate": "2024-01-19",
+   "url": "https://www.66wz.com/system/2024/01/19/105619093.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "从“忧居”到“优居” 市级民生实事老旧小区改造63个",
+   "pubDate": "2023-12-12",
+   "url": "https://www.66wz.com/system/2023/12/12/105613585.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "党建引领激发基层治理新活力 鹿城直面老旧小区改造",
+   "pubDate": "2023-04-25",
+   "url": "https://www.66wz.com/system/2023/04/25/105571728.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "urn": "urn:wz:asset:66wz:news:20230425:105571728"
+  },
+  {
+   "title": "党建引领老旧小区改造 平阳昆阳让幸福感“旧地升温”",
+   "pubDate": "2023-04-07",
+   "url": "https://www.66wz.com/system/2023/04/07/105559598.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "老旧小区实现“逆生长” 改造改在居民“心坎上”",
+   "pubDate": "2022-11-27",
+   "url": "https://www.66wz.com/system/2022/11/27/105523747.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "老旧小区改造出24小时共享自习室",
+   "pubDate": "2022-03-23",
+   "url": "https://www.66wz.com/system/2022/03/23/105450369.shtml",
+   "media": "温州新闻网",
+   "grade": "A",
+   "viaEvidence": true
+  },
+  {
+   "title": "鹿城吴宅城中村改造安置小区开展工程扫尾 开春验收",
+   "pubDate": "2017-01-10",
+   "url": "https://www.66wz.com/system/2017/01/10/104953956.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  },
+  {
+   "title": "我市城中村改造跑出“三垟速度”",
+   "pubDate": "2016-01-05",
+   "url": "https://www.66wz.com/system/2016/01/05/104683737.shtml",
+   "media": "温州新闻网",
+   "grade": null,
+   "viaEvidence": true
+  }
+ ]
+}

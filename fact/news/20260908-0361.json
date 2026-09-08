@@ -1,0 +1,118 @@
+{
+ "api": {
+  "name": "城市事实发布引擎 · News Event API",
+  "version": "v0.2",
+  "generatedAt": "2026-09-08T10:00:00+08:00",
+  "canonicalBase": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/"
+ },
+ "newsEvent": {
+  "contentId": "20260908-0361",
+  "title": "温州市实验中学教育集团滨江校区工程今日正式开工",
+  "source": "温州新闻网",
+  "publishedAt": "2026-09-08 13:05",
+  "modifiedAt": "2026-09-08 13:09",
+  "cmsUrl": "https://news.66wz.com/system/2026/09/08/105837361.shtml",
+  "lifecycle": "fact_change_detected",
+  "simulated": true,
+  "htmlUrl": "https://huangzuomin.github.io/wz-fact-engine-demo/fact/news/20260908-0361/",
+  "excerpt": "9月8日上午，温州市实验中学教育集团滨江校区工程举行开工仪式。该项目位于鹿城区滨江街道，为全市中小学校新建改扩建年度项目之一，总投资约4.2亿元，规划办学规模36个班，预计2028年秋季建成投用。"
+ },
+ "fastLane": [
+  {
+   "step": "新闻发布",
+   "time": "13:05:00",
+   "status": "success",
+   "result": "CMS 发布回调触发 · Content ID 入队"
+  },
+  {
+   "step": "Sitemap 更新",
+   "time": "13:05:02",
+   "status": "success",
+   "result": "sitemap.xml lastmod 已刷新 · 本次含 1 个新 URL"
+  },
+  {
+   "step": "IndexNow 提交",
+   "time": "13:05:03",
+   "status": "success",
+   "result": "HTTP 202 Accepted · 1 URL 提交至 Bing / Seznam / Yandex 通道"
+  },
+  {
+   "step": "百度收录提交",
+   "time": "13:05:04",
+   "status": "success",
+   "result": "普通收录推送成功 · 当日剩余配额 1987/2000"
+  },
+  {
+   "step": "Feed 追加",
+   "time": "13:05:05",
+   "status": "success",
+   "result": "RSS / JSON Feed 各追加 1 条（News = Event）"
+  }
+ ],
+ "entityAnchors": [
+  {
+   "entityId": "WZ-SCHOOL-00001782",
+   "entityName": "温州市中小学校新建改扩建工程",
+   "matchMethod": "标准名 + 项目类型（年度项目之一）",
+   "confidence": 0.96,
+   "para": 3,
+   "start": 26,
+   "end": 38,
+   "quote": "全市中小学校新建改扩建年度项目之一",
+   "state": "confirmed"
+  },
+  {
+   "entityId": null,
+   "entityName": "温州实验中学教育集团滨江校区（未建档）",
+   "matchMethod": "专名候选 · 受控实体库无此校",
+   "confidence": 0.71,
+   "para": 1,
+   "start": 5,
+   "end": 19,
+   "quote": "温州市实验中学教育集团滨江校区",
+   "state": "candidate",
+   "note": "建议进入建档评估队列，建档前 Claims 仅挂靠市级工程实体"
+  }
+ ],
+ "candidateClaims": [
+  {
+   "claimId": "cl-20260908-0361-1",
+   "entityId": "WZ-SCHOOL-00001782",
+   "predicate": "construction_started_on（开工日期）",
+   "value": "2026-09-08（滨江校区项目开工）",
+   "claimType": "observed_fact",
+   "evidenceText": "文章第1段：\"9月8日上午……工程举行开工仪式\"（第3段关联至市级工程实体）",
+   "confidence": 0.94,
+   "status": "candidate",
+   "changeId": "chg-20260908-002"
+  },
+  {
+   "claimId": "cl-20260908-0361-2",
+   "entityId": "WZ-SCHOOL-00001782",
+   "predicate": "planned_completion_year（计划建成年份）",
+   "value": "2028年秋季（预计）",
+   "claimType": "planned",
+   "evidenceText": "文章第3段：\"预计2028年秋季建成投用\" —— 计划口径，不得与已发生事实混同",
+   "confidence": 0.93,
+   "status": "candidate",
+   "changeId": "chg-20260908-003"
+  },
+  {
+   "claimId": "cl-20260908-0361-3",
+   "entityId": "WZ-SCHOOL-00001782",
+   "predicate": "project_total_investment（项目总投资）",
+   "value": "约4.2亿元（滨江校区）",
+   "claimType": "planned",
+   "evidenceText": "文章第3段：\"总投资约4.2亿元\"（\"约\"字表明计划/概算口径）",
+   "confidence": 0.92,
+   "status": "candidate",
+   "changeId": "chg-20260908-005"
+  }
+ ],
+ "factChanges": [
+  "chg-20260908-002",
+  "chg-20260908-003",
+  "chg-20260908-005"
+ ],
+ "reviewSummary": "3 项 New Fact 待人工确认（其中 2 项为计划口径，须与已发生事实分开建条）"
+}

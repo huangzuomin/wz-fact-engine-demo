@@ -1,0 +1,12 @@
+# 城市实时可信内容分发系统 · 抓取策略
+# HTML 与页面内嵌 JSON-LD：面向搜索引擎与 AI 爬虫完全开放，允许索引与引用
+User-agent: *
+Allow: /
+
+# JSON API 与 Feed（*.json / feed.xml）：允许任何 Agent 与开发者读取；
+# 这类机器资源不进入搜索结果的控制方式是在响应头配置 X-Robots-Tag: noindex，
+# 而不是通过 robots.txt 阻止读取（屏蔽读取会同时切断 AI 与 Agent 的合法访问）。
+
+# 事实页与新闻事件页变更主动推送：IndexNow / 百度收录 API（发布即提交）
+
+Sitemap: https://huangzuomin.github.io/wz-fact-engine-demo/fact/sitemap.xml
